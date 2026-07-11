@@ -1,0 +1,57 @@
+{
+  "cpu": {
+    "logical_cores": 10,
+    "physical_cores": 10
+  },
+  "disk": {
+    "free_gib": 28.81,
+    "path": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu",
+    "total_gib": 460.38,
+    "used_gib": 431.57
+  },
+  "git_commit": "not_available",
+  "hardware_profiler": {
+    "chip": "Apple M5",
+    "hardware_uuid": "9D02475B-F13A-576A-B6F5-C83008E969D3",
+    "memory": "16 GB",
+    "model_identifier": "Mac17,2",
+    "model_name": "MacBook Pro",
+    "model_number": "MDE44HN/A",
+    "os_loader_version": "18000.101.7",
+    "provisioning_udid": "00008142-001240A1146A401C",
+    "serial_number_system": "MQG19V07KC",
+    "system_firmware_version": "18000.101.7",
+    "total_number_of_cores": "10 (4 Performance and 6 Efficiency)"
+  },
+  "hardware_profiler_raw_stderr": "2026-07-11 21:09:10.791 system_profiler[85824:3214173] Error fetching hw.cpufamily: -1",
+  "macos": {
+    "cmd": [
+      "sw_vers"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.4.1\nBuildVersion:\t\t25E253"
+  },
+  "memory": {
+    "profiler_memory": "16 GB",
+    "total_bytes": 17179869184,
+    "total_gib": 16.0
+  },
+  "platform": {
+    "machine": "arm64",
+    "processor": "arm",
+    "python_executable": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/.venv/bin/python",
+    "python_version": "3.12.13",
+    "release": "25.4.0",
+    "system": "Darwin",
+    "version": "Darwin Kernel Version 25.4.0: Thu Mar 19 19:33:43 PDT 2026; root:xnu-12377.101.15~1/RELEASE_ARM64_T8142"
+  },
+  "timestamp_utc": "2026-07-11T15:39:10.797453+00:00",
+  "torch": {
+    "mps_is_available": false,
+    "mps_is_built": true,
+    "mps_tensor_op_ok": false,
+    "torch_version": "2.13.0",
+    "torchvision_version": "0.28.0"
+  }
+}

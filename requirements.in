@@ -1,0 +1,16 @@
+torch
+torchvision
+ultralytics
+opencv-python
+pillow
+numpy
+pandas
+pyyaml
+tqdm
+imagehash
+scikit-learn
+matplotlib
+psutil
+lxml
+gdown
+pytest

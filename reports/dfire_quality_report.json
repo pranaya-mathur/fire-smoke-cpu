@@ -1,0 +1,16 @@
+{
+  "excluded": 1,
+  "exclusions": [
+    {
+      "errors": [
+        "missing_label"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/DFireDataset/figures/dfire_examples.png",
+      "label": ""
+    }
+  ],
+  "images_discovered": 1,
+  "raw_dir": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire",
+  "timestamp_utc": "2026-07-11T15:41:40.561407+00:00",
+  "valid_samples": 0
+}

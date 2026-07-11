@@ -1,0 +1,27 @@
+{
+  "mps": {
+    "is_available": false,
+    "is_built": true,
+    "tensor_op_ok": false
+  },
+  "packages": {
+    "PIL": "12.3.0",
+    "cv2": "5.0.0",
+    "gdown": "6.1.0",
+    "imagehash": "4.3.2",
+    "lxml": "6.1.1",
+    "matplotlib": "3.11.0",
+    "numpy": "2.5.1",
+    "pandas": "3.0.3",
+    "psutil": "7.2.2",
+    "pytest": "9.1.1",
+    "sklearn": "1.9.0",
+    "torch": "2.13.0",
+    "torchvision": "0.28.0",
+    "tqdm": "4.68.4",
+    "ultralytics": "8.4.92",
+    "yaml": "6.0.3"
+  },
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "timestamp_utc": "2026-07-11T15:40:32.076184+00:00"
+}
