@@ -56,6 +56,7 @@ def main() -> int:
                     "split_b": right.get("split", ""),
                 }
             )
+    near_cross_split = [row for row in near_rows if row.get("split_a") and row.get("split_b") and row["split_a"] != row["split_b"]]
     write_csv_dicts(MANIFEST_DIR / "exact_duplicates.csv", exact_rows, ["duplicate_group", "sha256", "sample_id", "keep_sample_id", "split"])
     write_csv_dicts(MANIFEST_DIR / "near_duplicates.csv", near_rows, ["near_group", "sample_id_a", "sample_id_b", "phash_distance", "split_a", "split_b"])
     cross_split_exact = [r for r in exact_rows if r.get("split") and r["split"] != next((k["split"] for k in rows if k["sample_id"] == r["keep_sample_id"]), r["split"])]
@@ -66,13 +67,14 @@ def main() -> int:
         f"- Exact duplicate member rows: `{len(exact_rows)}`",
         f"- Near-duplicate pairs at threshold {args.near_threshold}: `{len(near_rows)}`",
         f"- Exact duplicate cross-split issues: `{len(cross_split_exact)}`",
+        f"- Near-duplicate cross-split pairs: `{len(near_cross_split)}`",
         "",
         "Policy: exact duplicate copies may be excluded after retaining one canonical sample; near duplicates are grouped for split co-location and human review.",
     ]
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     (REPORT_DIR / "deduplication_report.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     print("\n".join(md))
-    return 1 if cross_split_exact else 0
+    return 1 if cross_split_exact or near_cross_split else 0
 
 
 if __name__ == "__main__":

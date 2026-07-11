@@ -16,7 +16,44 @@ from fire_smoke_cpu.utils import safe_link_or_copy, write_csv_dicts
 
 
 def group_key(row: dict) -> str:
-    return row.get("group_id") or row["sha256"] or row["sample_id"]
+    return row.get("leakage_group") or row.get("group_id") or row["sha256"] or row["sample_id"]
+
+
+class UnionFind:
+    def __init__(self) -> None:
+        self.parent: dict[str, str] = {}
+
+    def find(self, item: str) -> str:
+        self.parent.setdefault(item, item)
+        if self.parent[item] != item:
+            self.parent[item] = self.find(self.parent[item])
+        return self.parent[item]
+
+    def union(self, left: str, right: str) -> None:
+        left_root = self.find(left)
+        right_root = self.find(right)
+        if left_root != right_root:
+            self.parent[right_root] = left_root
+
+
+def assign_leakage_groups(rows: list[dict], near_duplicates: Path | None = None) -> None:
+    uf = UnionFind()
+    sample_ids = {row["sample_id"] for row in rows}
+    for row in rows:
+        sample_node = f"sample:{row['sample_id']}"
+        uf.find(sample_node)
+        if row.get("group_id"):
+            uf.union(sample_node, f"group:{row['group_id']}")
+        if row.get("sha256"):
+            uf.union(sample_node, f"sha:{row['sha256']}")
+    if near_duplicates and near_duplicates.exists():
+        for near in csv.DictReader(near_duplicates.open("r", encoding="utf-8")):
+            left = near.get("sample_id_a", "")
+            right = near.get("sample_id_b", "")
+            if left in sample_ids and right in sample_ids:
+                uf.union(f"sample:{left}", f"sample:{right}")
+    for row in rows:
+        row["leakage_group"] = uf.find(f"sample:{row['sample_id']}")
 
 
 def label_for(row: dict) -> str:
@@ -34,6 +71,7 @@ def label_for(row: dict) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", type=Path, default=MANIFEST_DIR / "all_samples.csv")
+    parser.add_argument("--near-duplicates", type=Path, default=MANIFEST_DIR / "near_duplicates.csv")
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()
     if not args.manifest.exists():
@@ -43,6 +81,7 @@ def main() -> int:
     if not rows:
         print("No eligible rows for splitting.")
         return 2
+    assign_leakage_groups(rows, args.near_duplicates)
     groups = defaultdict(list)
     for row in rows:
         groups[group_key(row)].append(row)

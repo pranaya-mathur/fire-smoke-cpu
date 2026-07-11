@@ -19,6 +19,7 @@ Manual downloads may be required when an official provider has browser, access, 
 ## Dataset Pipeline
 
 ```bash
+python scripts/prepare_hf_indoor.py
 python scripts/prepare_dfire.py
 python scripts/prepare_ms_fsdb.py
 python scripts/validate_annotations.py
