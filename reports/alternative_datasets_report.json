@@ -1,0 +1,377 @@
+{
+  "archives": [
+    {
+      "path": "data/raw/hf_kien_fire_smoke/CCTV Smoke & Fire Emergency Detection Dataset.zip",
+      "size_bytes": 339006279,
+      "sha256": "7b1a8cbebe6c71d64a7510b88bcfedc7610a0a5e3495704e5307fd4a9eae69d5"
+    },
+    {
+      "path": "data/raw/hf_kien_fire_smoke/Indoor Fire Smoke.zip",
+      "size_bytes": 200547120,
+      "sha256": "f5e4b452bc0e74508366b4ce3f62d7479d1a790a7438a1f0ebee145a216d7b6a"
+    }
+  ],
+  "datasets": [
+    {
+      "name": "hf_kien_cctv",
+      "root": "data/raw/hf_kien_fire_smoke/extracted_cctv",
+      "images": 240,
+      "missing_labels": 1,
+      "empty_labels": 1,
+      "bad_images": 0,
+      "class_box_counts": {
+        "0": 121,
+        "1": 141
+      },
+      "split_image_counts": {
+        "all": 240
+      },
+      "sample_rows": [
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var10_img1.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var10_img1.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "01aa16f40c5493b75249761d1bedc2f8b2adb61676124430ac529f3bf54494ca"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var10_img2.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var10_img2.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "78187cfcee6e00ae1faf282805027658acc0eb7b1ad4f3468b9f1eb123af436e"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var10_img3.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var10_img3.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "1825c6cd72811ce1af2d9b51dea9c0972503088ce8428f3187af0e421cd08ceb"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var10_img4.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var10_img4.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "4ef4768cbcf9e0dd6190318a4e9a9d923f3e3c0f3bfcdce6c3be61e0b923110c"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var10_img5.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var10_img5.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "50a36732fa53ceb891016c587b9160fe804358188a83c95b1a0764cebc3329d2"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var12_img1.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var12_img1.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "d66fd693e2976326ea6d479e10c666fbe47d10a8a981c57a0bba6d912d7309b0"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var12_img2.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var12_img2.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "6556ae88a0c7e4556def84e8a2e93f9c94545c2e76cbc931b174ee94e1305604"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var12_img3.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var12_img3.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "7496540463d52efbc6d3dfe7b32c3ccf2b9f9f29ac48ff7e7b3f97edceb4d5fa"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var12_img4.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var12_img4.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "1690a692913c650b5530e819cc50b02ba87436f6352bbf9740b488e2a263fbd0"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var12_img5.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var12_img5.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "d3e9adca2fbe1abc036932382e53954be0ecf8f664a649be4b03e5841f8763fc"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var14_img1.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var14_img1.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "bb04049e3318a3c8f2ceaf4f1404fea45c1963b4a5da757142d27d63810a07b8"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var14_img2.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var14_img2.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "f9cb323d7f31fa6af5b9d19137f3cbb6fad219363618f667facab293e411259e"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var14_img3.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var14_img3.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "0b632437645e1e58a04d53d3284fa629452a6c39c66c76fd754a53c4b5c4a6d8"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var14_img4.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var14_img4.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "ff13efe8685c0b23224121d04fc92068204193c6c89534e38ba8c34e6bc14506"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var14_img5.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var14_img5.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "56e75a4a4d85e7d296564ad4e3e5f3c092195e999be79f5f7667a14e6462b367"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var16_img1.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var16_img1.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "dfad66d607deb4730f58253eb470e5818eb64d8b6822c56901eb45417bb8b9dc"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var16_img2.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var16_img2.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "219296dbb4aa09cd2f46245599ed131b29d8a68417cb240863e482929e66dafc"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var16_img3.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var16_img3.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 0,
+          "sha256": "31b7a293fcc13cc033ea76c52d8f231dbb8b9947b2fd8145a7150fb2aeb10ada"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var16_img4.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var16_img4.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "ed7b70d14875f19596c5cc2215529631d4e81819ad1866f9214435b003e4db03"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_cctv/images/fire_detected_var16_img5.png",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_cctv/labels/fire_detected_var16_img5.txt",
+          "width": 1024,
+          "height": 1024,
+          "boxes": 1,
+          "sha256": "b77c6aaa7b80eccbab94648f7c417de6401ab6e51c9d5914faccc1daa0ced7df"
+        }
+      ]
+    },
+    {
+      "name": "hf_kien_indoor",
+      "root": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke",
+      "images": 5000,
+      "missing_labels": 0,
+      "empty_labels": 0,
+      "bad_images": 0,
+      "class_box_counts": {
+        "0": 3592,
+        "1": 3343
+      },
+      "split_image_counts": {
+        "test": 750,
+        "train": 3500,
+        "valid": 750
+      },
+      "sample_rows": [
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/-2022-04-05-195954_png_jpg.rf.b71c34594b9ab92af9c05d88f6779b30.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/-2022-04-05-195954_png_jpg.rf.b71c34594b9ab92af9c05d88f6779b30.txt",
+          "width": 640,
+          "height": 640,
+          "boxes": 1,
+          "sha256": "28829f711522e7d8e87e9833988ae74e79b17af9d32521f6c3fe97bf9a703eec"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000039_jpg.rf.29e227f738bbc4e32317c0d77b53bafd.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000039_jpg.rf.29e227f738bbc4e32317c0d77b53bafd.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 1,
+          "sha256": "73faa7d2c951e48f4e7e2c1f1b4158e8718b840f00ce2468a99764755e75fbcc"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000045_jpg.rf.e131acc8dd73826aee3ab5af488c2e1b.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000045_jpg.rf.e131acc8dd73826aee3ab5af488c2e1b.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 1,
+          "sha256": "a74576bf16b61c4906eee083867f6565ccf4f8f08b9cccbaf3c0ec9c11762bf8"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000050_jpg.rf.3567e9ee9340731c5c619ba64a1da758.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000050_jpg.rf.3567e9ee9340731c5c619ba64a1da758.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 1,
+          "sha256": "0c71df20a587bc639a520885beb7a27d3f6edbe8fe254138de956f96c666b4a3"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000051_jpg.rf.f0f8cb8a06bd5390714ff417589737c5.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000051_jpg.rf.f0f8cb8a06bd5390714ff417589737c5.txt",
+          "width": 640,
+          "height": 640,
+          "boxes": 1,
+          "sha256": "942a9d31cf364daef88f047b07926c128bc0e7911e4a01143805666fadace039"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000122_jpg.rf.fe13b3583b657df230661e8fd753a238.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000122_jpg.rf.fe13b3583b657df230661e8fd753a238.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 1,
+          "sha256": "c68acfa6573a117afc8c2f5e3e1797cc6b78f8ddfb4297d19bfd5b5aa359ccd1"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000127_jpg.rf.d1e65bb626a199c7aaca0c5366f6d480.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000127_jpg.rf.d1e65bb626a199c7aaca0c5366f6d480.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 1,
+          "sha256": "0199198d8c319d6458e4b8090a7bd8f3f89e7648cf75d51f4819f0f7c002f8cd"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000133_jpg.rf.247604eda371adbcff2a6ef91d50d72a.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000133_jpg.rf.247604eda371adbcff2a6ef91d50d72a.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 1,
+          "sha256": "f3edadb7f5d4a353a526358f57e1c6dbc0b64dbde361124c97e7c759498ed2c6"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000149_jpg.rf.5117b01daa9e9b2434c25e081d52d04d.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000149_jpg.rf.5117b01daa9e9b2434c25e081d52d04d.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 1,
+          "sha256": "4fb63e7132cf6732b3ce3b37463e0aaeb019351cb0548cd1388c84b4e92f39fe"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000155_jpg.rf.a5b0e3313e42c55290b1c9ed71902934.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000155_jpg.rf.a5b0e3313e42c55290b1c9ed71902934.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 1,
+          "sha256": "8aee65c8f2c995b34af08352f2388d6f11db448d3bc070240a15eb823f121314"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000155_jpg.rf.d9ce50e4a2964f8407dfb170ab1fdbe7.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000155_jpg.rf.d9ce50e4a2964f8407dfb170ab1fdbe7.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 1,
+          "sha256": "c9795d451a322daca1c094606249d0a3cb84b81c139d8f16a58841da95f2c103"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000166_jpg.rf.40d8bf103906fff3ce55fd9e7a6fc6b9.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000166_jpg.rf.40d8bf103906fff3ce55fd9e7a6fc6b9.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 1,
+          "sha256": "ea665b58f21ca91a9b77aeb4ad310d85e856a1105e149a946c23b465dff8427b"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000177_jpg.rf.1c3896715140113043b2e7e260733c24.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000177_jpg.rf.1c3896715140113043b2e7e260733c24.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 1,
+          "sha256": "d4ca1d6310401ae520e51da5d1d1d1fad7414334939e7d204de0cfa76852becc"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000250_jpg.rf.0b3f448c235a5644cf97f5d8c06b0c77.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000250_jpg.rf.0b3f448c235a5644cf97f5d8c06b0c77.txt",
+          "width": 640,
+          "height": 640,
+          "boxes": 1,
+          "sha256": "4e81aaa55eff53bf8daadae7f57511d56df5edfdd2140c4644c531e4c97249dd"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000697_jpg.rf.ca8a60692b07cd9d9d6dfd88b5831bbb.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000697_jpg.rf.ca8a60692b07cd9d9d6dfd88b5831bbb.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 1,
+          "sha256": "9c4af7b7c8b8a35b8307ac9ef616924afe8f4babbc011372d35b49d827ffdc63"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000726_jpg.rf.03436a7ee651866921b47f9a05c9c17e.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000726_jpg.rf.03436a7ee651866921b47f9a05c9c17e.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 1,
+          "sha256": "41c72d4d354a52bb96e6df7e9dd39b5eeb5e51a2a182b356b966b164a25addc4"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000747_jpg.rf.960a717c5c0a0c0ce16f76e0af1ba7bb.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000747_jpg.rf.960a717c5c0a0c0ce16f76e0af1ba7bb.txt",
+          "width": 640,
+          "height": 640,
+          "boxes": 1,
+          "sha256": "2748f0bee6c1e9a59615add8831f00eb4a835d4fb7a589981d88b22c74c95395"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000887_jpg.rf.dd6d61bc70bf6e47c41175cba2914a4c.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000887_jpg.rf.dd6d61bc70bf6e47c41175cba2914a4c.txt",
+          "width": 640,
+          "height": 640,
+          "boxes": 1,
+          "sha256": "4b712d2bc168927606635c52be2f1cbf9ca91b98226181cb248d62265bbcc73d"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000894_jpg.rf.39a2d9b25184800e1cd23f565e150221.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000894_jpg.rf.39a2d9b25184800e1cd23f565e150221.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 2,
+          "sha256": "7cece01f523f910f0c8c4daeccc812342b9c8fb49342a3d00ebcd2895ba7ab53"
+        },
+        {
+          "image": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/images/000894_jpg.rf.7c2dd8cc9f94768259492248c32fa3ae.jpg",
+          "label": "data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke/test/labels/000894_jpg.rf.7c2dd8cc9f94768259492248c32fa3ae.txt",
+          "width": 416,
+          "height": 416,
+          "boxes": 2,
+          "sha256": "c690d7419c9cabcd95bda457e3c57dceb41764eaee98129c1b1ebaf04a96f01b"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Raw alternative datasets are quarantined; not merged into V1.",
+    "CCTV archive has license conflict between HF tag cc-by-nc-4.0 and card text CC BY 4.0, plus data.yaml nc mismatch.",
+    "Indoor archive has Roboflow data.yaml license CC BY 4.0 but class names are numeric only; semantic mapping must be verified visually/source-side before training."
+  ]
+}
