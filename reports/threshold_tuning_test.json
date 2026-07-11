@@ -1,0 +1,332 @@
+{
+  "model": "runs/detect/runs/yolo11n_hf_indoor_512/cpu_20e/weights/best.pt",
+  "split": "test",
+  "image_count": 824,
+  "iou_threshold": 0.5,
+  "thresholds": [
+    {
+      "threshold": 0.05,
+      "iou_threshold": 0.5,
+      "images": 824,
+      "classes": {
+        "fire": {
+          "tp": 366,
+          "fp": 769,
+          "fn": 72,
+          "images_with_prediction": 367,
+          "images_with_label": 305,
+          "precision": 0.3224669603524229,
+          "recall": 0.8356164383561644,
+          "f1": 0.4653528289891926,
+          "false_positives_per_image": 0.933252427184466
+        },
+        "smoke": {
+          "tp": 447,
+          "fp": 1137,
+          "fn": 294,
+          "images_with_prediction": 626,
+          "images_with_label": 563,
+          "precision": 0.2821969696969697,
+          "recall": 0.6032388663967612,
+          "f1": 0.38451612903225807,
+          "false_positives_per_image": 1.3798543689320388
+        }
+      }
+    },
+    {
+      "threshold": 0.1,
+      "iou_threshold": 0.5,
+      "images": 824,
+      "classes": {
+        "fire": {
+          "tp": 350,
+          "fp": 471,
+          "fn": 88,
+          "images_with_prediction": 347,
+          "images_with_label": 305,
+          "precision": 0.42630937880633374,
+          "recall": 0.7990867579908676,
+          "f1": 0.555996822875298,
+          "false_positives_per_image": 0.5716019417475728
+        },
+        "smoke": {
+          "tp": 409,
+          "fp": 741,
+          "fn": 332,
+          "images_with_prediction": 598,
+          "images_with_label": 563,
+          "precision": 0.3556521739130435,
+          "recall": 0.5519568151147098,
+          "f1": 0.43257535695399263,
+          "false_positives_per_image": 0.8992718446601942
+        }
+      }
+    },
+    {
+      "threshold": 0.15,
+      "iou_threshold": 0.5,
+      "images": 824,
+      "classes": {
+        "fire": {
+          "tp": 339,
+          "fp": 336,
+          "fn": 99,
+          "images_with_prediction": 331,
+          "images_with_label": 305,
+          "precision": 0.5022222222222222,
+          "recall": 0.773972602739726,
+          "f1": 0.6091644204851752,
+          "false_positives_per_image": 0.4077669902912621
+        },
+        "smoke": {
+          "tp": 389,
+          "fp": 558,
+          "fn": 352,
+          "images_with_prediction": 577,
+          "images_with_label": 563,
+          "precision": 0.41077085533262936,
+          "recall": 0.524966261808367,
+          "f1": 0.4609004739336493,
+          "false_positives_per_image": 0.6771844660194175
+        }
+      }
+    },
+    {
+      "threshold": 0.2,
+      "iou_threshold": 0.5,
+      "images": 824,
+      "classes": {
+        "fire": {
+          "tp": 327,
+          "fp": 256,
+          "fn": 111,
+          "images_with_prediction": 320,
+          "images_with_label": 305,
+          "precision": 0.5608919382504288,
+          "recall": 0.7465753424657534,
+          "f1": 0.6405484818805093,
+          "false_positives_per_image": 0.3106796116504854
+        },
+        "smoke": {
+          "tp": 371,
+          "fp": 447,
+          "fn": 370,
+          "images_with_prediction": 555,
+          "images_with_label": 563,
+          "precision": 0.45354523227383864,
+          "recall": 0.5006747638326585,
+          "f1": 0.4759461193072482,
+          "false_positives_per_image": 0.5424757281553398
+        }
+      }
+    },
+    {
+      "threshold": 0.25,
+      "iou_threshold": 0.5,
+      "images": 824,
+      "classes": {
+        "fire": {
+          "tp": 317,
+          "fp": 196,
+          "fn": 121,
+          "images_with_prediction": 312,
+          "images_with_label": 305,
+          "precision": 0.6179337231968811,
+          "recall": 0.723744292237443,
+          "f1": 0.6666666666666667,
+          "false_positives_per_image": 0.23786407766990292
+        },
+        "smoke": {
+          "tp": 359,
+          "fp": 379,
+          "fn": 382,
+          "images_with_prediction": 539,
+          "images_with_label": 563,
+          "precision": 0.48644986449864497,
+          "recall": 0.4844804318488529,
+          "f1": 0.48546315077755237,
+          "false_positives_per_image": 0.45995145631067963
+        }
+      }
+    },
+    {
+      "threshold": 0.3,
+      "iou_threshold": 0.5,
+      "images": 824,
+      "classes": {
+        "fire": {
+          "tp": 305,
+          "fp": 160,
+          "fn": 133,
+          "images_with_prediction": 300,
+          "images_with_label": 305,
+          "precision": 0.6559139784946236,
+          "recall": 0.6963470319634704,
+          "f1": 0.6755260243632337,
+          "false_positives_per_image": 0.1941747572815534
+        },
+        "smoke": {
+          "tp": 347,
+          "fp": 314,
+          "fn": 394,
+          "images_with_prediction": 514,
+          "images_with_label": 563,
+          "precision": 0.5249621785173979,
+          "recall": 0.4682860998650472,
+          "f1": 0.49500713266761764,
+          "false_positives_per_image": 0.38106796116504854
+        }
+      }
+    },
+    {
+      "threshold": 0.35,
+      "iou_threshold": 0.5,
+      "images": 824,
+      "classes": {
+        "fire": {
+          "tp": 295,
+          "fp": 126,
+          "fn": 143,
+          "images_with_prediction": 291,
+          "images_with_label": 305,
+          "precision": 0.7007125890736342,
+          "recall": 0.6735159817351598,
+          "f1": 0.6868451688009313,
+          "false_positives_per_image": 0.1529126213592233
+        },
+        "smoke": {
+          "tp": 339,
+          "fp": 254,
+          "fn": 402,
+          "images_with_prediction": 488,
+          "images_with_label": 563,
+          "precision": 0.5716694772344013,
+          "recall": 0.4574898785425101,
+          "f1": 0.5082458770614693,
+          "false_positives_per_image": 0.308252427184466
+        }
+      }
+    },
+    {
+      "threshold": 0.4,
+      "iou_threshold": 0.5,
+      "images": 824,
+      "classes": {
+        "fire": {
+          "tp": 280,
+          "fp": 101,
+          "fn": 158,
+          "images_with_prediction": 280,
+          "images_with_label": 305,
+          "precision": 0.7349081364829396,
+          "recall": 0.639269406392694,
+          "f1": 0.6837606837606837,
+          "false_positives_per_image": 0.12257281553398058
+        },
+        "smoke": {
+          "tp": 326,
+          "fp": 213,
+          "fn": 415,
+          "images_with_prediction": 462,
+          "images_with_label": 563,
+          "precision": 0.6048237476808905,
+          "recall": 0.4399460188933873,
+          "f1": 0.5093749999999999,
+          "false_positives_per_image": 0.25849514563106796
+        }
+      }
+    },
+    {
+      "threshold": 0.5,
+      "iou_threshold": 0.5,
+      "images": 824,
+      "classes": {
+        "fire": {
+          "tp": 254,
+          "fp": 63,
+          "fn": 184,
+          "images_with_prediction": 253,
+          "images_with_label": 305,
+          "precision": 0.8012618296529969,
+          "recall": 0.5799086757990868,
+          "f1": 0.6728476821192053,
+          "false_positives_per_image": 0.07645631067961164
+        },
+        "smoke": {
+          "tp": 297,
+          "fp": 147,
+          "fn": 444,
+          "images_with_prediction": 408,
+          "images_with_label": 563,
+          "precision": 0.668918918918919,
+          "recall": 0.4008097165991903,
+          "f1": 0.5012658227848101,
+          "false_positives_per_image": 0.1783980582524272
+        }
+      }
+    },
+    {
+      "threshold": 0.6,
+      "iou_threshold": 0.5,
+      "images": 824,
+      "classes": {
+        "fire": {
+          "tp": 214,
+          "fp": 40,
+          "fn": 224,
+          "images_with_prediction": 218,
+          "images_with_label": 305,
+          "precision": 0.84251968503937,
+          "recall": 0.4885844748858447,
+          "f1": 0.6184971098265896,
+          "false_positives_per_image": 0.04854368932038835
+        },
+        "smoke": {
+          "tp": 257,
+          "fp": 97,
+          "fn": 484,
+          "images_with_prediction": 341,
+          "images_with_label": 563,
+          "precision": 0.7259887005649718,
+          "recall": 0.3468286099865047,
+          "f1": 0.469406392694064,
+          "false_positives_per_image": 0.11771844660194175
+        }
+      }
+    },
+    {
+      "threshold": 0.7,
+      "iou_threshold": 0.5,
+      "images": 824,
+      "classes": {
+        "fire": {
+          "tp": 154,
+          "fp": 19,
+          "fn": 284,
+          "images_with_prediction": 165,
+          "images_with_label": 305,
+          "precision": 0.8901734104046243,
+          "recall": 0.3515981735159817,
+          "f1": 0.5040916530278232,
+          "false_positives_per_image": 0.023058252427184466
+        },
+        "smoke": {
+          "tp": 211,
+          "fp": 43,
+          "fn": 530,
+          "images_with_prediction": 250,
+          "images_with_label": 563,
+          "precision": 0.8307086614173228,
+          "recall": 0.28475033738191635,
+          "f1": 0.42412060301507537,
+          "false_positives_per_image": 0.05218446601941747
+        }
+      }
+    }
+  ],
+  "recommended_thresholds": {
+    "fire": 0.35,
+    "smoke": 0.4
+  },
+  "note": "False positives are unmatched predictions on labeled validation/test images, not a substitute for a dedicated negative CCTV validation set."
+}

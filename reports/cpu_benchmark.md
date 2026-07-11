@@ -1,0 +1,12 @@
+# CPU Benchmark
+
+- model: `runs/detect/runs/yolo11n_hf_indoor_512/cpu_20e/weights/best.pt`
+- model_size_mb: `5.2`
+- iterations: `100`
+- batch_size: `1`
+- avg_latency_ms: `18.34741505270358`
+- p50_latency_ms: `18.062124989228323`
+- p95_latency_ms: `20.73337498586625`
+- throughput_fps: `54.5035906762596`
+- peak_process_ram_mb: `424.875`
+- avg_process_ram_mb: `419.249375`
