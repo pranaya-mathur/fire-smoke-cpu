@@ -1,0 +1,106 @@
+{
+  "dataset_samples": 8656,
+  "dedup": {
+    "cross_source_duplicates": 0,
+    "exact_duplicate_groups": 0,
+    "exact_duplicate_rows": 0,
+    "label_conflicts": 0,
+    "near_duplicate_groups": 3579703,
+    "near_duplicate_pairs": 3579703
+  },
+  "libreyolo_status_counts": {
+    "UNKNOWN_CLASS_OR_INVALID_ANNOTATION": 5,
+    "VALID_SMOKE": 741
+  },
+  "medyoussef_status_counts": {
+    "ANNOTATED_POSITIVE": 11349,
+    "CONFIRMED_NEGATIVE": 10638,
+    "UNKNOWN": 340
+  },
+  "quality_gate": {
+    "dataset_rows": 8656,
+    "gates": {
+      "CANONICAL_CLASS_MAPPING_VERIFIED": true,
+      "CONFIRMED_GENUINE_NEGATIVES_EXIST": true,
+      "DATASET_SIZE_REMAINS_LEAN": true,
+      "DATASET_V1_PRESERVED": true,
+      "DATASET_V2_PRESERVED": true,
+      "LICENSE_PROVENANCE_RECORDED": true,
+      "MISSING_ANNOTATIONS_NOT_TREATED_AS_NEGATIVES": true,
+      "NO_CORRUPT_INCLUDED_IMAGES": true,
+      "NO_EXACT_DUPLICATE_LEAKAGE": true,
+      "NO_MOCK_DATA_FOR_REAL_TRAINING": true,
+      "NO_PLACEHOLDER_SAMPLES": true,
+      "NO_UNKNOWN_ORIGIN_SAMPLES": true,
+      "NO_UNRESOLVED_LABEL_CONFLICTS": true,
+      "REAL_HF_DATA_DOWNLOADED": true,
+      "REAL_SMOKE_BOOSTER_SAMPLES_EXIST": true,
+      "SOURCE_REVISION_RECORDED": true,
+      "V0_PRESERVED": true,
+      "V2_PRESERVED": true
+    },
+    "negative_count": 3000,
+    "source_counts": {
+      "LibreYOLO/smoke-uvylj": 741,
+      "hf_kien_indoor_existing": 4915,
+      "medyoussef/fire-smoke-hardnegatives-int8": 3000
+    },
+    "split_counts": {
+      "test": 1172,
+      "train": 6370,
+      "val": 1114
+    },
+    "status": "PASS"
+  },
+  "selected_hard_negatives": 3000,
+  "verifications": {
+    "dfire": {
+      "archive_count": 0,
+      "corrupt_count": 0,
+      "data_origin": "huggingface_snapshot",
+      "dataset_id": "badsaarow/d-fire",
+      "download_complete": false,
+      "file_count": 0,
+      "image_count": 0,
+      "incomplete_count": 0,
+      "label_count": 0,
+      "local_path": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/hf_candidates/badsaarow_d-fire_hf_snapshot",
+      "local_size_bytes": 0,
+      "revision_sha": null,
+      "status": "NOT_DOWNLOADED",
+      "zero_byte_count": 0
+    },
+    "libreyolo": {
+      "archive_count": 0,
+      "corrupt_count": 0,
+      "data_origin": "huggingface_snapshot",
+      "dataset_id": "LibreYOLO/smoke-uvylj",
+      "download_complete": true,
+      "file_count": 2996,
+      "image_count": 746,
+      "incomplete_count": 0,
+      "label_count": 748,
+      "local_path": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/hf_candidates/LibreYOLO_smoke-uvylj_hf_snapshot",
+      "local_size_bytes": 43726053,
+      "revision_sha": "fcc82783b1a61a87ab0bfed5b3727b344f2236a5",
+      "status": "DOWNLOAD_COMPLETE",
+      "zero_byte_count": 5
+    },
+    "medyoussef": {
+      "archive_count": 0,
+      "corrupt_count": 0,
+      "data_origin": "huggingface_snapshot",
+      "dataset_id": "medyoussef/fire-smoke-hardnegatives-int8",
+      "download_complete": true,
+      "file_count": 44656,
+      "image_count": 22327,
+      "incomplete_count": 0,
+      "label_count": 22327,
+      "local_path": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/hf_candidates/medyoussef_fire-smoke-hardnegatives-int8_real",
+      "local_size_bytes": 3242604105,
+      "revision_sha": "5db7b603eebc0229ac9fbff1bce760ea97bd2f5d",
+      "status": "DOWNLOAD_COMPLETE",
+      "zero_byte_count": 10638
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "class_names": {
+    "0": "smoke"
+  },
+  "dataset_id": "LibreYOLO/smoke-uvylj",
+  "status_counts": {
+    "UNKNOWN_CLASS_OR_INVALID_ANNOTATION": 5,
+    "VALID_SMOKE": 741
+  },
+  "total_images": 746
+}

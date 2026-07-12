@@ -1,0 +1,6 @@
+# LibreYOLO Smoke Validation
+
+- total: 500
+- corrupt: 0
+- valid_smoke: 1
+- missing_annotation: 0

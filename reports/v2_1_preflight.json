@@ -1,0 +1,13 @@
+{
+  "branch": "main",
+  "commit": "b5893d7d899ef62ac8d4f6229bc9f746f0eb4371",
+  "hf_auth_committed": false,
+  "modified_files": [
+    ".gitignore",
+    "reports/cpu_benchmark.json",
+    "reports/cpu_benchmark.md",
+    "scripts/benchmark_cpu.py",
+    "scripts/evaluate_video.py"
+  ],
+  "untracked_files": 47
+}

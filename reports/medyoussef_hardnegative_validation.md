@@ -1,0 +1,6 @@
+# Medyoussef Hard Negatives Validation
+
+- total: 1510
+- corrupt: 0
+- confirmed_negative: 1
+- missing_annotation: 0

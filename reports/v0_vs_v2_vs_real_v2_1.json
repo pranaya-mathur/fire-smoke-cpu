@@ -1,0 +1,86 @@
+{
+  "v0": {
+    "model_path": "runs/detect/runs/yolo11n_hf_indoor_512/cpu_20e/weights/best.pt",
+    "results_dir": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/runs/detect/runs/eval_real_v2_1/v0",
+    "precision": 0.6164272910811492,
+    "recall": 0.5383642684283183,
+    "map50": 0.5547181399459815,
+    "map50_95": 0.27172004237275044,
+    "class_names": {
+      "0": "fire",
+      "1": "smoke"
+    },
+    "per_class_precision": [
+      0.6629770437657523,
+      0.5698775383965461
+    ],
+    "per_class_recall": [
+      0.632420091324201,
+      0.44430844553243576
+    ],
+    "per_class_map50": [
+      0.6592055108160797,
+      0.4502307690758833
+    ],
+    "per_class_map50_95": [
+      0.336477657464176,
+      0.20696242728132472
+    ]
+  },
+  "v2": {
+    "model_path": "runs/detect/runs/detect/yolo11n_v2_512_20e/weights/best.pt",
+    "results_dir": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/runs/detect/runs/eval_real_v2_1/v2",
+    "precision": 0.5279425195858003,
+    "recall": 0.4763180250722378,
+    "map50": 0.4386846390571205,
+    "map50_95": 0.2052355642165335,
+    "class_names": {
+      "0": "fire",
+      "1": "smoke"
+    },
+    "per_class_precision": [
+      0.5738476975350888,
+      0.48203734163651174
+    ],
+    "per_class_recall": [
+      0.6050228310502284,
+      0.34761321909424725
+    ],
+    "per_class_map50": [
+      0.5746456445548116,
+      0.3027236335594294
+    ],
+    "per_class_map50_95": [
+      0.28616904931702253,
+      0.1243020791160444
+    ]
+  },
+  "real_v2_1": {
+    "model_path": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+    "results_dir": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/runs/detect/runs/eval_real_v2_1/real_v2_1",
+    "precision": 0.6527635566032564,
+    "recall": 0.5284902582924413,
+    "map50": 0.5751375166855835,
+    "map50_95": 0.27496605044643274,
+    "class_names": {
+      "0": "fire",
+      "1": "smoke"
+    },
+    "per_class_precision": [
+      0.6252095769024879,
+      0.6803175363040247
+    ],
+    "per_class_recall": [
+      0.5750960524307425,
+      0.4818844641541401
+    ],
+    "per_class_map50": [
+      0.6346441975068773,
+      0.5156308358642898
+    ],
+    "per_class_map50_95": [
+      0.31047461519793385,
+      0.23945748569493155
+    ]
+  }
+}

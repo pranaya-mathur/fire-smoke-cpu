@@ -17,3 +17,9 @@ data/processed/**/*
 !data/processed/.gitkeep
 reports/visual_qc/
 ultralytics_runs/
+
+# Environments
+.env
+.env.*
+!.env.example
+data/manifests/v2_1_real_near_duplicates.csv

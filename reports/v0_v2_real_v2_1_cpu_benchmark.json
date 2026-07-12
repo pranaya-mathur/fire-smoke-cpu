@@ -1,0 +1,32 @@
+{
+  "v0": {
+    "model_path": "runs/detect/runs/yolo11n_hf_indoor_512/cpu_20e/weights/best.pt",
+    "sample_count": 200,
+    "avg_latency_ms": 38.94804225565167,
+    "p50_latency_ms": 37.18489551101811,
+    "p95_latency_ms": 51.48755626869388,
+    "avg_rss_bytes": 435361136,
+    "peak_rss_bytes": 436240384,
+    "model_size_bytes": 5449562
+  },
+  "v2": {
+    "model_path": "runs/detect/runs/detect/yolo11n_v2_512_20e/weights/best.pt",
+    "sample_count": 200,
+    "avg_latency_ms": 36.26460060448153,
+    "p50_latency_ms": 35.579312505433336,
+    "p95_latency_ms": 43.687768414383754,
+    "avg_rss_bytes": 447328583,
+    "peak_rss_bytes": 447791104,
+    "model_size_bytes": 5447962
+  },
+  "real_v2_1": {
+    "model_path": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+    "sample_count": 200,
+    "avg_latency_ms": 37.19499044294935,
+    "p50_latency_ms": 36.28329199273139,
+    "p95_latency_ms": 44.99005482357461,
+    "avg_rss_bytes": 458775347,
+    "peak_rss_bytes": 458899456,
+    "model_size_bytes": 5447962
+  }
+}

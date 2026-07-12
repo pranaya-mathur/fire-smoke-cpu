@@ -1,0 +1,35 @@
+{
+  "dataset_rows": 8656,
+  "gates": {
+    "CANONICAL_CLASS_MAPPING_VERIFIED": true,
+    "CONFIRMED_GENUINE_NEGATIVES_EXIST": true,
+    "DATASET_SIZE_REMAINS_LEAN": true,
+    "DATASET_V1_PRESERVED": true,
+    "DATASET_V2_PRESERVED": true,
+    "LICENSE_PROVENANCE_RECORDED": true,
+    "MISSING_ANNOTATIONS_NOT_TREATED_AS_NEGATIVES": true,
+    "NO_CORRUPT_INCLUDED_IMAGES": true,
+    "NO_EXACT_DUPLICATE_LEAKAGE": true,
+    "NO_MOCK_DATA_FOR_REAL_TRAINING": true,
+    "NO_PLACEHOLDER_SAMPLES": true,
+    "NO_UNKNOWN_ORIGIN_SAMPLES": true,
+    "NO_UNRESOLVED_LABEL_CONFLICTS": true,
+    "REAL_HF_DATA_DOWNLOADED": true,
+    "REAL_SMOKE_BOOSTER_SAMPLES_EXIST": true,
+    "SOURCE_REVISION_RECORDED": true,
+    "V0_PRESERVED": true,
+    "V2_PRESERVED": true
+  },
+  "negative_count": 3000,
+  "source_counts": {
+    "LibreYOLO/smoke-uvylj": 741,
+    "hf_kien_indoor_existing": 4915,
+    "medyoussef/fire-smoke-hardnegatives-int8": 3000
+  },
+  "split_counts": {
+    "test": 1172,
+    "train": 6370,
+    "val": 1114
+  },
+  "status": "PASS"
+}

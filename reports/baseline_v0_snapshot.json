@@ -1,0 +1,33 @@
+{
+  "commit": "b5893d7d899ef62ac8d4f6229bc9f746f0eb4371",
+  "branch": "main",
+  "dataset_v1_path": "data/processed/fire_smoke_v1",
+  "model_path": "runs/detect/runs/yolo11n_hf_indoor_512/cpu_20e/weights/best.pt",
+  "model_sha256": "2ae9186fa8072b94ddca4f746fa4b55f777471834c5fda8da1d5bca068e7c603",
+  "model_size_mb": 5.2,
+  "train_count": 3319,
+  "val_count": 772,
+  "test_count": 824,
+  "validation_metrics": {
+    "mAP50": 0.556,
+    "mAP50_95": 0.291,
+    "precision": 0.728,
+    "recall": 0.492
+  },
+  "threshold_reports": {
+    "fire_val": 0.50,
+    "smoke_val": 0.30,
+    "fire_test": 0.35,
+    "smoke_test": 0.40
+  },
+  "cpu_benchmark": {
+    "avg_latency_ms": 18.35,
+    "p50_latency_ms": 18.06,
+    "p95_latency_ms": 20.73,
+    "throughput_fps": 54.50
+  },
+  "known_limitations": [
+    "Zero dedicated negative images",
+    "Thresholds tuned against validation images, lacks true negative video testing"
+  ]
+}

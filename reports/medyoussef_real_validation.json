@@ -1,0 +1,9 @@
+{
+  "dataset_id": "medyoussef/fire-smoke-hardnegatives-int8",
+  "status_counts": {
+    "ANNOTATED_POSITIVE": 11349,
+    "CONFIRMED_NEGATIVE": 10638,
+    "UNKNOWN": 340
+  },
+  "total_images": 22327
+}

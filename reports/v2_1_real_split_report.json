@@ -1,0 +1,30 @@
+{
+  "exact_overlap_with_v1_v2": "not recomputed beyond SHA duplicate manifests; V1 samples intentionally retained in original splits",
+  "negative_by_split": {
+    "test": 278,
+    "train": 2446,
+    "val": 276
+  },
+  "source_by_split": {
+    "test": {
+      "LibreYOLO/smoke-uvylj": 70,
+      "hf_kien_indoor_existing": 824,
+      "medyoussef/fire-smoke-hardnegatives-int8": 278
+    },
+    "train": {
+      "LibreYOLO/smoke-uvylj": 605,
+      "hf_kien_indoor_existing": 3319,
+      "medyoussef/fire-smoke-hardnegatives-int8": 2446
+    },
+    "val": {
+      "LibreYOLO/smoke-uvylj": 66,
+      "hf_kien_indoor_existing": 772,
+      "medyoussef/fire-smoke-hardnegatives-int8": 276
+    }
+  },
+  "split_counts": {
+    "test": 1172,
+    "train": 6370,
+    "val": 1114
+  }
+}

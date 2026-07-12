@@ -1,0 +1,277 @@
+{
+  "commit": "b5893d7d899ef62ac8d4f6229bc9f746f0eb4371",
+  "branch": "main",
+  "git_status_entries": 111,
+  "hf_auth": "PASS",
+  "authenticated_user": "chinki-m",
+  "downloads": {
+    "dfire": {
+      "archive_count": 0,
+      "corrupt_count": 0,
+      "data_origin": "huggingface_snapshot",
+      "dataset_id": "badsaarow/d-fire",
+      "download_complete": false,
+      "file_count": 0,
+      "image_count": 0,
+      "incomplete_count": 0,
+      "label_count": 0,
+      "local_path": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/hf_candidates/badsaarow_d-fire_hf_snapshot",
+      "local_size_bytes": 0,
+      "revision_sha": null,
+      "status": "NOT_DOWNLOADED",
+      "zero_byte_count": 0
+    },
+    "libreyolo": {
+      "archive_count": 0,
+      "corrupt_count": 0,
+      "data_origin": "huggingface_snapshot",
+      "dataset_id": "LibreYOLO/smoke-uvylj",
+      "download_complete": true,
+      "file_count": 2996,
+      "image_count": 746,
+      "incomplete_count": 0,
+      "label_count": 748,
+      "local_path": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/hf_candidates/LibreYOLO_smoke-uvylj_hf_snapshot",
+      "local_size_bytes": 43726053,
+      "revision_sha": "fcc82783b1a61a87ab0bfed5b3727b344f2236a5",
+      "status": "DOWNLOAD_COMPLETE",
+      "zero_byte_count": 5
+    },
+    "medyoussef": {
+      "archive_count": 0,
+      "corrupt_count": 0,
+      "data_origin": "huggingface_snapshot",
+      "dataset_id": "medyoussef/fire-smoke-hardnegatives-int8",
+      "download_complete": true,
+      "file_count": 44656,
+      "image_count": 22327,
+      "incomplete_count": 0,
+      "label_count": 22327,
+      "local_path": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/hf_candidates/medyoussef_fire-smoke-hardnegatives-int8_real",
+      "local_size_bytes": 3242604105,
+      "revision_sha": "5db7b603eebc0229ac9fbff1bce760ea97bd2f5d",
+      "status": "DOWNLOAD_COMPLETE",
+      "zero_byte_count": 10638
+    }
+  },
+  "dataset": {
+    "samples": 8656,
+    "splits": {
+      "test": 1172,
+      "train": 6370,
+      "val": 1114
+    },
+    "sources": {
+      "LibreYOLO/smoke-uvylj": 741,
+      "hf_kien_indoor_existing": 4915,
+      "medyoussef/fire-smoke-hardnegatives-int8": 3000
+    },
+    "quality_gate": "PASS",
+    "no_mock": true
+  },
+  "training": {
+    "epochs_completed": 6,
+    "best_epoch": 3,
+    "best_map50": 0.58336,
+    "best_map50_95": 0.3272,
+    "best_model": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt"
+  },
+  "comparison": {
+    "v0": {
+      "model_path": "runs/detect/runs/yolo11n_hf_indoor_512/cpu_20e/weights/best.pt",
+      "results_dir": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/runs/detect/runs/eval_real_v2_1/v0",
+      "precision": 0.6164272910811492,
+      "recall": 0.5383642684283183,
+      "map50": 0.5547181399459815,
+      "map50_95": 0.27172004237275044,
+      "class_names": {
+        "0": "fire",
+        "1": "smoke"
+      },
+      "per_class_precision": [
+        0.6629770437657523,
+        0.5698775383965461
+      ],
+      "per_class_recall": [
+        0.632420091324201,
+        0.44430844553243576
+      ],
+      "per_class_map50": [
+        0.6592055108160797,
+        0.4502307690758833
+      ],
+      "per_class_map50_95": [
+        0.336477657464176,
+        0.20696242728132472
+      ]
+    },
+    "v2": {
+      "model_path": "runs/detect/runs/detect/yolo11n_v2_512_20e/weights/best.pt",
+      "results_dir": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/runs/detect/runs/eval_real_v2_1/v2",
+      "precision": 0.5279425195858003,
+      "recall": 0.4763180250722378,
+      "map50": 0.4386846390571205,
+      "map50_95": 0.2052355642165335,
+      "class_names": {
+        "0": "fire",
+        "1": "smoke"
+      },
+      "per_class_precision": [
+        0.5738476975350888,
+        0.48203734163651174
+      ],
+      "per_class_recall": [
+        0.6050228310502284,
+        0.34761321909424725
+      ],
+      "per_class_map50": [
+        0.5746456445548116,
+        0.3027236335594294
+      ],
+      "per_class_map50_95": [
+        0.28616904931702253,
+        0.1243020791160444
+      ]
+    },
+    "real_v2_1": {
+      "model_path": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+      "results_dir": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/runs/detect/runs/eval_real_v2_1/real_v2_1",
+      "precision": 0.6527635566032564,
+      "recall": 0.5284902582924413,
+      "map50": 0.5751375166855835,
+      "map50_95": 0.27496605044643274,
+      "class_names": {
+        "0": "fire",
+        "1": "smoke"
+      },
+      "per_class_precision": [
+        0.6252095769024879,
+        0.6803175363040247
+      ],
+      "per_class_recall": [
+        0.5750960524307425,
+        0.4818844641541401
+      ],
+      "per_class_map50": [
+        0.6346441975068773,
+        0.5156308358642898
+      ],
+      "per_class_map50_95": [
+        0.31047461519793385,
+        0.23945748569493155
+      ]
+    }
+  },
+  "negative_eval": {
+    "v0": {
+      "model_path": "runs/detect/runs/yolo11n_hf_indoor_512/cpu_20e/weights/best.pt",
+      "total_negative_images": 278,
+      "images_with_false_fire": 58,
+      "images_with_false_smoke": 42,
+      "images_with_any_false_detection": 97,
+      "false_fire_count": 101,
+      "false_smoke_count": 67,
+      "fp_per_image": 0.60431654676259,
+      "false_positive_image_rate": 0.3489208633093525,
+      "elapsed_seconds": 25.21852707862854,
+      "false_positives_by_negative_category": {
+        "unknown": {
+          "images": 278,
+          "any_fp": 97,
+          "false_fire_images": 58,
+          "false_smoke_images": 42,
+          "false_fire_count": 101,
+          "false_smoke_count": 67
+        }
+      }
+    },
+    "v2": {
+      "model_path": "runs/detect/runs/detect/yolo11n_v2_512_20e/weights/best.pt",
+      "total_negative_images": 278,
+      "images_with_false_fire": 45,
+      "images_with_false_smoke": 29,
+      "images_with_any_false_detection": 72,
+      "false_fire_count": 76,
+      "false_smoke_count": 46,
+      "fp_per_image": 0.43884892086330934,
+      "false_positive_image_rate": 0.2589928057553957,
+      "elapsed_seconds": 23.275054931640625,
+      "false_positives_by_negative_category": {
+        "unknown": {
+          "images": 278,
+          "any_fp": 72,
+          "false_fire_images": 45,
+          "false_smoke_images": 29,
+          "false_fire_count": 76,
+          "false_smoke_count": 46
+        }
+      }
+    },
+    "real_v2_1": {
+      "model_path": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+      "total_negative_images": 278,
+      "images_with_false_fire": 12,
+      "images_with_false_smoke": 1,
+      "images_with_any_false_detection": 13,
+      "false_fire_count": 17,
+      "false_smoke_count": 1,
+      "fp_per_image": 0.06474820143884892,
+      "false_positive_image_rate": 0.046762589928057555,
+      "elapsed_seconds": 21.612664937973022,
+      "false_positives_by_negative_category": {
+        "unknown": {
+          "images": 278,
+          "any_fp": 13,
+          "false_fire_images": 12,
+          "false_smoke_images": 1,
+          "false_fire_count": 17,
+          "false_smoke_count": 1
+        }
+      }
+    }
+  },
+  "cpu_benchmark": {
+    "v0": {
+      "model_path": "runs/detect/runs/yolo11n_hf_indoor_512/cpu_20e/weights/best.pt",
+      "sample_count": 200,
+      "avg_latency_ms": 38.94804225565167,
+      "p50_latency_ms": 37.18489551101811,
+      "p95_latency_ms": 51.48755626869388,
+      "avg_rss_bytes": 435361136,
+      "peak_rss_bytes": 436240384,
+      "model_size_bytes": 5449562
+    },
+    "v2": {
+      "model_path": "runs/detect/runs/detect/yolo11n_v2_512_20e/weights/best.pt",
+      "sample_count": 200,
+      "avg_latency_ms": 36.26460060448153,
+      "p50_latency_ms": 35.579312505433336,
+      "p95_latency_ms": 43.687768414383754,
+      "avg_rss_bytes": 447328583,
+      "peak_rss_bytes": 447791104,
+      "model_size_bytes": 5447962
+    },
+    "real_v2_1": {
+      "model_path": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+      "sample_count": 200,
+      "avg_latency_ms": 37.19499044294935,
+      "p50_latency_ms": 36.28329199273139,
+      "p95_latency_ms": 44.99005482357461,
+      "avg_rss_bytes": 458775347,
+      "peak_rss_bytes": 458899456,
+      "model_size_bytes": 5447962
+    }
+  },
+  "threshold_negative_only": {
+    "fire_threshold": 0.7,
+    "smoke_threshold": 0.7,
+    "validation_negative_images": 276,
+    "false_fire_images": 0,
+    "false_smoke_images": 0,
+    "any_false_detection_images": 0,
+    "false_fire_count": 0,
+    "false_smoke_count": 0,
+    "false_positive_image_rate": 0.0
+  },
+  "video_evaluation": "not run; no local real video ground-truth policy used"
+}

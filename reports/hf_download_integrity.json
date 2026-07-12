@@ -1,0 +1,20 @@
+{
+  "medyoussef": {
+    "status": "DOWNLOAD_COMPLETE",
+    "files": 3012,
+    "images": 1510,
+    "size": 7131730
+  },
+  "LibreYOLO": {
+    "status": "DOWNLOAD_COMPLETE",
+    "files": 1003,
+    "images": 500,
+    "size": 2371500
+  },
+  "D-Fire": {
+    "status": "NOT_DOWNLOADED",
+    "files": 0,
+    "images": 0,
+    "size": 0
+  }
+}

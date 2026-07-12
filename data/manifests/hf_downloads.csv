@@ -1,0 +1,8 @@
+dataset_id,source_url,status,message,size_bytes
+badsaarow_d_fire,https://huggingface.co/datasets/badsaarow/d-fire,SKIPPED,Insufficient disk space,4207498037
+medyoussef_hardnegatives,https://huggingface.co/datasets/medyoussef/fire-smoke-hardnegatives-int8,SKIPPED,Insufficient disk space,3317229455
+libreyolo_smoke_uvylj,https://huggingface.co/datasets/LibreYOLO/smoke-uvylj,SKIPPED,Insufficient disk space,42050168
+yingjie_fire_smoke,https://huggingface.co/datasets/YingjieCheng/FireSmokeDetDatasets,SKIPPED,Insufficient disk space,2250856975
+kienngyuen_fire_smoke,https://huggingface.co/datasets/KienNgyuen/Fire-Smoke-Detection,SKIPPED,Insufficient disk space,3739502107
+hiennguyen_fire_smoke,https://huggingface.co/datasets/hiennguyen9874/fire-smoke-detection,SKIPPED,Insufficient disk space,11568743917
+betasecond_jimei,https://huggingface.co/datasets/betasecond/jimei-fire-smoke-yolo-dataset,SKIPPED,Insufficient disk space,589834150

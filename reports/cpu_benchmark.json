@@ -1,12 +1,21 @@
 {
-  "model": "runs/detect/runs/yolo11n_hf_indoor_512/cpu_20e/weights/best.pt",
+  "hardware": "arm",
+  "os": "Darwin 25.4.0",
+  "python": "3.12.13",
+  "torch": "2.13.0",
+  "threads": 8,
+  "model": "runs/detect/runs/detect/yolo11n_v2_512_20e/weights/best.pt",
+  "model_sha256": "bdde93e8f4446b6d99982b37c2511bc0a4198adba504d19ae95d646c56576baf",
   "model_size_mb": 5.2,
+  "imgsz": 512,
   "iterations": 100,
   "batch_size": 1,
-  "avg_latency_ms": 18.34741505270358,
-  "p50_latency_ms": 18.062124989228323,
-  "p95_latency_ms": 20.73337498586625,
-  "throughput_fps": 54.5035906762596,
-  "peak_process_ram_mb": 424.875,
-  "avg_process_ram_mb": 419.249375
+  "warmup": 10,
+  "avg_latency_ms": 18.033470395603217,
+  "p50_latency_ms": 17.94274998246692,
+  "p95_latency_ms": 18.168875016272068,
+  "throughput_fps": 55.4524435986438,
+  "peak_process_ram_mb": 411.390625,
+  "avg_process_ram_mb": 404.366875,
+  "avg_cpu_utilization": 3.265
 }
