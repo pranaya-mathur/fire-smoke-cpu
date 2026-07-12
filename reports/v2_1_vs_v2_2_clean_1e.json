@@ -1,0 +1,247 @@
+{
+  "clean_v2_2_1e": {
+    "test": {
+      "checkpoint": "runs/detect/runs/detect/smoke_test_v2_2_clean_eval_1e/weights/best.pt",
+      "checkpoint_sha256": "c8170f9cf150e0e753ddfbe2edde447809eefe27b000519c9352ef24e01d2891",
+      "fire": {
+        "mAP50": 0.6323597319503357,
+        "mAP50_95": 0.3293115395689338,
+        "precision": 0.7808870670128005,
+        "recall": 0.5379061371841155
+      },
+      "negatives": {
+        "false_fire_predictions": 5,
+        "false_positive_image_rate": 0.03535353535353535,
+        "false_smoke_predictions": 2,
+        "fp_per_image": 0.03535353535353535,
+        "images_with_any_false_detection": 7,
+        "images_with_false_fire": 5,
+        "images_with_false_smoke": 2,
+        "total_negative_images": 198
+      },
+      "overall": {
+        "mAP50": 0.525131485349456,
+        "mAP50_95": 0.2596442714482722,
+        "precision": 0.6558863812312994,
+        "recall": 0.49972229936128854
+      },
+      "smoke": {
+        "mAP50": 0.4179032387485764,
+        "mAP50_95": 0.18997700332761072,
+        "precision": 0.5308856954497981,
+        "recall": 0.46153846153846156
+      },
+      "split": "test"
+    },
+    "val": {
+      "checkpoint": "runs/detect/runs/detect/smoke_test_v2_2_clean_eval_1e/weights/best.pt",
+      "checkpoint_sha256": "c8170f9cf150e0e753ddfbe2edde447809eefe27b000519c9352ef24e01d2891",
+      "fire": {
+        "mAP50": 0.6695555113317444,
+        "mAP50_95": 0.3780270204370185,
+        "precision": 0.8358704809925062,
+        "recall": 0.580110497237569
+      },
+      "negatives": {
+        "false_fire_predictions": 7,
+        "false_positive_image_rate": 0.04040404040404041,
+        "false_smoke_predictions": 3,
+        "fp_per_image": 0.050505050505050504,
+        "images_with_any_false_detection": 8,
+        "images_with_false_fire": 6,
+        "images_with_false_smoke": 2,
+        "total_negative_images": 198
+      },
+      "overall": {
+        "mAP50": 0.5221210152782261,
+        "mAP50_95": 0.2705460860929461,
+        "precision": 0.689035388873046,
+        "recall": 0.4917281110723161
+      },
+      "smoke": {
+        "mAP50": 0.3746865192247077,
+        "mAP50_95": 0.16306515174887362,
+        "precision": 0.5422002967535858,
+        "recall": 0.4033457249070632
+      },
+      "split": "val"
+    }
+  },
+  "deltas": {
+    "test_fire_mAP50": {
+      "absolute": -0.04292990425953169,
+      "relative": -0.06357257976070861
+    },
+    "test_fire_mAP50_95": {
+      "absolute": -0.029533019874286026,
+      "relative": -0.08230031387436725
+    },
+    "test_fire_precision": {
+      "absolute": 0.05170016488732421,
+      "relative": 0.07090111566269987
+    },
+    "test_fire_recall": {
+      "absolute": -0.05504648438133142,
+      "relative": -0.09283454087107984
+    },
+    "test_overall_mAP50": {
+      "absolute": -0.062400774867020115,
+      "relative": -0.10620825287794165
+    },
+    "test_overall_mAP50_95": {
+      "absolute": -0.03350218803569155,
+      "relative": -0.11428481208562662
+    },
+    "test_overall_precision": {
+      "absolute": -0.05309685049664714,
+      "relative": -0.07489154626018242
+    },
+    "test_overall_recall": {
+      "absolute": -0.02564706958278573,
+      "relative": -0.04881721527528924
+    },
+    "test_smoke_mAP50": {
+      "absolute": -0.08187164547450837,
+      "relative": -0.16381704655242996
+    },
+    "test_smoke_mAP50_95": {
+      "absolute": -0.03747135619709688,
+      "relative": -0.16474665403346814
+    },
+    "test_smoke_precision": {
+      "absolute": -0.1578938658806185,
+      "relative": -0.22923715328549757
+    },
+    "test_smoke_recall": {
+      "absolute": 0.0037523452157599,
+      "relative": 0.00819672131147552
+    },
+    "val_fire_mAP50": {
+      "absolute": -0.030192680523971394,
+      "relative": -0.04314792217454841
+    },
+    "val_fire_mAP50_95": {
+      "absolute": -0.015821044725259747,
+      "relative": -0.04017042642761482
+    },
+    "val_fire_precision": {
+      "absolute": 0.06998483176017889,
+      "relative": 0.09137765125946284
+    },
+    "val_fire_recall": {
+      "absolute": -0.04645995493914201,
+      "relative": -0.07414961043525072
+    },
+    "val_overall_mAP50": {
+      "absolute": -0.05059495117410129,
+      "relative": -0.08834213491115023
+    },
+    "val_overall_mAP50_95": {
+      "absolute": -0.028433916619468924,
+      "relative": -0.09510307164863845
+    },
+    "val_overall_precision": {
+      "absolute": -0.02606769123058217,
+      "relative": -0.036453054050339995
+    },
+    "val_overall_recall": {
+      "absolute": -0.020441873380351694,
+      "relative": -0.03991228303274541
+    },
+    "val_smoke_mAP50": {
+      "absolute": -0.07099722182423135,
+      "relative": -0.15929955545862146
+    },
+    "val_smoke_mAP50_95": {
+      "absolute": -0.04104678851367813,
+      "relative": -0.2010993989909612
+    },
+    "val_smoke_precision": {
+      "absolute": -0.12212021422134334,
+      "relative": -0.1838272523636592
+    },
+    "val_smoke_recall": {
+      "absolute": 0.00557620817843868,
+      "relative": 0.014018691588785092
+    }
+  },
+  "frozen_v2_1": {
+    "metric_scope_note": "official_clean_baseline; earlier repaired V2.2 metrics are historically_exposure_unverified",
+    "test": {
+      "checkpoint": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+      "checkpoint_sha256": "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea",
+      "fire": {
+        "mAP50": 0.6752896362098674,
+        "mAP50_95": 0.3588445594432198,
+        "precision": 0.7291869021254763,
+        "recall": 0.5929526215654469
+      },
+      "negatives": {
+        "false_fire_predictions": 12,
+        "false_positive_image_rate": 0.05555555555555555,
+        "false_smoke_predictions": 4,
+        "fp_per_image": 0.08080808080808081,
+        "images_with_any_false_detection": 11,
+        "images_with_false_fire": 8,
+        "images_with_false_smoke": 4,
+        "total_negative_images": 198
+      },
+      "overall": {
+        "mAP50": 0.5875322602164761,
+        "mAP50_95": 0.29314645948396373,
+        "precision": 0.7089832317279465,
+        "recall": 0.5253693689440743
+      },
+      "smoke": {
+        "mAP50": 0.49977488422308475,
+        "mAP50_95": 0.2274483595247076,
+        "precision": 0.6887795613304166,
+        "recall": 0.45778611632270166
+      },
+      "split": "test"
+    },
+    "val": {
+      "checkpoint": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+      "checkpoint_sha256": "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea",
+      "fire": {
+        "mAP50": 0.6997481918557158,
+        "mAP50_95": 0.39384806516227827,
+        "precision": 0.7658856492323273,
+        "recall": 0.626570452176711
+      },
+      "negatives": {
+        "false_fire_predictions": 8,
+        "false_positive_image_rate": 0.045454545454545456,
+        "false_smoke_predictions": 5,
+        "fp_per_image": 0.06565656565656566,
+        "images_with_any_false_detection": 9,
+        "images_with_false_fire": 6,
+        "images_with_false_smoke": 4,
+        "total_negative_images": 198
+      },
+      "overall": {
+        "mAP50": 0.5727159664523274,
+        "mAP50_95": 0.29898000271241504,
+        "precision": 0.7151030801036282,
+        "recall": 0.5121699844526678
+      },
+      "smoke": {
+        "mAP50": 0.44568374104893904,
+        "mAP50_95": 0.20411194026255175,
+        "precision": 0.6643205109749292,
+        "recall": 0.39776951672862454
+      },
+      "split": "val"
+    }
+  },
+  "negative_fp_delta": {
+    "test": {
+      "absolute": -0.0202020202020202,
+      "relative": -0.36363636363636365
+    },
+    "val": {
+      "absolute": -0.005050505050505048,
+      "relative": -0.11111111111111106
+    }
+  }
+}

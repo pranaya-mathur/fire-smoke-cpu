@@ -1,0 +1,79 @@
+{
+  "exact_cross_split_duplicates": 0,
+  "fire_box_count_by_split": {
+    "test": 554,
+    "train": 3556,
+    "val": 543
+  },
+  "fire_only_by_split": {
+    "test": 393,
+    "train": 2134,
+    "val": 394
+  },
+  "fire_smoke_by_split": {
+    "test": 32,
+    "train": 466,
+    "val": 30
+  },
+  "gates": {
+    "INSUFFICIENT_CLEAN_EVALUATION_SAMPLES": false,
+    "SPLIT_CLASS_BALANCE_ACCEPTABLE": true,
+    "TEST_HAS_FIRE_ONLY": true,
+    "TEST_HAS_FIRE_SMOKE": true,
+    "TEST_HAS_NEGATIVES": true,
+    "TEST_HAS_SMOKE_ONLY": true,
+    "VALIDATION_HAS_FIRE_ONLY": true,
+    "VALIDATION_HAS_FIRE_SMOKE": true,
+    "VALIDATION_HAS_NEGATIVES": true,
+    "VALIDATION_HAS_SMOKE_ONLY": true
+  },
+  "near_duplicate_components_spanning_splits": 0,
+  "negative_by_split": {
+    "test": 198,
+    "train": 2543,
+    "val": 198
+  },
+  "object_size_by_split": {
+    "test": {
+      "none": 1011
+    },
+    "train": {
+      "none": 6390,
+      "small": 136,
+      "tiny": 864
+    },
+    "val": {
+      "none": 1030
+    }
+  },
+  "smoke_box_count_by_split": {
+    "test": 533,
+    "train": 3163,
+    "val": 538
+  },
+  "smoke_only_by_split": {
+    "test": 388,
+    "train": 2247,
+    "val": 408
+  },
+  "source_counts_by_split": {
+    "test": {
+      "LibreYOLO/smoke-uvylj": 38,
+      "hf_kien_indoor_existing": 775,
+      "medyoussef/fire-smoke-hardnegatives-int8": 198
+    },
+    "train": {
+      "LibreYOLO/smoke-uvylj": 665,
+      "hf_kien_indoor_existing": 3182,
+      "medyoussef/fire-smoke-hardnegatives-int8": 3543
+    },
+    "val": {
+      "LibreYOLO/smoke-uvylj": 38,
+      "hf_kien_indoor_existing": 794,
+      "medyoussef/fire-smoke-hardnegatives-int8": 198
+    }
+  },
+  "test_count": 1011,
+  "train_count": 7390,
+  "val_count": 1030
+}

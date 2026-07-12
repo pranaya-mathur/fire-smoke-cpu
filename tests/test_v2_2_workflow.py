@@ -113,3 +113,93 @@ def test_simple_ssim_identical_image(tmp_path: Path):
     image = tmp_path / "same.jpg"
     Image.new("RGB", (32, 32), "red").save(image)
     assert mod["simple_ssim"](image, image) > 0.99
+
+
+def test_clean_eval_constants_and_commands_present():
+    mod = load_workflow()
+    assert mod["V2_2_CLEAN_DATASET"].name == "fire_smoke_v2_2_clean_eval"
+    root = Path(__file__).resolve().parents[1]
+    text = (root / "scripts/v2_2_workflow.py").read_text(encoding="utf-8")
+    for command in [
+        "historical-preflight",
+        "reconstruct-exposure",
+        "propagate-exposure",
+        "audit-current-contamination",
+        "build-clean-eval",
+        "quality-gate-clean",
+        "smoke-train-clean",
+        "decision-clean",
+    ]:
+        assert command in text
+
+
+def test_historical_exposure_marks_only_train_split_seen():
+    root = Path(__file__).resolve().parents[1]
+    text = (root / "scripts/v2_2_workflow.py").read_text(encoding="utf-8")
+    start = text.index("def reconstruct_v2_1_historical_training_exposure")
+    end = text.index("def historical_training_sets")
+    body = text[start:end]
+    assert '"seen_by_v2_1_training": split == "train"' in body
+    assert "ABORT: ambiguous V2.1 split reconstruction" in body
+
+
+def test_component_exposure_blocks_val_and_test():
+    root = Path(__file__).resolve().parents[1]
+    text = (root / "scripts/v2_2_workflow.py").read_text(encoding="utf-8")
+    start = text.index("def propagate_historical_exposure_components")
+    end = text.index("def component_exposure_map")
+    body = text[start:end]
+    assert '"eligible_for_train": True' in body
+    assert '"eligible_for_val": not exposed' in body
+    assert '"eligible_for_test": not exposed' in body
+
+
+def test_mined_fire_samples_are_forced_train_only():
+    root = Path(__file__).resolve().parents[1]
+    text = (root / "scripts/v2_2_workflow.py").read_text(encoding="utf-8")
+    start = text.index("def force_mined_hard_fire_train_only")
+    end = text.index("def clean_eval_base_rows")
+    body = text[start:end]
+    assert "v2_1_error_mined_training_only" in body
+    assert '"MINED_HARD_FIRE_SAMPLES_TRAIN_ONLY"' in body
+    assert '"NO_MINED_FIRE_SAMPLE_IN_VAL"' in body
+    assert '"NO_MINED_FIRE_SAMPLE_IN_TEST"' in body
+
+
+def test_clean_eval_quality_gate_has_historical_contamination_gates():
+    root = Path(__file__).resolve().parents[1]
+    text = (root / "scripts/v2_2_workflow.py").read_text(encoding="utf-8")
+    start = text.index("def clean_eval_quality_gate")
+    end = text.index("def frozen_v2_1_on_clean")
+    body = text[start:end]
+    for gate in [
+        "NO_V2_1_TRAIN_SHA_IN_VAL",
+        "NO_V2_1_TRAIN_SHA_IN_TEST",
+        "NO_V2_1_TRAIN_COMPONENT_IN_VAL",
+        "NO_V2_1_TRAIN_COMPONENT_IN_TEST",
+        "NO_MINED_FIRE_SAMPLE_IN_VAL",
+        "NO_MINED_FIRE_SAMPLE_IN_TEST",
+    ]:
+        assert gate in body
+
+
+def test_clean_smoke_has_one_epoch_ceiling_and_lr():
+    root = Path(__file__).resolve().parents[1]
+    text = (root / "scripts/v2_2_workflow.py").read_text(encoding="utf-8")
+    start = text.index("def train_v2_2_clean_smoke")
+    end = text.index("def compare_clean_one_epoch")
+    body = text[start:end]
+    assert "epochs=1" in body
+    assert "lr0=0.0001" in body
+    assert "smoke_test_v2_2_clean_eval_1e" in body
+
+
+def test_clean_decision_blocks_main_on_no_go_and_checks_tests():
+    root = Path(__file__).resolve().parents[1]
+    text = (root / "scripts/v2_2_workflow.py").read_text(encoding="utf-8")
+    start = text.index("def clean_main_training_decision")
+    end = text.index("def frozen_baseline")
+    body = text[start:end]
+    assert '"decision": "GO" if not reasons else "NO_GO"' in body
+    assert '"main_training_ran": False' in body
+    assert "tests did not pass" in body

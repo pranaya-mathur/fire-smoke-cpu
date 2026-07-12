@@ -1,0 +1,71 @@
+# Frozen V2.1 on Clean V2.2
+
+{
+  "metric_scope_note": "official_clean_baseline; earlier repaired V2.2 metrics are historically_exposure_unverified",
+  "val": {
+    "overall": {
+      "precision": 0.7151030801036282,
+      "recall": 0.5121699844526678,
+      "mAP50": 0.5727159664523274,
+      "mAP50_95": 0.29898000271241504
+    },
+    "fire": {
+      "precision": 0.7658856492323273,
+      "recall": 0.626570452176711,
+      "mAP50": 0.6997481918557158,
+      "mAP50_95": 0.39384806516227827
+    },
+    "smoke": {
+      "precision": 0.6643205109749292,
+      "recall": 0.39776951672862454,
+      "mAP50": 0.44568374104893904,
+      "mAP50_95": 0.20411194026255175
+    },
+    "negatives": {
+      "total_negative_images": 198,
+      "images_with_false_fire": 6,
+      "images_with_false_smoke": 4,
+      "images_with_any_false_detection": 9,
+      "false_fire_predictions": 8,
+      "false_smoke_predictions": 5,
+      "fp_per_image": 0.06565656565656566,
+      "false_positive_image_rate": 0.045454545454545456
+    },
+    "checkpoint": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+    "checkpoint_sha256": "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea",
+    "split": "val"
+  },
+  "test": {
+    "overall": {
+      "precision": 0.7089832317279465,
+      "recall": 0.5253693689440743,
+      "mAP50": 0.5875322602164761,
+      "mAP50_95": 0.29314645948396373
+    },
+    "fire": {
+      "precision": 0.7291869021254763,
+      "recall": 0.5929526215654469,
+      "mAP50": 0.6752896362098674,
+      "mAP50_95": 0.3588445594432198
+    },
+    "smoke": {
+      "precision": 0.6887795613304166,
+      "recall": 0.45778611632270166,
+      "mAP50": 0.49977488422308475,
+      "mAP50_95": 0.2274483595247076
+    },
+    "negatives": {
+      "total_negative_images": 198,
+      "images_with_false_fire": 8,
+      "images_with_false_smoke": 4,
+      "images_with_any_false_detection": 11,
+      "false_fire_predictions": 12,
+      "false_smoke_predictions": 4,
+      "fp_per_image": 0.08080808080808081,
+      "false_positive_image_rate": 0.05555555555555555
+    },
+    "checkpoint": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+    "checkpoint_sha256": "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea",
+    "split": "test"
+  }
+}

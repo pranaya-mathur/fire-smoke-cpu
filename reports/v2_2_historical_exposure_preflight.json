@@ -1,0 +1,45 @@
+{
+  "checkpoint": {
+    "exists": true,
+    "path": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+    "sha256": "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea",
+    "sha256_verified": true
+  },
+  "environment": {
+    "python": "3.12.13",
+    "torch": "2.13.0",
+    "ultralytics": "8.4.92"
+  },
+  "git": {
+    "branch": "main",
+    "head": "8fd8a8ba94e8d255a57a9242a0fee4c27a76d238",
+    "status_short": [
+      "M scripts/v2_2_workflow.py",
+      " M tests/test_v2_2_workflow.py",
+      "?? reports/v2_1_historical_training_exposure.json",
+      "?? reports/v2_1_historical_training_exposure.md"
+    ]
+  },
+  "manifests": {
+    "v2_1_real_all_samples": {
+      "exists": true,
+      "path": "data/manifests/v2_1_real_all_samples.csv",
+      "rows": 8656
+    },
+    "v2_2_repaired_all_samples": {
+      "exists": true,
+      "path": "data/manifests/v2_2_repaired_all_samples.csv",
+      "rows": 9431
+    },
+    "v2_2_repaired_near_duplicate_components": {
+      "exists": true,
+      "path": "data/manifests/v2_2_repaired_near_duplicate_components.csv",
+      "rows": 27643
+    },
+    "v2_2_repaired_selected_fire_positives": {
+      "exists": true,
+      "path": "data/manifests/v2_2_repaired_selected_fire_positives.csv",
+      "rows": 1000
+    }
+  }
+}

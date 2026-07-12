@@ -1,0 +1,13 @@
+# V2.1 Historical Training Exposure
+
+{
+  "status": "PASS",
+  "total_v2_1_samples": 8656,
+  "v2_1_train_samples": 6370,
+  "v2_1_val_samples": 1114,
+  "v2_1_test_samples": 1172,
+  "missing_split_metadata": 0,
+  "duplicate_sha_exposure_cases": 0,
+  "duplicate_sha_exposure_sample": [],
+  "training_exposed_component_count": 4729
+}

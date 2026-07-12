@@ -38,6 +38,8 @@ V2_2_DATASET = ROOT / "data/processed/fire_smoke_v2_2"
 V2_2_BUILDING = ROOT / "data/processed/fire_smoke_v2_2.building"
 V2_2_REPAIRED_DATASET = ROOT / "data/processed/fire_smoke_v2_2_repaired"
 V2_2_REPAIRED_BUILDING = ROOT / "data/processed/fire_smoke_v2_2_repaired.building"
+V2_2_CLEAN_DATASET = ROOT / "data/processed/fire_smoke_v2_2_clean_eval"
+V2_2_CLEAN_BUILDING = ROOT / "data/processed/fire_smoke_v2_2_clean_eval.building"
 MANIFEST_DIR = ROOT / "data/manifests"
 REPORT_DIR = ROOT / "reports"
 EXPECTED_V2_1_SHA256 = "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea"
@@ -1727,6 +1729,603 @@ def main_training_decision() -> dict:
     return payload
 
 
+def historical_exposure_preflight() -> dict:
+    sha = verify_v2_1_checkpoint_sha()
+    py = sh([str(ROOT / ".venv/bin/python"), "-c", "import sys, torch, ultralytics; print(sys.version.split()[0]); print(torch.__version__); print(ultralytics.__version__)"]).splitlines()
+    manifests = {
+        "v2_1_real_all_samples": MANIFEST_DIR / "v2_1_real_all_samples.csv",
+        "v2_2_repaired_all_samples": MANIFEST_DIR / "v2_2_repaired_all_samples.csv",
+        "v2_2_repaired_near_duplicate_components": MANIFEST_DIR / "v2_2_repaired_near_duplicate_components.csv",
+        "v2_2_repaired_selected_fire_positives": MANIFEST_DIR / "v2_2_repaired_selected_fire_positives.csv",
+    }
+    payload = {
+        "git": {
+            "head": sh(["git", "rev-parse", "HEAD"]),
+            "branch": sh(["git", "branch", "--show-current"]),
+            "status_short": sh(["git", "status", "--short"]).splitlines(),
+        },
+        "environment": {"python": py[0] if len(py) > 0 else "", "torch": py[1] if len(py) > 1 else "", "ultralytics": py[2] if len(py) > 2 else ""},
+        "checkpoint": {"path": str(V2_1_CKPT.relative_to(ROOT)), "exists": V2_1_CKPT.exists(), "sha256": sha, "sha256_verified": sha == EXPECTED_V2_1_SHA256},
+        "manifests": {name: {"path": str(path.relative_to(ROOT)), "exists": path.exists(), "rows": len(read_csv(path)) if path.exists() else 0} for name, path in manifests.items()},
+    }
+    write_json(REPORT_DIR / "v2_2_historical_exposure_preflight.json", payload)
+    (REPORT_DIR / "v2_2_historical_exposure_preflight.md").write_text("# V2.2 Historical Exposure Preflight\n\n" + json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    if not all(item["exists"] for item in payload["manifests"].values()):
+        missing = [name for name, item in payload["manifests"].items() if not item["exists"]]
+        raise SystemExit(f"ABORT: missing historical exposure inputs: {missing}")
+    return payload
+
+
+def reconstruct_v2_1_historical_training_exposure() -> dict:
+    rows = read_csv(MANIFEST_DIR / "v2_1_real_all_samples.csv")
+    if not rows:
+        raise SystemExit("ABORT: missing V2.1 manifest for historical exposure reconstruction")
+    comp = repaired_component_map() if (MANIFEST_DIR / "v2_2_repaired_near_duplicate_components.csv").exists() else {}
+    out = []
+    missing_split = []
+    split_counts = Counter()
+    sha_split: dict[str, set[str]] = defaultdict(set)
+    for row in rows:
+        split = row.get("split", "")
+        if split not in set(SPLITS):
+            missing_split.append(row.get("sample_id", ""))
+        split_counts[split] += 1
+        if row.get("sha256"):
+            sha_split[row["sha256"]].add(split)
+        out.append(
+            {
+                "sample_id": row.get("sample_id", ""),
+                "sha256": row.get("sha256", ""),
+                "source_dataset": normalize_source(row),
+                "original_v2_1_split": split,
+                "seen_by_v2_1_training": split == "train",
+                "original_image_path": row.get("original_image_path") or row.get("canonical_image_path", ""),
+                "component_id": comp.get(row.get("sample_id", ""), row.get("sha256") or row.get("sample_id", "")),
+                "notes": "v2_1_training_split" if split == "train" else "not_v2_1_training_split",
+            }
+        )
+    if missing_split:
+        payload = {"status": "FAIL", "ambiguous_samples": missing_split[:100], "ambiguous_count": len(missing_split)}
+        write_json(REPORT_DIR / "v2_1_historical_training_exposure.json", payload)
+        raise SystemExit(f"ABORT: ambiguous V2.1 split reconstruction for {len(missing_split)} samples")
+    fields = ["sample_id", "sha256", "source_dataset", "original_v2_1_split", "seen_by_v2_1_training", "original_image_path", "component_id", "notes"]
+    write_csv(MANIFEST_DIR / "v2_1_historical_training_exposure.csv", out, fields)
+    train_components = {r["component_id"] for r in out if truthy(r.get("seen_by_v2_1_training")) and r.get("component_id")}
+    duplicate_sha_exposure = [{"sha256": sha, "splits": " ".join(sorted(splits))} for sha, splits in sha_split.items() if len(splits) > 1]
+    payload = {
+        "status": "PASS",
+        "total_v2_1_samples": len(rows),
+        "v2_1_train_samples": split_counts["train"],
+        "v2_1_val_samples": split_counts["val"],
+        "v2_1_test_samples": split_counts["test"],
+        "missing_split_metadata": len(missing_split),
+        "duplicate_sha_exposure_cases": len(duplicate_sha_exposure),
+        "duplicate_sha_exposure_sample": duplicate_sha_exposure[:50],
+        "training_exposed_component_count": len(train_components),
+    }
+    write_json(REPORT_DIR / "v2_1_historical_training_exposure.json", payload)
+    (REPORT_DIR / "v2_1_historical_training_exposure.md").write_text("# V2.1 Historical Training Exposure\n\n" + json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    return payload
+
+
+def historical_training_sets() -> tuple[set[str], set[str]]:
+    exposure = read_csv(MANIFEST_DIR / "v2_1_historical_training_exposure.csv")
+    if not exposure:
+        reconstruct_v2_1_historical_training_exposure()
+        exposure = read_csv(MANIFEST_DIR / "v2_1_historical_training_exposure.csv")
+    train_ids = {r["sample_id"] for r in exposure if truthy(r.get("seen_by_v2_1_training"))}
+    train_shas = {r["sha256"] for r in exposure if truthy(r.get("seen_by_v2_1_training")) and r.get("sha256")}
+    return train_ids, train_shas
+
+
+def propagate_historical_exposure_components() -> dict:
+    train_ids, train_shas = historical_training_sets()
+    rows = read_csv(MANIFEST_DIR / "v2_2_repaired_near_duplicate_components.csv")
+    if not rows:
+        raise SystemExit("ABORT: missing repaired near-duplicate component manifest")
+    grouped: dict[str, list[dict]] = defaultdict(list)
+    for row in rows:
+        grouped[row["component_id"]].append(row)
+    out = []
+    for component_id, members in grouped.items():
+        train_members = [m for m in members if m.get("sample_id") in train_ids or (m.get("sha256") and m.get("sha256") in train_shas)]
+        exposed = bool(train_members)
+        out.append(
+            {
+                "component_id": component_id,
+                "component_size": len(members),
+                "contains_v2_1_train_sample": exposed,
+                "v2_1_train_member_count": len(train_members),
+                "member_sources": " ".join(sorted({normalize_source(m) for m in members})),
+                "eligible_for_train": True,
+                "eligible_for_val": not exposed,
+                "eligible_for_test": not exposed,
+                "reason": "contains_v2_1_training_sample" if exposed else "clean_component",
+            }
+        )
+    fields = ["component_id", "component_size", "contains_v2_1_train_sample", "v2_1_train_member_count", "member_sources", "eligible_for_train", "eligible_for_val", "eligible_for_test", "reason"]
+    write_csv(MANIFEST_DIR / "v2_2_historical_exposure_components.csv", out, fields)
+    payload = {
+        "status": "PASS",
+        "component_count": len(out),
+        "historically_training_exposed_components": sum(1 for r in out if truthy(r.get("contains_v2_1_train_sample"))),
+        "train_members_in_components": sum(int(r.get("v2_1_train_member_count") or 0) for r in out),
+    }
+    write_json(REPORT_DIR / "v2_2_historical_exposure_components.json", payload)
+    (REPORT_DIR / "v2_2_historical_exposure_components.md").write_text("# V2.2 Historical Exposure Components\n\n" + json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    return payload
+
+
+def component_exposure_map() -> dict[str, dict]:
+    if not (MANIFEST_DIR / "v2_2_historical_exposure_components.csv").exists():
+        propagate_historical_exposure_components()
+    return {r["component_id"]: r for r in read_csv(MANIFEST_DIR / "v2_2_historical_exposure_components.csv")}
+
+
+def selected_fire_sample_ids() -> set[str]:
+    return {r["sample_id"] for r in read_csv(MANIFEST_DIR / "v2_2_repaired_selected_fire_positives.csv") if truthy(r.get("included"))}
+
+
+def selected_fire_component_ids() -> set[str]:
+    return {r["component_id"] for r in read_csv(MANIFEST_DIR / "v2_2_repaired_selected_fire_positives.csv") if truthy(r.get("included")) and r.get("component_id")}
+
+
+def audit_current_repaired_eval_contamination() -> dict:
+    train_ids, train_shas = historical_training_sets()
+    comp_exposure = component_exposure_map()
+    selected_ids = selected_fire_sample_ids()
+    rows = read_csv(MANIFEST_DIR / "v2_2_repaired_all_samples.csv")
+    if not rows:
+        raise SystemExit("ABORT: missing current repaired V2.2 manifest for contamination audit")
+
+    def sample_ids(split: str, predicate) -> list[str]:
+        return sorted({r["sample_id"] for r in rows if r.get("split") == split and predicate(r)})
+
+    val_train_sha = sample_ids("val", lambda r: r.get("sha256") in train_shas)
+    test_train_sha = sample_ids("test", lambda r: r.get("sha256") in train_shas)
+    val_train_comp = sample_ids("val", lambda r: truthy(comp_exposure.get(r.get("component_id", ""), {}).get("contains_v2_1_train_sample")))
+    test_train_comp = sample_ids("test", lambda r: truthy(comp_exposure.get(r.get("component_id", ""), {}).get("contains_v2_1_train_sample")))
+    val_mined = sample_ids("val", lambda r: r.get("sample_id") in selected_ids)
+    test_mined = sample_ids("test", lambda r: r.get("sample_id") in selected_ids)
+    val_contam = sorted(set(val_train_sha) | set(val_train_comp) | set(val_mined))
+    test_contam = sorted(set(test_train_sha) | set(test_train_comp) | set(test_mined))
+    payload = {
+        "v2_1_train_sha_in_val": len(val_train_sha),
+        "v2_1_train_sha_in_val_sample_ids": val_train_sha[:200],
+        "v2_1_train_sha_in_test": len(test_train_sha),
+        "v2_1_train_sha_in_test_sample_ids": test_train_sha[:200],
+        "v2_1_train_components_in_val": len(val_train_comp),
+        "v2_1_train_components_in_val_sample_ids": val_train_comp[:200],
+        "v2_1_train_components_in_test": len(test_train_comp),
+        "v2_1_train_components_in_test_sample_ids": test_train_comp[:200],
+        "mined_fire_samples_in_val": len(val_mined),
+        "mined_fire_samples_in_val_sample_ids": val_mined[:200],
+        "mined_fire_samples_in_test": len(test_mined),
+        "mined_fire_samples_in_test_sample_ids": test_mined[:200],
+        "total_contaminated_val_samples": len(val_contam),
+        "total_contaminated_val_sample_ids": val_contam[:300],
+        "total_contaminated_test_samples": len(test_contam),
+        "total_contaminated_test_sample_ids": test_contam[:300],
+    }
+    write_json(REPORT_DIR / "v2_2_current_eval_contamination_audit.json", payload)
+    (REPORT_DIR / "v2_2_current_eval_contamination_audit.md").write_text("# V2.2 Current Eval Contamination Audit\n\n" + json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    return payload
+
+
+def force_mined_hard_fire_train_only() -> dict:
+    rows = read_csv(MANIFEST_DIR / "v2_2_repaired_selected_fire_positives.csv")
+    if not rows:
+        raise SystemExit("ABORT: no selected hard-fire positives to force")
+    for row in rows:
+        row["is_error_mined"] = truthy(row.get("included"))
+        row["forced_split"] = "train" if truthy(row.get("included")) else ""
+        row["forced_split_reason"] = "v2_1_error_mined_training_only" if truthy(row.get("included")) else row.get("exclusion_reason", "")
+    fields = list(rows[0].keys())
+    for field in ("is_error_mined", "forced_split", "forced_split_reason"):
+        if field not in fields:
+            fields.append(field)
+    write_csv(MANIFEST_DIR / "v2_2_repaired_selected_fire_positives.csv", rows, fields)
+    payload = {
+        "status": "PASS",
+        "included_selected_samples": sum(1 for r in rows if truthy(r.get("included"))),
+        "gates": {
+            "MINED_HARD_FIRE_SAMPLES_TRAIN_ONLY": all((not truthy(r.get("included"))) or r.get("forced_split") == "train" for r in rows),
+            "NO_MINED_FIRE_SAMPLE_IN_VAL": True,
+            "NO_MINED_FIRE_SAMPLE_IN_TEST": True,
+        },
+    }
+    write_json(REPORT_DIR / "v2_2_mined_fire_train_only.json", payload)
+    (REPORT_DIR / "v2_2_mined_fire_train_only.md").write_text("# V2.2 Mined Fire Train Only\n\n" + json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    return payload
+
+
+def clean_eval_base_rows() -> list[dict]:
+    comp = repaired_component_map()
+    conflicts = repaired_conflict_component_ids()
+    comp_exposure = component_exposure_map()
+    train_ids, train_shas = historical_training_sets()
+    selected_components = selected_fire_component_ids()
+    rows: list[dict] = []
+    for src in read_csv(MANIFEST_DIR / "v2_1_real_all_samples.csv"):
+        if truthy(src.get("excluded")):
+            continue
+        row = dict(src)
+        row["source_dataset"] = normalize_source(row)
+        row["component_id"] = comp.get(row["sample_id"], row.get("sha256") or row["sample_id"])
+        if row["component_id"] in conflicts:
+            continue
+        row["group_id"] = row["component_id"]
+        if row.get("canonical_image_path") and Path(row["canonical_image_path"]).exists():
+            row["original_image_path"] = row.get("original_image_path") or row["canonical_image_path"]
+            row["original_label_path"] = row.get("original_label_path") or row["canonical_label_path"]
+        component_exposed = truthy(comp_exposure.get(row["component_id"], {}).get("contains_v2_1_train_sample"))
+        seen = row["sample_id"] in train_ids
+        sha_seen = row.get("sha256") in train_shas
+        mined_component = row["component_id"] in selected_components
+        row["seen_by_v2_1_training"] = seen
+        row["component_contains_v2_1_train_sample"] = component_exposed
+        row["is_error_mined"] = False
+        reasons = []
+        if seen:
+            reasons.append("sample_seen_by_v2_1_training")
+        if sha_seen:
+            reasons.append("sha_seen_by_v2_1_training")
+        if component_exposed:
+            reasons.append("component_contains_v2_1_training_sample")
+        if mined_component:
+            reasons.append("component_contains_error_mined_sample")
+        row["forced_split"] = "train" if reasons else ""
+        row["forced_split_reason"] = ";".join(reasons)
+        row["eligible_for_train"] = True
+        row["eligible_for_val"] = not reasons
+        row["eligible_for_test"] = not reasons
+        row["ineligibility_reason"] = ";".join(reasons)
+        rows.append(row)
+    source_by_id = {r["sample_id"]: r for r in load_source_rows()}
+    for sel in [r for r in read_csv(MANIFEST_DIR / "v2_2_repaired_selected_fire_positives.csv") if truthy(r.get("included"))]:
+        src = source_by_id.get(sel["sample_id"], {})
+        label = Path(sel["label_path"])
+        _boxes, errors, fire_count, smoke_count, smallest, bucket = yolo_counts(label)
+        if errors:
+            continue
+        rows.append(
+            {
+                "sample_id": sel["sample_id"],
+                "canonical_image_path": "",
+                "canonical_label_path": "",
+                "source_dataset": normalize_source(sel),
+                "original_image_path": sel["image_path"],
+                "original_label_path": sel["label_path"],
+                "original_filename": Path(sel["image_path"]).name,
+                "sha256": src.get("sha256", sha256_file(Path(sel["image_path"]))),
+                "perceptual_hash": src.get("perceptual_hash", ""),
+                "component_id": sel["component_id"],
+                "width": src.get("width", ""),
+                "height": src.get("height", ""),
+                "has_fire": fire_count > 0,
+                "has_smoke": smoke_count > 0,
+                "fire_box_count": fire_count,
+                "smoke_box_count": smoke_count,
+                "is_negative": False,
+                "object_size_bucket": bucket,
+                "is_synthetic": False,
+                "is_cctv_like": "",
+                "group_id": sel["component_id"],
+                "scene_id": "",
+                "video_id": "",
+                "license_status": "PENDING_REVIEW",
+                "provenance_status": "hf_snapshot_revision_recorded",
+                "data_origin": "huggingface_snapshot",
+                "split": "",
+                "excluded": False,
+                "exclusion_reason": "",
+                "seen_by_v2_1_training": False,
+                "component_contains_v2_1_train_sample": False,
+                "is_error_mined": True,
+                "forced_split": "train",
+                "forced_split_reason": "v2_1_error_mined_training_only",
+                "eligible_for_train": True,
+                "eligible_for_val": False,
+                "eligible_for_test": False,
+                "ineligibility_reason": "v2_1_error_mined_training_only",
+            }
+        )
+    return rows
+
+
+def assign_clean_eval_splits(rows: list[dict]) -> dict[str, str]:
+    groups: dict[str, list[dict]] = defaultdict(list)
+    for row in rows:
+        groups[row["group_id"]].append(row)
+    assignment: dict[str, str] = {}
+    counts = {split: Counter() for split in SPLITS}
+
+    def group_counts(members: list[dict]) -> Counter:
+        c = Counter(total=len(members))
+        for member in members:
+            bucket = row_bucket(member)
+            c[bucket] += 1
+            c[f"{bucket}_boxes_fire"] += int(member.get("fire_box_count") or 0)
+            c[f"{bucket}_boxes_smoke"] += int(member.get("smoke_box_count") or 0)
+            c[f"source_{member.get('source_dataset', '')}"] += 1
+            if member.get("object_size_bucket"):
+                c[f"fire_size_{member['object_size_bucket']}"] += 1
+        return c
+
+    forced_groups = set()
+    for group_id, members in groups.items():
+        if any((m.get("forced_split") == "train") or not truthy(m.get("eligible_for_val")) or not truthy(m.get("eligible_for_test")) for m in members):
+            assignment[group_id] = "train"
+            forced_groups.add(group_id)
+            counts["train"].update(group_counts(members))
+    eligible_items = [(gid, members) for gid, members in groups.items() if gid not in forced_groups]
+    eligible_rows = [member for _gid, members in eligible_items for member in members]
+    totals = Counter()
+    for row in eligible_rows:
+        totals.update(group_counts([row]))
+    targets = {split: {key: val * ratio for key, val in totals.items()} for split, ratio in {"train": 0.80, "val": 0.10, "test": 0.10}.items()}
+    for group_id, members in sorted(eligible_items, key=lambda item: (-len(item[1]), item[0])):
+        gc = group_counts(members)
+
+        def score(split: str) -> float:
+            projected = counts[split] + gc
+            total_score = 0.0
+            for key, target in targets[split].items():
+                if target <= 0:
+                    continue
+                total_score += ((projected[key] - target) / target) ** 2
+            return total_score
+
+        split = min(SPLITS, key=score)
+        assignment[group_id] = split
+        counts[split].update(gc)
+
+    def rebalance_minimum(split: str, bucket: str, minimum: int) -> None:
+        while counts[split][bucket] < minimum:
+            candidates = []
+            for group_id, members in eligible_items:
+                donor = assignment[group_id]
+                if donor == split:
+                    continue
+                gc = group_counts(members)
+                if gc[bucket] <= 0:
+                    continue
+                if donor in {"val", "test"} and counts[donor][bucket] - gc[bucket] < minimum:
+                    continue
+                candidates.append((len(members), -gc[bucket], donor, group_id, gc))
+            if not candidates:
+                break
+            _size, _need, donor, group_id, gc = min(candidates)
+            assignment[group_id] = split
+            counts[donor].subtract(gc)
+            counts[split].update(gc)
+
+    for target_split in ("val", "test"):
+        for target_bucket in ("fire_only", "smoke_only", "fire_smoke", "negative"):
+            rebalance_minimum(target_split, target_bucket, 30)
+    return assignment
+
+
+def copy_sample_to_clean(row: dict, split: str, prefix: str) -> tuple[str, str]:
+    src_img = Path(row["original_image_path"])
+    src_label = Path(row["original_label_path"]) if row.get("original_label_path") else None
+    stem = f"{prefix}_{row['sample_id']}".replace("/", "_")
+    dst_img = V2_2_CLEAN_BUILDING / "images" / split / f"{stem}{src_img.suffix.lower()}"
+    dst_label = V2_2_CLEAN_BUILDING / "labels" / split / f"{stem}.txt"
+    dst_img.parent.mkdir(parents=True, exist_ok=True)
+    dst_label.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(src_img, dst_img)
+    if truthy(row.get("is_negative")):
+        dst_label.write_text("", encoding="utf-8")
+    elif src_label and src_label.exists():
+        if normalize_source(row) == "LibreYOLO/smoke-uvylj":
+            dst_label.write_text(canonicalize_libreyolo_smoke_detection_label(src_label), encoding="utf-8")
+        else:
+            dst_label.write_text(src_label.read_text(encoding="utf-8"), encoding="utf-8")
+    else:
+        raise ValueError(f"missing annotation is not negative: {row['sample_id']}")
+    return str(V2_2_CLEAN_DATASET / "images" / split / dst_img.name), str(V2_2_CLEAN_DATASET / "labels" / split / dst_label.name)
+
+
+def build_dataset_v2_2_clean_eval() -> list[dict]:
+    force_mined_hard_fire_train_only()
+    rows = clean_eval_base_rows()
+    assignment = assign_clean_eval_splits(rows)
+    if V2_2_CLEAN_BUILDING.exists():
+        shutil.rmtree(V2_2_CLEAN_BUILDING)
+    final_rows = []
+    for row in rows:
+        split = assignment[row["group_id"]]
+        out_img, out_label = copy_sample_to_clean(row, split, "v22c")
+        row["canonical_image_path"] = out_img
+        row["canonical_label_path"] = out_label
+        row["split"] = split
+        row["assigned_split"] = split
+        final_rows.append(row)
+    assert_real_training_origins(final_rows)
+    fields = ["sample_id", "canonical_image_path", "canonical_label_path", "source_dataset", "original_image_path", "original_label_path", "original_filename", "sha256", "perceptual_hash", "component_id", "width", "height", "has_fire", "has_smoke", "fire_box_count", "smoke_box_count", "is_negative", "object_size_bucket", "is_synthetic", "is_cctv_like", "group_id", "scene_id", "video_id", "license_status", "provenance_status", "data_origin", "split", "assigned_split", "excluded", "exclusion_reason", "seen_by_v2_1_training", "component_contains_v2_1_train_sample", "is_error_mined", "forced_split", "forced_split_reason", "eligible_for_train", "eligible_for_val", "eligible_for_test", "ineligibility_reason"]
+    write_csv(MANIFEST_DIR / "v2_2_clean_eval_all_samples.csv", final_rows, fields)
+    eligibility_fields = ["sample_id", "sha256", "component_id", "source_dataset", "seen_by_v2_1_training", "component_contains_v2_1_train_sample", "is_error_mined", "eligible_for_train", "eligible_for_val", "eligible_for_test", "assigned_split", "ineligibility_reason"]
+    write_csv(MANIFEST_DIR / "v2_2_clean_eval_eligibility.csv", final_rows, eligibility_fields)
+    (V2_2_CLEAN_BUILDING / "fire_smoke.yaml").write_text("\n".join([f"path: {V2_2_CLEAN_DATASET}", "train: images/train", "val: images/val", "test: images/test", "names:", "  0: fire", "  1: smoke", ""]), encoding="utf-8")
+    if V2_2_CLEAN_DATASET.exists():
+        shutil.rmtree(V2_2_CLEAN_DATASET)
+    V2_2_CLEAN_BUILDING.rename(V2_2_CLEAN_DATASET)
+    write_clean_eval_split_report(final_rows)
+    return final_rows
+
+
+def write_clean_eval_split_report(rows: list[dict]) -> dict:
+    leaks = leakage_counts(rows)
+    counts = split_bucket_counts(rows)
+    gates = split_balance_gates(rows)
+    gates["SPLIT_CLASS_BALANCE_ACCEPTABLE"] = all(gates.values())
+    eligible = [r for r in rows if truthy(r.get("eligible_for_val")) and truthy(r.get("eligible_for_test"))]
+    gate_possible = {
+        "INSUFFICIENT_CLEAN_EVALUATION_SAMPLES": any(
+            sum(1 for r in eligible if row_bucket(r) == bucket) < 60 for bucket in ("fire_only", "smoke_only", "fire_smoke", "negative")
+        )
+    }
+    payload = {
+        "train_count": sum(1 for r in rows if r["split"] == "train"),
+        "val_count": sum(1 for r in rows if r["split"] == "val"),
+        "test_count": sum(1 for r in rows if r["split"] == "test"),
+        **counts,
+        "source_counts_by_split": {s: dict(Counter(r["source_dataset"] for r in rows if r["split"] == s)) for s in SPLITS},
+        "fire_box_count_by_split": {s: sum(int(r.get("fire_box_count") or 0) for r in rows if r["split"] == s) for s in SPLITS},
+        "smoke_box_count_by_split": {s: sum(int(r.get("smoke_box_count") or 0) for r in rows if r["split"] == s) for s in SPLITS},
+        "object_size_by_split": {s: dict(Counter(r.get("object_size_bucket") or "none" for r in rows if r["split"] == s)) for s in SPLITS},
+        **leaks,
+        "gates": {**gates, **gate_possible},
+    }
+    write_json(REPORT_DIR / "v2_2_clean_eval_split_report.json", payload)
+    (REPORT_DIR / "v2_2_clean_eval_split_report.md").write_text("# V2.2 Clean Eval Split Report\n\n" + json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    return payload
+
+
+def clean_eval_quality_gate(rows: list[dict] | None = None) -> dict:
+    rows = rows or read_csv(MANIFEST_DIR / "v2_2_clean_eval_all_samples.csv")
+    if not rows:
+        raise SystemExit("ABORT: clean eval dataset manifest missing")
+    train_ids, train_shas = historical_training_sets()
+    comp_exposure = component_exposure_map()
+    selected_ids = selected_fire_sample_ids()
+    conflict_components = repaired_conflict_component_ids()
+    split_report = write_clean_eval_split_report(rows)
+    leaks = leakage_counts(rows)
+    val_rows = [r for r in rows if r.get("split") == "val"]
+    test_rows = [r for r in rows if r.get("split") == "test"]
+
+    def exposed_component(row: dict) -> bool:
+        return truthy(comp_exposure.get(row.get("component_id", ""), {}).get("contains_v2_1_train_sample"))
+
+    gates = {
+        "V2_1_CHECKPOINT_SHA_VERIFIED": V2_1_CKPT.exists() and sha256_file(V2_1_CKPT) == EXPECTED_V2_1_SHA256,
+        "HISTORICAL_TRAINING_EXPOSURE_AUDITED": (REPORT_DIR / "v2_1_historical_training_exposure.json").exists(),
+        "V2_1_TRAIN_SPLIT_RECONSTRUCTED": bool(train_ids),
+        "NO_V2_1_TRAIN_SHA_IN_VAL": not any(r.get("sha256") in train_shas for r in val_rows),
+        "NO_V2_1_TRAIN_SHA_IN_TEST": not any(r.get("sha256") in train_shas for r in test_rows),
+        "NO_V2_1_TRAIN_COMPONENT_IN_VAL": not any(exposed_component(r) for r in val_rows),
+        "NO_V2_1_TRAIN_COMPONENT_IN_TEST": not any(exposed_component(r) for r in test_rows),
+        "MINED_HARD_FIRE_SAMPLES_TRAIN_ONLY": all(r.get("split") == "train" for r in rows if truthy(r.get("is_error_mined"))),
+        "NO_MINED_FIRE_SAMPLE_IN_VAL": not any(r.get("sample_id") in selected_ids for r in val_rows),
+        "NO_MINED_FIRE_SAMPLE_IN_TEST": not any(r.get("sample_id") in selected_ids for r in test_rows),
+        "NO_EXACT_DUPLICATE_LEAKAGE": leaks["exact_cross_split_duplicates"] == 0,
+        "NO_NEAR_DUPLICATE_COMPONENT_LEAKAGE": leaks["near_duplicate_components_spanning_splits"] == 0,
+        "NO_INCLUDED_LABEL_CONFLICTS": not any((r.get("component_id") or r.get("group_id")) in conflict_components for r in rows),
+        "CANONICAL_MAPPING_VERIFIED": canonical_mapping_verified(rows),
+        "REAL_SOURCE_DATA_ONLY": all(r.get("data_origin") in {"local_existing", "huggingface_snapshot"} for r in rows),
+        "NO_MOCK_DATA": not any(r.get("data_origin") == "mock" for r in rows),
+        "NO_PLACEHOLDER_DATA": not any(r.get("data_origin") == "placeholder" for r in rows),
+        "NO_UNKNOWN_DATA_ORIGIN": not any(r.get("data_origin") in {"", "unknown"} for r in rows),
+        "MISSING_ANNOTATIONS_NOT_TREATED_AS_NEGATIVES": all(Path(r.get("canonical_label_path", "")).exists() for r in rows),
+        "REAL_NEGATIVES_EXIST": any(row_bucket(r) == "negative" for r in rows),
+        "REAL_SMOKE_BOOSTER_EXISTS": any(r.get("source_dataset") == "LibreYOLO/smoke-uvylj" for r in rows),
+        "SPLIT_CLASS_BALANCE_ACCEPTABLE": split_report.get("gates", {}).get("SPLIT_CLASS_BALANCE_ACCEPTABLE") is True,
+        "V0_PRESERVED": V0_CKPT.exists(),
+        "V2_PRESERVED": V2_CKPT.exists(),
+        "V2_1_PRESERVED": V2_1_CKPT.exists(),
+        "DATASET_V1_PRESERVED": (ROOT / "data/processed/fire_smoke_v1/fire_smoke.yaml").exists(),
+        "DATASET_V2_PRESERVED": (ROOT / "data/processed/fire_smoke_v2/fire_smoke.yaml").exists(),
+        "DATASET_V2_1_PRESERVED": (V2_1_DATASET / "fire_smoke.yaml").exists(),
+    }
+    payload = {"status": "PASS" if all(gates.values()) else "FAIL", "gates": gates, "failed_gates": [k for k, v in gates.items() if not v], "dataset_rows": len(rows), **leaks}
+    write_json(REPORT_DIR / "v2_2_clean_eval_quality_gate.json", payload)
+    (REPORT_DIR / "v2_2_clean_eval_quality_gate.md").write_text("# V2.2 Clean Eval Quality Gate\n\n" + json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    return payload
+
+
+def frozen_v2_1_on_clean() -> dict:
+    payload = {
+        "metric_scope_note": "official_clean_baseline; earlier repaired V2.2 metrics are historically_exposure_unverified",
+        "val": evaluate_checkpoint_on_dataset(V2_1_CKPT, V2_2_CLEAN_DATASET, MANIFEST_DIR / "v2_2_clean_eval_all_samples.csv", "val", "clean_v21"),
+        "test": evaluate_checkpoint_on_dataset(V2_1_CKPT, V2_2_CLEAN_DATASET, MANIFEST_DIR / "v2_2_clean_eval_all_samples.csv", "test", "clean_v21"),
+    }
+    write_json(REPORT_DIR / "frozen_v2_1_on_clean_v2_2.json", payload)
+    (REPORT_DIR / "frozen_v2_1_on_clean_v2_2.md").write_text("# Frozen V2.1 on Clean V2.2\n\n" + json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    return payload
+
+
+def train_v2_2_clean_smoke() -> None:
+    gate = json.loads((REPORT_DIR / "v2_2_clean_eval_quality_gate.json").read_text(encoding="utf-8")) if (REPORT_DIR / "v2_2_clean_eval_quality_gate.json").exists() else {}
+    if gate.get("status") != "PASS":
+        raise SystemExit(f"Refusing clean smoke test: clean eval quality gate is {gate.get('status', 'missing')}")
+    verify_v2_1_checkpoint_sha()
+    from ultralytics import YOLO
+
+    model = YOLO(str(V2_1_CKPT))
+    model.train(data=str((V2_2_CLEAN_DATASET / "fire_smoke.yaml").absolute()), epochs=1, patience=1, imgsz=512, device="cpu", batch=8, workers=2, cache=False, seed=42, optimizer="AdamW", lr0=0.0001, lrf=0.01, weight_decay=0.0005, warmup_epochs=1.0, hsv_h=0.01, hsv_s=0.30, hsv_v=0.30, translate=0.10, scale=0.30, fliplr=0.5, flipud=0.0, mosaic=0.20, close_mosaic=1, mixup=0.0, copy_paste=0.0, project="runs/detect", name="smoke_test_v2_2_clean_eval_1e")
+    report = {"status": "COMPLETED", "epochs_requested": 1, "starting_checkpoint": str(V2_1_CKPT.relative_to(ROOT)), "run_name": "smoke_test_v2_2_clean_eval_1e", "lr0": 0.0001}
+    write_json(REPORT_DIR / "v2_2_clean_smoke_test.json", report)
+    (REPORT_DIR / "v2_2_clean_smoke_test.md").write_text("# V2.2 Clean Smoke Test\n\n" + json.dumps(report, indent=2) + "\n", encoding="utf-8")
+
+
+def compare_clean_one_epoch() -> dict:
+    clean_ckpt = ROOT / "runs/detect/runs/detect/smoke_test_v2_2_clean_eval_1e/weights/best.pt"
+    baseline = frozen_v2_1_on_clean()
+    one = {
+        "val": evaluate_checkpoint_on_dataset(clean_ckpt, V2_2_CLEAN_DATASET, MANIFEST_DIR / "v2_2_clean_eval_all_samples.csv", "val", "clean_1e"),
+        "test": evaluate_checkpoint_on_dataset(clean_ckpt, V2_2_CLEAN_DATASET, MANIFEST_DIR / "v2_2_clean_eval_all_samples.csv", "test", "clean_1e"),
+    }
+
+    def delta(split: str, cls: str, metric: str) -> dict:
+        before = baseline[split][cls][metric]
+        after = one[split][cls][metric]
+        abs_delta = after - before
+        return {"absolute": abs_delta, "relative": (abs_delta / before if before else None)}
+
+    payload = {
+        "frozen_v2_1": baseline,
+        "clean_v2_2_1e": one,
+        "deltas": {
+            f"{split}_{cls}_{metric}": delta(split, cls, metric)
+            for split in ("val", "test")
+            for cls in ("overall", "fire", "smoke")
+            for metric in ("precision", "recall", "mAP50", "mAP50_95")
+        },
+        "negative_fp_delta": {
+            split: {
+                "absolute": (one[split]["negatives"]["false_positive_image_rate"] or 0) - (baseline[split]["negatives"]["false_positive_image_rate"] or 0),
+                "relative": (((one[split]["negatives"]["false_positive_image_rate"] or 0) - (baseline[split]["negatives"]["false_positive_image_rate"] or 0)) / baseline[split]["negatives"]["false_positive_image_rate"] if baseline[split]["negatives"]["false_positive_image_rate"] else None),
+            }
+            for split in ("val", "test")
+        },
+    }
+    write_json(REPORT_DIR / "v2_1_vs_v2_2_clean_1e.json", payload)
+    (REPORT_DIR / "v2_1_vs_v2_2_clean_1e.md").write_text("# V2.1 vs V2.2 Clean 1e\n\n" + json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    return payload
+
+
+def clean_main_training_decision(tests_passed: bool = True) -> dict:
+    gate = json.loads((REPORT_DIR / "v2_2_clean_eval_quality_gate.json").read_text(encoding="utf-8")) if (REPORT_DIR / "v2_2_clean_eval_quality_gate.json").exists() else {}
+    comp = json.loads((REPORT_DIR / "v2_1_vs_v2_2_clean_1e.json").read_text(encoding="utf-8")) if (REPORT_DIR / "v2_1_vs_v2_2_clean_1e.json").exists() else {}
+    reasons = []
+    if gate.get("status") != "PASS":
+        reasons.append("clean evaluation quality gate is not PASS")
+    if not tests_passed:
+        reasons.append("tests did not pass")
+    if not comp:
+        reasons.append("same clean split one-epoch comparison missing")
+    else:
+        base = comp["frozen_v2_1"]["val"]
+        one = comp["clean_v2_2_1e"]["val"]
+        for metric, limit, label in (("recall", 0.05, "smoke recall relative drop exceeds 5%"), ("mAP50", 0.05, "smoke mAP50 relative drop exceeds 5%")):
+            before, after = base["smoke"][metric], one["smoke"][metric]
+            if before and (before - after) / before > limit:
+                reasons.append(label)
+        before_fire, after_fire = base["fire"]["recall"], one["fire"]["recall"]
+        if before_fire and (before_fire - after_fire) / before_fire > 0.03:
+            reasons.append("fire recall relative drop exceeds 3%")
+        base_fp = base["negatives"]["false_positive_image_rate"] or 0
+        one_fp = one["negatives"]["false_positive_image_rate"] or 0
+        if one_fp > max(base_fp + 0.02, base_fp * 1.25):
+            reasons.append("negative false-positive image rate regressed beyond limit")
+    payload = {"decision": "GO" if not reasons else "NO_GO", "failure_reasons": reasons, "main_training_ran": False, "main_epochs_completed": 0}
+    write_json(REPORT_DIR / "v2_2_clean_main_training_decision.json", payload)
+    (REPORT_DIR / "v2_2_clean_main_training_decision.md").write_text("# V2.2 Clean Main Training Decision\n\n" + json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    return payload
+
+
 def frozen_baseline() -> dict:
     result_csv = V2_1_CKPT.parents[1] / "results.csv"
     metrics = {}
@@ -1878,7 +2477,7 @@ def prepare() -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("command", choices=["preflight", "deduplicate", "error-mine", "select-positives", "build", "quality-gate", "baseline", "difficulty", "license", "prepare", "smoke-train", "train", "thresholds", "benchmark-v2-1", "artifact", "repair-preflight", "error-mine-real", "diagnose-current", "deduplicate-repaired", "select-positives-repaired", "build-repaired", "quality-gate-repaired", "eval-frozen-repaired", "smoke-train-repaired", "compare-repaired-1e", "decision"])
+    parser.add_argument("command", choices=["preflight", "deduplicate", "error-mine", "select-positives", "build", "quality-gate", "baseline", "difficulty", "license", "prepare", "smoke-train", "train", "thresholds", "benchmark-v2-1", "artifact", "repair-preflight", "error-mine-real", "diagnose-current", "deduplicate-repaired", "select-positives-repaired", "build-repaired", "quality-gate-repaired", "eval-frozen-repaired", "smoke-train-repaired", "compare-repaired-1e", "decision", "historical-preflight", "reconstruct-exposure", "propagate-exposure", "audit-current-contamination", "force-mined-train", "build-clean-eval", "quality-gate-clean", "eval-frozen-clean", "smoke-train-clean", "compare-clean-1e", "decision-clean"])
     parser.add_argument("--limit", type=int, default=0)
     args = parser.parse_args()
     if args.command == "preflight":
@@ -1933,6 +2532,28 @@ def main() -> int:
         print(json.dumps(compare_repaired_one_epoch(), indent=2))
     elif args.command == "decision":
         print(json.dumps(main_training_decision(), indent=2))
+    elif args.command == "historical-preflight":
+        print(json.dumps(historical_exposure_preflight(), indent=2))
+    elif args.command == "reconstruct-exposure":
+        print(json.dumps(reconstruct_v2_1_historical_training_exposure(), indent=2))
+    elif args.command == "propagate-exposure":
+        print(json.dumps(propagate_historical_exposure_components(), indent=2))
+    elif args.command == "audit-current-contamination":
+        print(json.dumps(audit_current_repaired_eval_contamination(), indent=2))
+    elif args.command == "force-mined-train":
+        print(json.dumps(force_mined_hard_fire_train_only(), indent=2))
+    elif args.command == "build-clean-eval":
+        print(f"Rows: {len(build_dataset_v2_2_clean_eval())}")
+    elif args.command == "quality-gate-clean":
+        print(json.dumps(clean_eval_quality_gate(), indent=2))
+    elif args.command == "eval-frozen-clean":
+        print(json.dumps(frozen_v2_1_on_clean(), indent=2))
+    elif args.command == "smoke-train-clean":
+        train_v2_2_clean_smoke()
+    elif args.command == "compare-clean-1e":
+        print(json.dumps(compare_clean_one_epoch(), indent=2))
+    elif args.command == "decision-clean":
+        print(json.dumps(clean_main_training_decision(), indent=2))
     return 0
 
 
