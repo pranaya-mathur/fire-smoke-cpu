@@ -1,0 +1,33 @@
+{
+  "dataset_rows": 6981,
+  "exact_cross_split_duplicates": 0,
+  "gates": {
+    "CANONICAL_MAPPING_VERIFIED": true,
+    "DATASET_V1_PRESERVED": true,
+    "DATASET_V2_1_PRESERVED": true,
+    "DATASET_V2_PRESERVED": true,
+    "FIRE_POSITIVE_MINING_COMPLETED": true,
+    "LICENSE_STATUS_RECORDED": true,
+    "MISSING_ANNOTATIONS_NOT_TREATED_AS_NEGATIVES": true,
+    "NO_CORRUPT_INCLUDED_IMAGES": true,
+    "NO_CROSS_SOURCE_LABEL_CONFLICTS": true,
+    "NO_EXACT_DUPLICATE_LEAKAGE": true,
+    "NO_MOCK_DATA": true,
+    "NO_NEAR_DUPLICATE_LEAKAGE": true,
+    "NO_PLACEHOLDER_DATA": true,
+    "NO_UNKNOWN_DATA_ORIGIN": true,
+    "NO_UNRESOLVED_LABEL_CONFLICTS": true,
+    "NO_VIDEO_GROUP_LEAKAGE_WHERE_IDENTIFIABLE": true,
+    "REAL_NEGATIVES_EXIST": true,
+    "REAL_SMOKE_BOOSTER_EXISTS": true,
+    "REAL_SOURCE_DATA_ONLY": true,
+    "V0_PRESERVED": true,
+    "V2_1_PRESERVED": true,
+    "V2_PRESERVED": true
+  },
+  "included_label_conflict_components": 0,
+  "near_duplicate_components_spanning_splits": 0,
+  "quarantined_label_conflict_components_total": 324,
+  "selected_fire_positives": 1250,
+  "status": "PASS"
+}

@@ -1,0 +1,29 @@
+{
+  "LibreYOLO/smoke-uvylj": {
+    "commercial_status": "PENDING_REVIEW",
+    "dataset_url": "LibreYOLO/smoke-uvylj",
+    "license_file": "",
+    "license_tag": "pending_review",
+    "revision_sha": "",
+    "sample_count": 705,
+    "upstream_provenance": "hf_snapshot_revision_recorded"
+  },
+  "hf_kien_indoor_existing": {
+    "commercial_status": "PENDING_REVIEW",
+    "dataset_url": "hf_kien_indoor_existing",
+    "license_file": "",
+    "license_tag": "existing_dataset",
+    "revision_sha": "",
+    "sample_count": 3853,
+    "upstream_provenance": "local_existing"
+  },
+  "medyoussef/fire-smoke-hardnegatives-int8": {
+    "commercial_status": "PENDING_REVIEW",
+    "dataset_url": "medyoussef/fire-smoke-hardnegatives-int8",
+    "license_file": "",
+    "license_tag": "pending_review",
+    "revision_sha": "",
+    "sample_count": 2423,
+    "upstream_provenance": "hf_snapshot_revision_recorded"
+  }
+}

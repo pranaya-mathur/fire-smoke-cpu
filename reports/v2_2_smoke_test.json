@@ -1,0 +1,6 @@
+{
+  "epochs_requested": 1,
+  "run_name": "smoke_test_v2_2_1e",
+  "starting_checkpoint": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+  "status": "COMPLETED"
+}

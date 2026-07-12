@@ -1,0 +1,71 @@
+{
+  "candidate": "SecureVU Fire/Smoke V2.2",
+  "checkpoints": {
+    "v0": {
+      "exists": true,
+      "path": "runs/detect/runs/yolo11n_hf_indoor_512/cpu_20e/weights/best.pt",
+      "sha256": "2ae9186fa8072b94ddca4f746fa4b55f777471834c5fda8da1d5bca068e7c603"
+    },
+    "v2": {
+      "exists": true,
+      "path": "runs/detect/runs/detect/yolo11n_v2_512_20e/weights/best.pt",
+      "sha256": "bdde93e8f4446b6d99982b37c2511bc0a4198adba504d19ae95d646c56576baf"
+    },
+    "v2_1": {
+      "exists": true,
+      "path": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+      "sha256": "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea"
+    }
+  },
+  "datasets": {
+    "v1_exists": true,
+    "v2_1_exists": true,
+    "v2_exists": true
+  },
+  "disk": {
+    "available": "114Gi",
+    "capacity": "74%",
+    "filesystem": "/dev/disk3s5",
+    "mounted_on": "4.7M",
+    "size": "460Gi",
+    "used": "325Gi"
+  },
+  "frozen_baseline_id": "candidate_v2_1_baseline",
+  "git": {
+    "branch": "main",
+    "head": "16b5ec9e9a16f779e9335e2f0ca8ddc91f9320de",
+    "status_short": [
+      "M scripts/evaluate_video.py",
+      "?? data/manifests/error_mining_v2_1.csv",
+      "?? data/manifests/v2_2_all_samples.csv",
+      "?? data/manifests/v2_2_cross_source_duplicates.csv",
+      "?? data/manifests/v2_2_exact_duplicates.csv",
+      "?? data/manifests/v2_2_label_conflicts.csv",
+      "?? data/manifests/v2_2_near_duplicate_components.csv",
+      "?? data/manifests/v2_2_near_duplicate_pairs.csv",
+      "?? data/manifests/v2_2_selected_fire_positives.csv",
+      "?? reports/v2_1_difficulty_analysis.json",
+      "?? reports/v2_1_difficulty_analysis.md",
+      "?? reports/v2_1_frozen_baseline.json",
+      "?? reports/v2_1_frozen_baseline.md",
+      "?? reports/v2_2_license_status.json",
+      "?? reports/v2_2_license_status.md",
+      "?? reports/v2_2_model_artifact_manifest.json",
+      "?? reports/v2_2_model_artifact_manifest.md",
+      "?? reports/v2_2_near_duplicate_report.json",
+      "?? reports/v2_2_near_duplicate_report.md",
+      "?? reports/v2_2_preflight.json",
+      "?? reports/v2_2_preflight.md",
+      "?? reports/v2_2_quality_gate.json",
+      "?? reports/v2_2_quality_gate.md",
+      "?? reports/v2_2_split_report.json",
+      "?? reports/v2_2_split_report.md",
+      "?? scripts/deduplicate_v2_2.py",
+      "?? scripts/error_mining_v2_1.py",
+      "?? scripts/train_v2_2.py",
+      "?? scripts/tune_v2_2_thresholds.py",
+      "?? scripts/v2_2_workflow.py",
+      "?? tests/test_v2_2_workflow.py"
+    ]
+  }
+}

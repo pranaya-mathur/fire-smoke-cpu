@@ -1,0 +1,45 @@
+{
+  "exact_cross_split_duplicates": 0,
+  "fire_only_by_split": {
+    "test": 221,
+    "train": 1598,
+    "val": 371
+  },
+  "fire_smoke_by_split": {
+    "test": 32,
+    "train": 852,
+    "val": 3
+  },
+  "label_conflicts": 0,
+  "near_duplicate_components_spanning_splits": 0,
+  "negative_by_split": {
+    "test": 117,
+    "train": 939,
+    "val": 117
+  },
+  "smoke_only_by_split": {
+    "test": 630,
+    "train": 1877,
+    "val": 224
+  },
+  "source_counts_by_split": {
+    "test": {
+      "LibreYOLO/smoke-uvylj": 75,
+      "hf_kien_indoor_existing": 808,
+      "medyoussef/fire-smoke-hardnegatives-int8": 117
+    },
+    "train": {
+      "LibreYOLO/smoke-uvylj": 550,
+      "hf_kien_indoor_existing": 2527,
+      "medyoussef/fire-smoke-hardnegatives-int8": 2189
+    },
+    "val": {
+      "LibreYOLO/smoke-uvylj": 80,
+      "hf_kien_indoor_existing": 518,
+      "medyoussef/fire-smoke-hardnegatives-int8": 117
+    }
+  },
+  "test_count": 1000,
+  "train_count": 5266,
+  "val_count": 715
+}

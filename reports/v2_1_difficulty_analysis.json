@@ -1,0 +1,50 @@
+{
+  "fire_large": {
+    "box_count": 4381,
+    "image_count": 4381,
+    "low_confidence_detections": 0,
+    "misses": 4381
+  },
+  "fire_medium": {
+    "box_count": 2029,
+    "image_count": 2029,
+    "low_confidence_detections": 0,
+    "misses": 2029
+  },
+  "fire_small": {
+    "box_count": 1700,
+    "image_count": 1700,
+    "low_confidence_detections": 0,
+    "misses": 1700
+  },
+  "fire_tiny": {
+    "box_count": 2120,
+    "image_count": 2120,
+    "low_confidence_detections": 0,
+    "misses": 2120
+  },
+  "smoke_large": {
+    "box_count": 2444,
+    "image_count": 4381,
+    "low_confidence_detections": 0,
+    "misses": 0
+  },
+  "smoke_medium": {
+    "box_count": 1021,
+    "image_count": 2029,
+    "low_confidence_detections": 0,
+    "misses": 0
+  },
+  "smoke_small": {
+    "box_count": 699,
+    "image_count": 1700,
+    "low_confidence_detections": 0,
+    "misses": 0
+  },
+  "smoke_tiny": {
+    "box_count": 252,
+    "image_count": 2120,
+    "low_confidence_detections": 0,
+    "misses": 0
+  }
+}

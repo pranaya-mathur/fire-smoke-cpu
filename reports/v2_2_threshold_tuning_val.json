@@ -1,0 +1,7 @@
+{
+  "grid": [],
+  "profiles": {},
+  "reason": "error_mining_v2_1.csv does not contain real V2.1 prediction confidences; threshold tuning would be misleading.",
+  "required_command": "./.venv/bin/python scripts/error_mining_v2_1.py",
+  "status": "BLOCKED_NEEDS_V2_1_INFERENCE"
+}

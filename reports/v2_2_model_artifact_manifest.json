@@ -1,0 +1,27 @@
+{
+  "artifact_location": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/runs/detect/runs/detect/smoke_test_v2_2_1e/weights",
+  "artifact_status": "SMOKE_TEST_ONLY",
+  "checkpoint_path": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/runs/detect/runs/detect/smoke_test_v2_2_1e/weights/best.pt",
+  "checkpoint_sha256": "7229c4981bce36c867c6075200a32cc05b48a49a69d04205901190e87056099c",
+  "config_sha256": "1e56d205985e7998739776be3482e6820e94ad2899bbe1d0c4a2347d3f64c85a",
+  "dataset_manifest_path": "data/manifests/v2_2_all_samples.csv",
+  "dataset_manifest_sha256": "2cc67f397fc6039d568b209920fd3cdad385d7f651bf7839ea1ca30b9637b0bc",
+  "dataset_version": "fire_smoke_v2_2",
+  "epochs_completed": 1,
+  "epochs_requested": 8,
+  "git_commit": "16b5ec9e9a16f779e9335e2f0ca8ddc91f9320de",
+  "model_id": "securevu_fire_smoke_v2_2",
+  "parent_checkpoint_path": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+  "parent_checkpoint_sha256": "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea",
+  "training_config": {
+    "batch": 8,
+    "epochs_requested": 8,
+    "imgsz": 512,
+    "lr0": 0.0002,
+    "mosaic": 0.25,
+    "optimizer": "AdamW",
+    "parent": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+    "patience": 2,
+    "workers": 2
+  }
+}
