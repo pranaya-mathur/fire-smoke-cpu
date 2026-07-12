@@ -77,3 +77,39 @@ def test_video_evaluator_has_safe_defaults_and_threshold_controls():
     assert "--smoke-threshold" in text
     assert "--infer-ground-truth-from-filename" in text
     assert "READY_NO_LOCAL_VIDEOS" in text
+
+
+def test_repair_checkpoint_sha_constant_and_verifier_present():
+    mod = load_workflow()
+    assert mod["EXPECTED_V2_1_SHA256"] == "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea"
+    assert "verify_v2_1_checkpoint_sha" in mod
+
+
+def test_real_mining_does_not_silently_fallback_to_model_none():
+    root = Path(__file__).resolve().parents[1]
+    text = (root / "scripts/v2_2_workflow.py").read_text(encoding="utf-8")
+    start = text.index("def mine_error_rows_real")
+    end = text.index("def deduplicate_v2_2_repaired")
+    body = text[start:end]
+    assert "model = None" not in body
+    assert "failed to load frozen V2.1 checkpoint" in body
+    assert "REAL_IOU_VALUES_COMPUTED" in body
+
+
+def test_repaired_split_requires_fire_smoke_validation_bucket():
+    mod = load_workflow()
+    rows = [
+        {"split": "val", "has_fire": True, "has_smoke": True, "is_negative": False},
+        {"split": "test", "has_fire": True, "has_smoke": True, "is_negative": False},
+    ]
+    gates = mod["split_balance_gates"](rows)
+    assert not gates["VALIDATION_HAS_FIRE_SMOKE"]
+
+
+def test_simple_ssim_identical_image(tmp_path: Path):
+    mod = load_workflow()
+    from PIL import Image
+
+    image = tmp_path / "same.jpg"
+    Image.new("RGB", (32, 32), "red").save(image)
+    assert mod["simple_ssim"](image, image) > 0.99

@@ -1,0 +1,11 @@
+{
+  "hard_negative_removed_fraction": 0.02033333333333333,
+  "kien_removed": 164,
+  "kien_retained": 4751,
+  "libreyolo_removed": 0,
+  "libreyolo_retained": 741,
+  "medyoussef_negatives_removed": 61,
+  "medyoussef_negatives_retained": 2939,
+  "new_hard_fire_positives_added": 1000,
+  "warnings": []
+}

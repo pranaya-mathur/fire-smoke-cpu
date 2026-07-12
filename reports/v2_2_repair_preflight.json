@@ -1,0 +1,42 @@
+{
+  "checkpoints": {
+    "v0_exists": true,
+    "v2_1_exists": true,
+    "v2_1_sha256": "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea",
+    "v2_2_1e_exists": true,
+    "v2_exists": true
+  },
+  "datasets": {
+    "v1": true,
+    "v2": true,
+    "v2_1": true,
+    "v2_2": true,
+    "v2_2_repaired": false
+  },
+  "disk": {
+    "available": "114Gi",
+    "capacity": "74%",
+    "filesystem": "/dev/disk3s5",
+    "mounted_on": "4.7M",
+    "size": "460Gi",
+    "used": "325Gi"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "torch": "2.13.0",
+    "ultralytics": "8.4.92"
+  },
+  "git": {
+    "branch": "main",
+    "head": "aa5b209d08e0f8f2e4c5c84ff2e920c303d4e597",
+    "status_short": [
+      "M scripts/error_mining_v2_1.py",
+      " M scripts/v2_2_workflow.py",
+      " M tests/test_v2_2_workflow.py"
+    ]
+  },
+  "manifests": {
+    "v2_2_all_samples": true,
+    "v2_2_repaired_all_samples": false
+  }
+}

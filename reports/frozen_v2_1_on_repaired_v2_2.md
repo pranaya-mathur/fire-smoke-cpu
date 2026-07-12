@@ -1,0 +1,70 @@
+# Frozen V2.1 on Repaired V2.2
+
+{
+  "val": {
+    "overall": {
+      "precision": 0.906096345392799,
+      "recall": 0.8118617607478622,
+      "mAP50": 0.8745504708882176,
+      "mAP50_95": 0.559422498805587
+    },
+    "fire": {
+      "precision": 0.8905977195360162,
+      "recall": 0.7976190476190477,
+      "mAP50": 0.8664701192948148,
+      "mAP50_95": 0.5335566598679845
+    },
+    "smoke": {
+      "precision": 0.9215949712495818,
+      "recall": 0.8261044738766766,
+      "mAP50": 0.8826308224816204,
+      "mAP50_95": 0.5852883377431897
+    },
+    "negatives": {
+      "total_negative_images": 361,
+      "images_with_false_fire": 0,
+      "images_with_false_smoke": 0,
+      "images_with_any_false_detection": 0,
+      "false_fire_predictions": 0,
+      "false_smoke_predictions": 0,
+      "fp_per_image": 0.0,
+      "false_positive_image_rate": 0.0
+    },
+    "checkpoint": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+    "checkpoint_sha256": "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea",
+    "split": "val"
+  },
+  "test": {
+    "overall": {
+      "precision": 0.8529273746501758,
+      "recall": 0.7973695166649793,
+      "mAP50": 0.863119536469747,
+      "mAP50_95": 0.5333323491775015
+    },
+    "fire": {
+      "precision": 0.8391201592058422,
+      "recall": 0.7888834824943997,
+      "mAP50": 0.8564536944156728,
+      "mAP50_95": 0.5150968263227721
+    },
+    "smoke": {
+      "precision": 0.8667345900945093,
+      "recall": 0.805855550835559,
+      "mAP50": 0.8697853785238214,
+      "mAP50_95": 0.5515678720322308
+    },
+    "negatives": {
+      "total_negative_images": 434,
+      "images_with_false_fire": 9,
+      "images_with_false_smoke": 1,
+      "images_with_any_false_detection": 10,
+      "false_fire_predictions": 14,
+      "false_smoke_predictions": 1,
+      "fp_per_image": 0.03456221198156682,
+      "false_positive_image_rate": 0.02304147465437788
+    },
+    "checkpoint": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+    "checkpoint_sha256": "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea",
+    "split": "test"
+  }
+}

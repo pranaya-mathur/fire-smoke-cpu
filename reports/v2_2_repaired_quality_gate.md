@@ -1,0 +1,42 @@
+# V2.2 Repaired Quality Gate
+
+{
+  "status": "PASS",
+  "gates": {
+    "V2_1_CHECKPOINT_SHA_VERIFIED": true,
+    "REAL_V2_1_INFERENCE_MINING_COMPLETED": true,
+    "MINING_INFERENCE_COVERAGE_AT_LEAST_99_PERCENT": true,
+    "REAL_CONFIDENCES_PRESENT": true,
+    "REAL_IOUS_PRESENT": true,
+    "REAL_SOURCE_DATA_ONLY": true,
+    "NO_MOCK_DATA": true,
+    "NO_PLACEHOLDER_DATA": true,
+    "NO_UNKNOWN_DATA_ORIGIN": true,
+    "NO_CORRUPT_INCLUDED_IMAGES": true,
+    "NO_EXACT_DUPLICATE_LEAKAGE": true,
+    "NO_NEAR_DUPLICATE_COMPONENT_LEAKAGE": true,
+    "NO_UNEXPLAINED_GIANT_COMPONENTS": true,
+    "NO_INCLUDED_LABEL_CONFLICTS": true,
+    "MISSING_ANNOTATIONS_NOT_TREATED_AS_NEGATIVES": true,
+    "CANONICAL_MAPPING_ACTUALLY_VERIFIED": true,
+    "FIRE_POSITIVE_MINING_COMPLETED_FROM_REAL_INFERENCE": true,
+    "REAL_NEGATIVES_EXIST": true,
+    "REAL_SMOKE_BOOSTER_EXISTS": true,
+    "SPLIT_CLASS_BALANCE_ACCEPTABLE": true,
+    "V0_PRESERVED": true,
+    "V2_PRESERVED": true,
+    "V2_1_PRESERVED": true,
+    "DATASET_V1_PRESERVED": true,
+    "DATASET_V2_PRESERVED": true,
+    "DATASET_V2_1_PRESERVED": true,
+    "LICENSE_STATUS_RECORDED": true,
+    "COMMERCIAL_USE_CLEARED_OR_PENDING_EXPLICITLY": true,
+    "NO_SELECTED_SAMPLE_FROM_CONFLICT_COMPONENT": true,
+    "NO_DUPLICATE_COMPONENT_REPRESENTATION_OVERFLOW": true
+  },
+  "dataset_rows": 9431,
+  "exact_cross_split_duplicates": 0,
+  "near_duplicate_components_spanning_splits": 0,
+  "selected_fire_positives": 1000,
+  "failed_gates": []
+}

@@ -1,0 +1,147 @@
+# V2.1 vs Repaired V2.2 1e
+
+{
+  "frozen_v2_1": {
+    "val": {
+      "overall": {
+        "precision": 0.906096345392799,
+        "recall": 0.8118617607478622,
+        "mAP50": 0.8745504708882176,
+        "mAP50_95": 0.559422498805587
+      },
+      "fire": {
+        "precision": 0.8905977195360162,
+        "recall": 0.7976190476190477,
+        "mAP50": 0.8664701192948148,
+        "mAP50_95": 0.5335566598679845
+      },
+      "smoke": {
+        "precision": 0.9215949712495818,
+        "recall": 0.8261044738766766,
+        "mAP50": 0.8826308224816204,
+        "mAP50_95": 0.5852883377431897
+      },
+      "negatives": {
+        "total_negative_images": 361,
+        "images_with_false_fire": 0,
+        "images_with_false_smoke": 0,
+        "images_with_any_false_detection": 0,
+        "false_fire_predictions": 0,
+        "false_smoke_predictions": 0,
+        "fp_per_image": 0.0,
+        "false_positive_image_rate": 0.0
+      },
+      "checkpoint": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+      "checkpoint_sha256": "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea",
+      "split": "val"
+    },
+    "test": {
+      "overall": {
+        "precision": 0.8529273746501758,
+        "recall": 0.7973695166649793,
+        "mAP50": 0.863119536469747,
+        "mAP50_95": 0.5333323491775015
+      },
+      "fire": {
+        "precision": 0.8391201592058422,
+        "recall": 0.7888834824943997,
+        "mAP50": 0.8564536944156728,
+        "mAP50_95": 0.5150968263227721
+      },
+      "smoke": {
+        "precision": 0.8667345900945093,
+        "recall": 0.805855550835559,
+        "mAP50": 0.8697853785238214,
+        "mAP50_95": 0.5515678720322308
+      },
+      "negatives": {
+        "total_negative_images": 434,
+        "images_with_false_fire": 9,
+        "images_with_false_smoke": 1,
+        "images_with_any_false_detection": 10,
+        "false_fire_predictions": 14,
+        "false_smoke_predictions": 1,
+        "fp_per_image": 0.03456221198156682,
+        "false_positive_image_rate": 0.02304147465437788
+      },
+      "checkpoint": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+      "checkpoint_sha256": "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea",
+      "split": "test"
+    }
+  },
+  "repaired_v2_2_1e": {
+    "val": {
+      "overall": {
+        "precision": 0.8614580860040105,
+        "recall": 0.7407331809499055,
+        "mAP50": 0.8254295105671744,
+        "mAP50_95": 0.5071768193969408
+      },
+      "fire": {
+        "precision": 0.8807155825670265,
+        "recall": 0.6830357142857143,
+        "mAP50": 0.7901104021815453,
+        "mAP50_95": 0.48190504002129425
+      },
+      "smoke": {
+        "precision": 0.8422005894409945,
+        "recall": 0.7984306476140967,
+        "mAP50": 0.8607486189528035,
+        "mAP50_95": 0.5324485987725871
+      },
+      "negatives": {
+        "total_negative_images": 361,
+        "images_with_false_fire": 2,
+        "images_with_false_smoke": 4,
+        "images_with_any_false_detection": 6,
+        "false_fire_predictions": 2,
+        "false_smoke_predictions": 4,
+        "fp_per_image": 0.01662049861495845,
+        "false_positive_image_rate": 0.01662049861495845
+      },
+      "checkpoint": "runs/detect/runs/detect/smoke_test_v2_2_repaired_1e/weights/best.pt",
+      "checkpoint_sha256": "7bb30da8b7482d071b7c560628acd40a60d58a199e888b7e12a169739ec0fd59",
+      "split": "val"
+    },
+    "test": {
+      "overall": {
+        "precision": 0.7944302462454074,
+        "recall": 0.7304036154699916,
+        "mAP50": 0.8108871816097977,
+        "mAP50_95": 0.482114511923987
+      },
+      "fire": {
+        "precision": 0.7842796614762064,
+        "recall": 0.723935389133627,
+        "mAP50": 0.7995250899164166,
+        "mAP50_95": 0.4687652203700338
+      },
+      "smoke": {
+        "precision": 0.8045808310146084,
+        "recall": 0.7368718418063562,
+        "mAP50": 0.8222492733031788,
+        "mAP50_95": 0.49546380347794017
+      },
+      "negatives": {
+        "total_negative_images": 434,
+        "images_with_false_fire": 8,
+        "images_with_false_smoke": 3,
+        "images_with_any_false_detection": 11,
+        "false_fire_predictions": 11,
+        "false_smoke_predictions": 4,
+        "fp_per_image": 0.03456221198156682,
+        "false_positive_image_rate": 0.02534562211981567
+      },
+      "checkpoint": "runs/detect/runs/detect/smoke_test_v2_2_repaired_1e/weights/best.pt",
+      "checkpoint_sha256": "7bb30da8b7482d071b7c560628acd40a60d58a199e888b7e12a169739ec0fd59",
+      "split": "test"
+    }
+  },
+  "deltas": {
+    "val_smoke_recall": -0.02767382626257997,
+    "val_smoke_mAP50": -0.021882203528816868,
+    "val_fire_recall": -0.11458333333333337,
+    "test_smoke_recall": -0.06898370902920281,
+    "test_fire_recall": -0.06494809336077267
+  }
+}
