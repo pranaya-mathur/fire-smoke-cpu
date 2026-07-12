@@ -1,1 +1,0 @@
-# hf_adapters package

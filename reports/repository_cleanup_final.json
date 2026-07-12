@@ -1,0 +1,85 @@
+{
+  "phase": 16,
+  "timestamp_utc": "2026-07-12T16:38:43.326928+00:00",
+  "pytest": "36 passed",
+  "final_decision": "NO_GO",
+  "entries": [
+    {
+      "path": "archive/obsolete_workflows/",
+      "classification": "ARCHIVE_REFERENCE_ONLY",
+      "reason": "Smoke100/Kien/mock/synthetic one-offs; not active",
+      "dependency_check": "no active imports from scripts/",
+      "action_taken": "retained_in_archive"
+    },
+    {
+      "path": "scripts/error_driven_workflow.py",
+      "classification": "KEEP",
+      "reason": "canonical error-driven pipeline",
+      "dependency_check": "tests/test_error_driven_workflow.py",
+      "action_taken": "replay_filter_fixed_val_test_only"
+    },
+    {
+      "path": "scripts/v2_2_workflow.py",
+      "classification": "KEEP",
+      "reason": "eval/dedupe helpers + V2.2 provenance",
+      "dependency_check": "imported by error_driven",
+      "action_taken": "retained"
+    },
+    {
+      "path": "scripts/real_v2_1_workflow.py",
+      "classification": "KEEP",
+      "reason": "V2.1 build provenance",
+      "dependency_check": "historical",
+      "action_taken": "retained"
+    },
+    {
+      "path": "scripts/prepare_hf_indoor.py",
+      "classification": "KEEP",
+      "reason": "historical Kien prep for registry only; not booster path",
+      "dependency_check": "not called by error_driven",
+      "action_taken": "retained_for_provenance"
+    },
+    {
+      "path": "requirements.in",
+      "classification": "REFACTOR",
+      "reason": "roboflow removed earlier",
+      "dependency_check": "ok",
+      "action_taken": "unchanged_this_pass"
+    },
+    {
+      "path": "README.md",
+      "classification": "REFACTOR",
+      "reason": "documents V2.1 + error-driven rules",
+      "dependency_check": "n/a",
+      "action_taken": "updated_with_challenger_nogo"
+    },
+    {
+      "path": "reports/error_driven_* + v2_1_vs_*",
+      "classification": "KEEP",
+      "reason": "challenger evidence",
+      "dependency_check": "n/a",
+      "action_taken": "generated"
+    },
+    {
+      "path": "runs/.../yolo11n_v2_1_real_512_12e/weights/best.pt",
+      "classification": "KEEP",
+      "reason": "frozen champion SHA verified",
+      "dependency_check": "n/a",
+      "action_taken": "untouched"
+    },
+    {
+      "path": "runs/.../v2_1_error_driven_replay_challenger_1e/",
+      "classification": "KEEP",
+      "reason": "NO_GO challenger evidence",
+      "dependency_check": "n/a",
+      "action_taken": "retained_not_promoted"
+    }
+  ],
+  "stale_workflows_eliminated": [
+    "Smoke100 download/retry",
+    "Roboflow API downloads",
+    "Kien fallback booster training",
+    "blind full-dataset merges",
+    "mock HF download path for real training"
+  ]
+}

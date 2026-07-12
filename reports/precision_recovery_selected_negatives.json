@@ -1,0 +1,15 @@
+{
+  "category_counts": {
+    "CONFUSING_HARDNEG_SOURCE": 55,
+    "FALSE_FIRE_ON_NEGATIVE": 27,
+    "FALSE_SMOKE_ON_NEGATIVE": 9,
+    "NEAR_BOUNDARY_FALSE_FIRE": 29,
+    "NEAR_BOUNDARY_FALSE_SMOKE": 20
+  },
+  "deviations": [],
+  "selected": 140,
+  "status": "PASS",
+  "target_range": "100-160",
+  "v2_1_train_pool": 126,
+  "yingjie_pool": 14
+}

@@ -188,7 +188,7 @@ def preflight() -> dict:
         "hf_token_preview": token_status["preview"],
         "real_dataset_local_paths": {key: str(cfg.get("snapshot")) for key, cfg in DATASETS.items()},
         "mock_files_exist": {
-            "scripts/mock_hf_downloads.py": (ROOT / "scripts/mock_hf_downloads.py").exists(),
+            "archive/obsolete_workflows/mock_hf_downloads.py": (ROOT / "archive/obsolete_workflows/mock_hf_downloads.py").exists(),
             "legacy_medyoussef_candidate": (ROOT / "data/raw/hf_candidates/medyoussef_fire-smoke-hardnegatives-int8").exists(),
             "legacy_libreyolo_candidate": (ROOT / "data/raw/hf_candidates/LibreYOLO_smoke-uvylj").exists(),
         },

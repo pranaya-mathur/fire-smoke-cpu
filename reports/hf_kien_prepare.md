@@ -1,0 +1,16 @@
+# HF Kien Fallback Prepare
+
+{
+  "class_mapping": {
+    "0": "fire",
+    "1": "smoke"
+  },
+  "class_mapping_evidence": "Archive data.yaml uses literal names ['0', '1']; filename correlation showed fire filenames overwhelmingly label 0 and smoke filenames label 1, matching canonical 0=fire and 1=smoke.",
+  "excluded_samples": 85,
+  "license_status": "HF metadata apache-2.0; archive data.yaml Roboflow license CC BY 4.0",
+  "manifest": "data/manifests/hf_kien_indoor_fire_smoke_samples.csv",
+  "status": "PASS",
+  "timestamp_utc": "2026-07-12T15:16:47.328128+00:00",
+  "usable_samples": 4915,
+  "usable_train_samples": 3435
+}

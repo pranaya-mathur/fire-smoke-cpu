@@ -1,0 +1,33 @@
+# V2.1 New Source Error Analysis
+
+```json
+{
+  "checkpoint": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+  "checkpoint_sha256": "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea",
+  "error_category_counts": {
+    "FALSE_FIRE_ON_NEGATIVE": 9,
+    "FALSE_SMOKE_ON_NEGATIVE": 5,
+    "FIRE_LOW_CONFIDENCE": 827,
+    "FIRE_MISSED": 2595,
+    "FIRE_POOR_LOCALIZATION": 684,
+    "FIRE_SMALL": 1269,
+    "FIRE_TINY": 712,
+    "SMOKE_LOW_CONFIDENCE": 267,
+    "SMOKE_MISSED": 2953,
+    "SMOKE_POOR_LOCALIZATION": 527,
+    "SMOKE_SMALL": 125,
+    "SMOKE_TINY": 10
+  },
+  "false_fire": 9,
+  "false_smoke": 5,
+  "hard_samples": 4106,
+  "low_confidence_fire": 827,
+  "low_confidence_smoke": 267,
+  "missed_fire": 2595,
+  "missed_smoke": 2953,
+  "samples_evaluated": 4243,
+  "status": "PASS",
+  "tiny_small_fire": 1981,
+  "tiny_small_smoke": 135
+}
+```

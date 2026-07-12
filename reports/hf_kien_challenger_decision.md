@@ -1,0 +1,12 @@
+# HF Kien Fallback Challenger Decision
+
+{
+  "decision": "NO_GO",
+  "failure_reasons": [
+    "smoke mAP50 regressed",
+    "smoke recall regressed",
+    "fire recall relative drop exceeds 3%"
+  ],
+  "long_training_started": false,
+  "main_training_ran": false
+}

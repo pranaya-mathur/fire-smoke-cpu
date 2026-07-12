@@ -6,13 +6,14 @@ from dataclasses import dataclass
 ALLOWED_DATA_ORIGINS = {
     "huggingface_snapshot",
     "local_existing",
+    "roboflow_universe",
     "synthetic",
     "mock",
     "placeholder",
     "unknown",
 }
 
-REAL_TRAINING_ALLOWED_ORIGINS = {"huggingface_snapshot", "local_existing"}
+REAL_TRAINING_ALLOWED_ORIGINS = {"huggingface_snapshot", "local_existing", "roboflow_universe"}
 REAL_TRAINING_FORBIDDEN_ORIGINS = {"mock", "placeholder", "unknown"}
 
 

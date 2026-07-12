@@ -1,0 +1,570 @@
+# New Source Historical Overlap
+
+```json
+{
+  "clean_eval_leaks": 64,
+  "clean_leak_examples": [
+    {
+      "kind": "phash",
+      "phash": "1c3c3c7c7c3c1808",
+      "sample_id": "yingjie_train_fire002188"
+    },
+    {
+      "kind": "phash",
+      "phash": "ffffffffff000000",
+      "sample_id": "yingjie_train_fire002252"
+    },
+    {
+      "kind": "phash",
+      "phash": "ffffff0100000000",
+      "sample_id": "yingjie_train_fire002297"
+    },
+    {
+      "kind": "phash",
+      "phash": "fcfcdc1c4c181800",
+      "sample_id": "yingjie_train_fire002323"
+    },
+    {
+      "kind": "phash",
+      "phash": "ffffffff1f000000",
+      "sample_id": "yingjie_train_fire002512"
+    },
+    {
+      "kind": "phash",
+      "phash": "00181c1c3e1c0000",
+      "sample_id": "yingjie_train_fire002620"
+    },
+    {
+      "kind": "phash",
+      "phash": "78f8fc7c3e1a0000",
+      "sample_id": "yingjie_train_fire002642"
+    },
+    {
+      "kind": "phash",
+      "phash": "0071f9fc3e1f1e00",
+      "sample_id": "yingjie_train_fire002702"
+    },
+    {
+      "kind": "phash",
+      "phash": "003e77b3333c0000",
+      "sample_id": "yingjie_train_fire002715"
+    },
+    {
+      "kind": "phash",
+      "phash": "0000383c3e1e0c00",
+      "sample_id": "yingjie_train_fire002756"
+    },
+    {
+      "kind": "phash",
+      "phash": "ffffffffffe00000",
+      "sample_id": "yingjie_train_fire002826"
+    },
+    {
+      "kind": "phash",
+      "phash": "ffffffff1f000000",
+      "sample_id": "yingjie_train_fire002964"
+    },
+    {
+      "kind": "phash",
+      "phash": "ff7f3f1e00000000",
+      "sample_id": "yingjie_train_fire003074"
+    },
+    {
+      "kind": "phash",
+      "phash": "ffff7f3f37300c00",
+      "sample_id": "yingjie_train_fire003197"
+    },
+    {
+      "kind": "phash",
+      "phash": "fffffffbf9180400",
+      "sample_id": "yingjie_train_fire003238"
+    },
+    {
+      "kind": "phash",
+      "phash": "bebedc9830000018",
+      "sample_id": "yingjie_train_fire003312"
+    },
+    {
+      "kind": "phash",
+      "phash": "ffcff726c6870000",
+      "sample_id": "yingjie_train_fire003360"
+    },
+    {
+      "kind": "phash",
+      "phash": "ffffffff1b000000",
+      "sample_id": "yingjie_train_fire003407"
+    },
+    {
+      "kind": "phash",
+      "phash": "fffffffff8000000",
+      "sample_id": "yingjie_train_fire003492"
+    },
+    {
+      "kind": "phash",
+      "phash": "ffffff0000000000",
+      "sample_id": "yingjie_train_fire003539"
+    }
+  ],
+  "contamination_resolved": true,
+  "eligible": 4243,
+  "exact_duplicates": 7,
+  "exact_examples": [
+    {
+      "hist_sample": "medyoussef_PublicDataset00997",
+      "sample_id": "yingjie_train_fire003387",
+      "sha256": "3ad700a9d36b48a6337e284fcbd3066f9dfcb0ff0cdb7ddbcd4ca1c7edd1f4b4"
+    },
+    {
+      "hist_sample": "medyoussef_PublicDataset01000",
+      "sample_id": "yingjie_train_fire003388",
+      "sha256": "a4512b5339273c1d82bd39e66939aface2f55caa617981586a03a8d968850a33"
+    },
+    {
+      "hist_sample": "medyoussef_PublicDataset01002",
+      "sample_id": "yingjie_train_fire003390",
+      "sha256": "6afad1bda66cfc4ae3141ebe60e4c2960fd1ea1e40727b02ab496bc2193e6868"
+    },
+    {
+      "hist_sample": "medyoussef_PublicDataset01036",
+      "sample_id": "yingjie_train_fire003409",
+      "sha256": "4985a63764a2e6d0dd04b48880988c2f18dd70ee593c4b608890869e58483527"
+    },
+    {
+      "hist_sample": "medyoussef_PublicDataset01038",
+      "sample_id": "yingjie_train_fire004441",
+      "sha256": "3f4039f9e50900f68aaa95cb335eb835dca4e05ff40fec6e16f30a769a1346c9"
+    },
+    {
+      "hist_sample": "medyoussef_PublicDataset01019",
+      "sample_id": "yingjie_train_fire004453",
+      "sha256": "5dceaeb2538dc45b6297a9fb873250d879ac467aeb2b13018bef0aeac5d0f027"
+    },
+    {
+      "hist_sample": "medyoussef_PublicDataset01321",
+      "sample_id": "yingjie_train_fire004454",
+      "sha256": "958112f6c71cfdac933d0bfdb792cadc51655ca5f685efbb91b02c428edd27a7"
+    }
+  ],
+  "excluded": 1820,
+  "near_duplicates": 1815,
+  "near_examples": [
+    {
+      "matches": [
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB10391",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_hardneg_000000276804",
+          "hist_split": "val"
+        },
+        {
+          "hamming": 2,
+          "hist_sample": "medyoussef_AoF03596",
+          "hist_split": "val"
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB02424",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB10355",
+          "hist_split": "train"
+        }
+      ],
+      "sample_id": "yingjie_train_fire002183"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 1,
+          "hist_sample": "medyoussef_WEB03736",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002184"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 0,
+          "hist_sample": "medyoussef_PublicDataset01023",
+          "hist_split": ""
+        },
+        {
+          "hamming": 3,
+          "hist_sample": "medyoussef_WEB03753",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002193"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 0,
+          "hist_sample": "medyoussef_PublicDataset01024",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002194"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB10044",
+          "hist_split": ""
+        },
+        {
+          "hamming": 5,
+          "hist_sample": "medyoussef_WEB10936",
+          "hist_split": ""
+        },
+        {
+          "hamming": 5,
+          "hist_sample": "medyoussef_WEB02589",
+          "hist_split": ""
+        },
+        {
+          "hamming": 4,
+          "hist_sample": "medyoussef_WEB05172",
+          "hist_split": ""
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB05317",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002199"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB10157",
+          "hist_split": ""
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB11328",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002205"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB02458",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 3,
+          "hist_sample": "medyoussef_WEB02408",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB02664",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB02997",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 5,
+          "hist_sample": "medyoussef_WEB03022",
+          "hist_split": "train"
+        }
+      ],
+      "sample_id": "yingjie_train_fire002208"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_PublicDataset00127",
+          "hist_split": ""
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_PublicDataset00131",
+          "hist_split": ""
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB04339",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002216"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_AoF02450",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 4,
+          "hist_sample": "medyoussef_AoF01926",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_AoF02206",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 4,
+          "hist_sample": "medyoussef_AoF00070",
+          "hist_split": "test"
+        },
+        {
+          "hamming": 2,
+          "hist_sample": "medyoussef_WEB02046",
+          "hist_split": "train"
+        }
+      ],
+      "sample_id": "yingjie_train_fire002219"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 5,
+          "hist_sample": "medyoussef_PublicDataset01083",
+          "hist_split": ""
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_PublicDataset00092",
+          "hist_split": ""
+        },
+        {
+          "hamming": 4,
+          "hist_sample": "medyoussef_WEB03137",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002220"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 0,
+          "hist_sample": "medyoussef_PublicDataset01320",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002222"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB02605",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 0,
+          "hist_sample": "medyoussef_PublicDataset01032",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002226"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 4,
+          "hist_sample": "medyoussef_WEB04862",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002229"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 5,
+          "hist_sample": "medyoussef_WEB02959",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB01846",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB02915",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB03138",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB09617",
+          "hist_split": "train"
+        }
+      ],
+      "sample_id": "yingjie_train_fire002233"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB11803",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 5,
+          "hist_sample": "medyoussef_PublicDataset01059",
+          "hist_split": ""
+        },
+        {
+          "hamming": 3,
+          "hist_sample": "medyoussef_PublicDataset00026",
+          "hist_split": ""
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_PublicDataset00121",
+          "hist_split": ""
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_PublicDataset00124",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002235"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB10496",
+          "hist_split": ""
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB01206",
+          "hist_split": ""
+        },
+        {
+          "hamming": 4,
+          "hist_sample": "medyoussef_WEB04274",
+          "hist_split": ""
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB05172",
+          "hist_split": ""
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB05317",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002237"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 0,
+          "hist_sample": "medyoussef_WEB03881",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002246"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB03923",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002249"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 5,
+          "hist_sample": "medyoussef_WEB07156",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 4,
+          "hist_sample": "medyoussef_WEB09710",
+          "hist_split": ""
+        },
+        {
+          "hamming": 4,
+          "hist_sample": "medyoussef_WEB10940",
+          "hist_split": ""
+        },
+        {
+          "hamming": 5,
+          "hist_sample": "medyoussef_WEB10963",
+          "hist_split": ""
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB01261",
+          "hist_split": ""
+        }
+      ],
+      "sample_id": "yingjie_train_fire002251"
+    },
+    {
+      "matches": [
+        {
+          "hamming": 3,
+          "hist_sample": "medyoussef_WEB01819",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 5,
+          "hist_sample": "medyoussef_WEB03670",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 5,
+          "hist_sample": "medyoussef_WEB01917",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 4,
+          "hist_sample": "medyoussef_WEB01138",
+          "hist_split": "train"
+        },
+        {
+          "hamming": 6,
+          "hist_sample": "medyoussef_WEB02843",
+          "hist_split": "train"
+        }
+      ],
+      "sample_id": "yingjie_train_fire002252"
+    }
+  ],
+  "status": "PASS",
+  "total_new": 6063
+}
+```

@@ -1,0 +1,80 @@
+{
+  "api_key_printed": false,
+  "attempted_formats": [
+    "yolov11",
+    "yolov8",
+    "yolov5pytorch",
+    "yolov5"
+  ],
+  "errors": [
+    {
+      "format": "yolov11",
+      "method": "roboflow_cli",
+      "returncode": 3,
+      "stderr_sample": "Error: Unsupported request. `GET /smoke-detection/smoke100-uwe4t` does not exist or cannot be loaded due to missing permissions.\n",
+      "stdout_sample": ""
+    },
+    {
+      "format": "yolov8",
+      "method": "roboflow_cli",
+      "returncode": 3,
+      "stderr_sample": "Error: Unsupported request. `GET /smoke-detection/smoke100-uwe4t` does not exist or cannot be loaded due to missing permissions.\n",
+      "stdout_sample": ""
+    },
+    {
+      "format": "yolov5pytorch",
+      "method": "roboflow_cli",
+      "returncode": 3,
+      "stderr_sample": "Error: Unsupported request. `GET /smoke-detection/smoke100-uwe4t` does not exist or cannot be loaded due to missing permissions.\n",
+      "stdout_sample": ""
+    },
+    {
+      "format": "yolov5",
+      "method": "roboflow_cli",
+      "returncode": 3,
+      "stderr_sample": "Error: Unsupported request. `GET /smoke-detection/smoke100-uwe4t` does not exist or cannot be loaded due to missing permissions.\n",
+      "stdout_sample": ""
+    },
+    {
+      "error": "RoboflowError",
+      "format": "yolov8",
+      "message": "{\"error\":{\"message\":\"Unsupported request. `GET /smoke-detection/smoke100-uwe4t` does not exist or cannot be loaded due to missing permissions.\",\"type\":\"GraphMethodException\",\"hint\":\"You can see your active workspace by issuing a GET request to `/` with your `api_key`.\"}}",
+      "method": "roboflow_sdk"
+    },
+    {
+      "error": "RoboflowError",
+      "format": "yolov5pytorch",
+      "message": "{\"error\":{\"message\":\"Unsupported request. `GET /smoke-detection/smoke100-uwe4t` does not exist or cannot be loaded due to missing permissions.\",\"type\":\"GraphMethodException\",\"hint\":\"You can see your active workspace by issuing a GET request to `/` with your `api_key`.\"}}",
+      "method": "roboflow_sdk"
+    },
+    {
+      "error": "RoboflowError",
+      "format": "yolov5",
+      "message": "{\"error\":{\"message\":\"Unsupported request. `GET /smoke-detection/smoke100-uwe4t` does not exist or cannot be loaded due to missing permissions.\",\"type\":\"GraphMethodException\",\"hint\":\"You can see your active workspace by issuing a GET request to `/` with your `api_key`.\"}}",
+      "method": "roboflow_sdk"
+    },
+    {
+      "error": "http_404",
+      "format": "yolov8",
+      "url": "https://universe.roboflow.com/smoke-detection/smoke100-uwe4t/dataset/4/download/yolov8?key=<redacted>"
+    },
+    {
+      "error": "http_403",
+      "format": "yolov5pytorch",
+      "url": "https://universe.roboflow.com/smoke-detection/smoke100-uwe4t/dataset/4/download/yolov5pytorch?key=<redacted>"
+    },
+    {
+      "error": "http_403",
+      "format": "yolov5",
+      "url": "https://universe.roboflow.com/smoke-detection/smoke100-uwe4t/dataset/4/download/yolov5?key=<redacted>"
+    }
+  ],
+  "manual_export": {
+    "searched": [
+      "data/raw/roboflow_smoke100",
+      "data/raw/roboflow_smoke100/download"
+    ],
+    "status": "NOT_FOUND"
+  },
+  "status": "FAIL"
+}

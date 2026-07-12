@@ -1,0 +1,12 @@
+{
+  "excluded_from_prior_review": 50,
+  "fire_candidates": 1876,
+  "selected_fire": 50,
+  "selected_smoke": 100,
+  "smoke_candidates": 2518,
+  "status": "PASS",
+  "targets": {
+    "fire": "40-70",
+    "smoke": "80-120"
+  }
+}

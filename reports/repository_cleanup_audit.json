@@ -1,0 +1,131 @@
+{
+  "entries": [
+    {
+      "action_taken": "moved_to_archive",
+      "classification": "ARCHIVE_REFERENCE_ONLY",
+      "dependency_check": "tests moved with archive",
+      "path": "archive/obsolete_workflows/smoke100_workflow.py",
+      "reason": "Smoke100 blocked NO_GO; do not retry"
+    },
+    {
+      "action_taken": "moved_to_archive",
+      "classification": "ARCHIVE_REFERENCE_ONLY",
+      "dependency_check": "no active imports",
+      "path": "archive/obsolete_workflows/hf_kien_fallback_workflow.py",
+      "reason": "Kien reuse NO_GO"
+    },
+    {
+      "action_taken": "moved_to_archive",
+      "classification": "REMOVE",
+      "dependency_check": "unused",
+      "path": "archive/obsolete_workflows/analyze_negative_candidates.py",
+      "reason": "mocked stub"
+    },
+    {
+      "action_taken": "moved_to_archive",
+      "classification": "REMOVE",
+      "dependency_check": "unused",
+      "path": "archive/obsolete_workflows/visual_qc.py",
+      "reason": "mocked stub"
+    },
+    {
+      "action_taken": "moved_to_archive",
+      "classification": "REMOVE",
+      "dependency_check": "only build_dataset_v2",
+      "path": "archive/obsolete_workflows/deduplicate_v2_candidates.py",
+      "reason": "fake zero-dup stub"
+    },
+    {
+      "action_taken": "moved_to_archive",
+      "classification": "ARCHIVE_REFERENCE_ONLY",
+      "dependency_check": "real_v2_1_workflow path updated",
+      "path": "archive/obsolete_workflows/mock_hf_downloads.py",
+      "reason": "mock path forbidden for real training"
+    },
+    {
+      "action_taken": "moved_to_archive",
+      "classification": "ARCHIVE_REFERENCE_ONLY",
+      "dependency_check": "unused",
+      "path": "archive/obsolete_workflows/synthesize_v2_data.py",
+      "reason": "synthetic superseded by real V2.1"
+    },
+    {
+      "action_taken": "moved_to_archive",
+      "classification": "ARCHIVE_REFERENCE_ONLY",
+      "dependency_check": "unused",
+      "path": "archive/obsolete_workflows/build_synthetic_v2.py",
+      "reason": "synthetic superseded"
+    },
+    {
+      "action_taken": "moved_to_archive",
+      "classification": "ARCHIVE_REFERENCE_ONLY",
+      "dependency_check": "unused",
+      "path": "archive/obsolete_workflows/build_v2_1.py",
+      "reason": "synthetic V2.1 builder"
+    },
+    {
+      "action_taken": "moved_to_archive",
+      "classification": "REMOVE",
+      "dependency_check": "unused",
+      "path": "archive/obsolete_workflows/build_dataset_v2.py",
+      "reason": "orchestrated mock stubs"
+    },
+    {
+      "action_taken": "deleted",
+      "classification": "REMOVE",
+      "dependency_check": "no imports",
+      "path": "src/fire_smoke_cpu/hf_adapters/",
+      "reason": "empty unimplemented scaffold"
+    },
+    {
+      "action_taken": "created",
+      "classification": "KEEP",
+      "dependency_check": "n/a",
+      "path": "scripts/error_driven_workflow.py",
+      "reason": "new error-driven pipeline"
+    },
+    {
+      "action_taken": "retained",
+      "classification": "KEEP",
+      "dependency_check": "tests + error_driven import",
+      "path": "scripts/v2_2_workflow.py",
+      "reason": "eval/dedupe utilities + historical V2.2 evidence"
+    },
+    {
+      "action_taken": "updated_mock_path",
+      "classification": "REFACTOR",
+      "dependency_check": "ok",
+      "path": "scripts/real_v2_1_workflow.py",
+      "reason": "mock path reference updated"
+    },
+    {
+      "action_taken": "roboflow_removed",
+      "classification": "REFACTOR",
+      "dependency_check": "ok",
+      "path": "requirements.in",
+      "reason": "removed roboflow dependency"
+    },
+    {
+      "action_taken": "retained",
+      "classification": "KEEP",
+      "dependency_check": "n/a",
+      "path": "reports/*smoke100*",
+      "reason": "historical NO_GO evidence"
+    },
+    {
+      "action_taken": "retained",
+      "classification": "KEEP",
+      "dependency_check": "n/a",
+      "path": "reports/*hf_kien*",
+      "reason": "historical NO_GO evidence"
+    },
+    {
+      "action_taken": "untouched",
+      "classification": "KEEP",
+      "dependency_check": "n/a",
+      "path": "runs/.../yolo11n_v2_1_real_512_12e/weights/best.pt",
+      "reason": "frozen champion"
+    }
+  ],
+  "timestamp_utc": "2026-07-12T16:38:14.805545+00:00"
+}

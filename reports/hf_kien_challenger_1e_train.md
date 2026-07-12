@@ -1,0 +1,10 @@
+# HF Kien Fallback Challenger 1e Train
+
+{
+  "checkpoint": "runs/detect/runs/detect/hf_kien_v2_1_challenger_1e/weights/best.pt",
+  "checkpoint_sha256": "9c33dc538366a453fed12052a8f5bc5a8f16c68debc6b448224aef6da252f19f",
+  "epochs_requested": 1,
+  "run_name": "hf_kien_v2_1_challenger_1e",
+  "starting_checkpoint": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+  "status": "COMPLETED"
+}

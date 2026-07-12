@@ -1,0 +1,45 @@
+{
+  "blocker": "Smoke100 download failed; raw dataset unavailable locally",
+  "comparison_available": false,
+  "download_errors": [
+    {
+      "error": "RoboflowError",
+      "format": "yolov8",
+      "message": "{\"error\":{\"message\":\"Unsupported request. `GET /smoke-detection/smoke100-uwe4t` does not exist or cannot be loaded due to missing permissions.\",\"type\":\"GraphMethodException\",\"hint\":\"You can see your active workspace by issuing a GET request to `/` with your `api_key`.\"}}",
+      "method": "roboflow_sdk"
+    },
+    {
+      "error": "RoboflowError",
+      "format": "yolov5pytorch",
+      "message": "{\"error\":{\"message\":\"Unsupported request. `GET /smoke-detection/smoke100-uwe4t` does not exist or cannot be loaded due to missing permissions.\",\"type\":\"GraphMethodException\",\"hint\":\"You can see your active workspace by issuing a GET request to `/` with your `api_key`.\"}}",
+      "method": "roboflow_sdk"
+    },
+    {
+      "error": "RoboflowError",
+      "format": "yolov5",
+      "message": "{\"error\":{\"message\":\"Unsupported request. `GET /smoke-detection/smoke100-uwe4t` does not exist or cannot be loaded due to missing permissions.\",\"type\":\"GraphMethodException\",\"hint\":\"You can see your active workspace by issuing a GET request to `/` with your `api_key`.\"}}",
+      "method": "roboflow_sdk"
+    },
+    {
+      "error": "http_404",
+      "format": "yolov8",
+      "url": "https://universe.roboflow.com/smoke-detection/smoke100-uwe4t/dataset/4/download/yolov8?key=<redacted>"
+    },
+    {
+      "error": "http_403",
+      "format": "yolov5pytorch",
+      "url": "https://universe.roboflow.com/smoke-detection/smoke100-uwe4t/dataset/4/download/yolov5pytorch?key=<redacted>"
+    },
+    {
+      "error": "http_404",
+      "format": "yolov5",
+      "url": "https://universe.roboflow.com/smoke-detection/smoke100-uwe4t/dataset/4/download/yolov5?key=<redacted>"
+    }
+  ],
+  "download_report": "reports/smoke100_download.json",
+  "fabricated_results": false,
+  "reason": "No one-epoch challenger trained because download/source/duplicate gates could not pass",
+  "status": "BLOCKED",
+  "timestamp_utc": "2026-07-12T14:55:02.720204+00:00",
+  "training_ran": false
+}

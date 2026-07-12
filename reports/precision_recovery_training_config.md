@@ -1,0 +1,27 @@
+# Precision Recovery Training Config
+
+```json
+{
+  "batch": 4,
+  "cache": false,
+  "changed_variable": "sample_selection_only",
+  "device": "cpu",
+  "epochs": 1,
+  "freeze_modules": 21,
+  "freeze_strategy": "Ultralytics freeze=21: train Detect head + last 2-3 neck modules only",
+  "frozen_parameter_count": 1780288,
+  "imgsz": 512,
+  "lr0": 5e-05,
+  "lrf": 0.01,
+  "matches_previous_challenger_hparams": true,
+  "model": "yolo11n",
+  "module_count": 24,
+  "optimizer": "AdamW",
+  "output_project": "runs/detect",
+  "run_name": "v2_1_precision_recovery_challenger_1e",
+  "seed": 42,
+  "starting_checkpoint": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+  "trainable_parameter_count": 809942,
+  "workers": 2
+}
+```

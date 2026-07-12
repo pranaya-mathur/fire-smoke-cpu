@@ -1,0 +1,134 @@
+# Candidate Dataset Qualification
+
+```json
+{
+  "accepted_count": 2,
+  "candidates": [
+    {
+      "dataset": "YingjieCheng/FireSmokeDetDatasets",
+      "decision": "ACCEPT",
+      "genuinely_new": true,
+      "license_status": "apache-2.0",
+      "local_exists": true,
+      "local_path": "data/raw/hf_candidates/YingjieCheng_FireSmokeDetDatasets/extracted",
+      "notes": "Apache-2.0 datasets.zip with YOLO images/labels train/val/test. Class IDs 0/1 mapped to fire/smoke via co-occurrence of small localized boxes (fire) and larger plume boxes (smoke).",
+      "object_detection_annotations": true,
+      "reject_reasons": [],
+      "url": "https://huggingface.co/datasets/YingjieCheng/FireSmokeDetDatasets"
+    },
+    {
+      "dataset": "betasecond/jimei-fire-smoke-yolo-dataset",
+      "decision": "CANDIDATE",
+      "genuinely_new": true,
+      "license_status": "requires_review_no_hub_license_card",
+      "local_exists": true,
+      "local_path": "data/raw/hf_candidates/betasecond_jimei-fire-smoke-yolo-dataset",
+      "notes": "YOLO Fire/Smoke backup candidate; deferred because Yingjie has clearer Apache-2.0 license.",
+      "object_detection_annotations": true,
+      "reject_reasons": [],
+      "url": "https://huggingface.co/datasets/betasecond/jimei-fire-smoke-yolo-dataset"
+    },
+    {
+      "dataset": "KienNgyuen/Fire-Smoke-Detection",
+      "decision": "REJECT",
+      "genuinely_new": false,
+      "license_status": "conflict_apache_vs_cc_by_nc",
+      "local_exists": true,
+      "local_path": "data/raw/hf_kien_fire_smoke",
+      "notes": "Historically exposed; previous challenger NO_GO.",
+      "object_detection_annotations": true,
+      "reject_reasons": [
+        "historically_blocked_or_exposed_lineage"
+      ],
+      "url": "https://huggingface.co/datasets/KienNgyuen/Fire-Smoke-Detection"
+    },
+    {
+      "dataset": "roboflow/smoke100",
+      "decision": "REJECT",
+      "genuinely_new": false,
+      "license_status": "blocked",
+      "local_exists": false,
+      "local_path": "data/raw/roboflow_smoke100",
+      "notes": "Download blocked; do not retry.",
+      "object_detection_annotations": true,
+      "reject_reasons": [
+        "historically_blocked_or_exposed_lineage"
+      ],
+      "url": "https://universe.roboflow.com/smoke-detection/smoke100-uwe4t"
+    },
+    {
+      "dataset": "medyoussef/fire-smoke-hardnegatives-int8",
+      "decision": "REJECT",
+      "genuinely_new": false,
+      "license_status": "requires_review",
+      "local_exists": true,
+      "local_path": "data/raw/hf_candidates/medyoussef_fire-smoke-hardnegatives-int8_real",
+      "notes": "Already used in V2.1 training.",
+      "object_detection_annotations": true,
+      "reject_reasons": [
+        "historically_blocked_or_exposed_lineage",
+        "source_present_in_historical_registry"
+      ],
+      "url": "https://huggingface.co/datasets/medyoussef/fire-smoke-hardnegatives-int8"
+    },
+    {
+      "dataset": "LibreYOLO/smoke-uvylj",
+      "decision": "REJECT",
+      "genuinely_new": false,
+      "license_status": "cc-by-4.0",
+      "local_exists": true,
+      "local_path": "data/raw/hf_candidates/LibreYOLO_smoke-uvylj_hf_snapshot",
+      "notes": "Already used in V2.1 training.",
+      "object_detection_annotations": true,
+      "reject_reasons": [
+        "historically_blocked_or_exposed_lineage",
+        "source_present_in_historical_registry"
+      ],
+      "url": "https://huggingface.co/datasets/LibreYOLO/smoke-uvylj"
+    },
+    {
+      "dataset": "badsaarow/d-fire",
+      "decision": "REJECT",
+      "genuinely_new": true,
+      "license_status": "unknown",
+      "local_exists": false,
+      "local_path": "data/raw/hf_candidates/badsaarow_d-fire",
+      "notes": "Quarantined; possible D-Fire derivative; not downloaded.",
+      "object_detection_annotations": false,
+      "reject_reasons": [
+        "object_detection_annotations_unverified"
+      ],
+      "url": "https://huggingface.co/datasets/badsaarow/d-fire"
+    },
+    {
+      "dataset": "hiennguyen9874/fire-smoke-detection",
+      "decision": "CANDIDATE_NOT_LOCAL",
+      "genuinely_new": true,
+      "license_status": "unknown",
+      "local_exists": false,
+      "local_path": "data/raw/hf_candidates/hiennguyen9874_fire-smoke-detection",
+      "notes": "~11GB parquet; license unknown; skip for this task.",
+      "object_detection_annotations": true,
+      "reject_reasons": [],
+      "url": "https://huggingface.co/datasets/hiennguyen9874/fire-smoke-detection"
+    }
+  ],
+  "selected": {
+    "archive_sha256": "d6b5fdf61da633b659869d919fc54419624b4fa6648e742965e00428bb2083e9",
+    "dataset": "YingjieCheng/FireSmokeDetDatasets",
+    "decision": "ACCEPT",
+    "download_artifact": "data/raw/hf_candidates/YingjieCheng_FireSmokeDetDatasets/datasets.zip",
+    "genuinely_new": true,
+    "license_status": "apache-2.0",
+    "local_exists": true,
+    "local_path": "data/raw/hf_candidates/YingjieCheng_FireSmokeDetDatasets/extracted",
+    "notes": "Apache-2.0 datasets.zip with YOLO images/labels train/val/test. Class IDs 0/1 mapped to fire/smoke via co-occurrence of small localized boxes (fire) and larger plume boxes (smoke).",
+    "object_detection_annotations": true,
+    "reject_reasons": [],
+    "url": "https://huggingface.co/datasets/YingjieCheng/FireSmokeDetDatasets",
+    "usability_status": "usable_od_apache2"
+  },
+  "status": "PASS",
+  "timestamp_utc": "2026-07-12T16:26:21.989469+00:00"
+}
+```

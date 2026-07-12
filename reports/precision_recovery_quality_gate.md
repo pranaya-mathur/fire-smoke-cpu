@@ -1,0 +1,30 @@
+# Precision Recovery Quality Gate
+
+```json
+{
+  "checks": {
+    "CANONICAL_MAPPING_VERIFIED": true,
+    "HARD_NEGATIVES_LEGITIMATE": true,
+    "HARD_NEG_COUNT_ADEQUATE": true,
+    "NEW_SOURCE_QUALIFIED": true,
+    "NO_CLEAN_VAL_TEST_LEAKAGE": true,
+    "NO_EXACT_HISTORICAL_OVERLAP_UNRESOLVED": true,
+    "NO_MISSING_ANNOTATION_AS_NEGATIVE": true,
+    "NO_MOCK_OR_PLACEHOLDER": true,
+    "OBSOLETE_WORKFLOWS_INACTIVE": true,
+    "POSITIVES_QUALITY_FILTERED": true,
+    "REPLAY_FROM_V2_1_TRAIN_ONLY": true,
+    "TESTS_PASS": true,
+    "UNKNOWN_PROVENANCE_ABSENT": true,
+    "V2_1_SHA_VERIFIED": true
+  },
+  "clean_leak_count": 0,
+  "failed": [],
+  "pytest_returncode": 0,
+  "pytest_stdout_tail": ".......................................                                  [100%]\n39 passed in 0.22s\n",
+  "selected_fire": 50,
+  "selected_negatives": 140,
+  "selected_smoke": 100,
+  "status": "PASS"
+}
+```

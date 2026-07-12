@@ -1,0 +1,22 @@
+# V2.1 Champion Verification
+
+```json
+{
+  "canonical_mapping_ok": true,
+  "checkpoint_path": "runs/detect/runs/detect/yolo11n_v2_1_real_512_12e/weights/best.pt",
+  "class_names": {
+    "0": "fire",
+    "1": "smoke"
+  },
+  "clean_eval_dataset_exists": true,
+  "clean_eval_manifest_exists": true,
+  "model_loads": true,
+  "sha256": "8eda741d3741ee8b8094ee8244d1a276f0bf7ca41d5ee3afb73099095dab6aea",
+  "sha256_matches_expected": true,
+  "status": "PASS",
+  "timestamp_utc": "2026-07-12T16:51:34.942433+00:00",
+  "trusted_baseline_report": "reports/v2_1_frozen_baseline.json",
+  "trusted_baseline_report_loaded": true,
+  "v2_1_dataset_exists": true
+}
+```

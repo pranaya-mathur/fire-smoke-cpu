@@ -1,7 +1,7 @@
 {
   "token_detected": true,
   "token_preview": "hf_N...",
-  "auth_status": "PASS",
-  "authenticated_user": "chinki-m",
-  "reason": null
+  "auth_status": "FAIL",
+  "authenticated_user": null,
+  "reason": "Network or unexpected error: Curl command failed"
 }

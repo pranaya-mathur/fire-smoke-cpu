@@ -1,0 +1,17 @@
+# Error-Driven Challenger Decision
+
+```json
+{
+  "conservative": true,
+  "decision": "NO_GO",
+  "failure_reasons": [
+    "false-positive image rate materially regressed"
+  ],
+  "improvements": [
+    "smoke_recall_improved",
+    "fire_recall_improved"
+  ],
+  "long_training_started": false,
+  "main_training_ran": false
+}
+```
