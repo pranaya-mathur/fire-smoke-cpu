@@ -20,7 +20,6 @@ OUTPUT_MD = "reports/hf_authenticated_retry.md"
 TARGET_DATASETS = [
     "medyoussef/fire-smoke-hardnegatives-int8",
     "LibreYOLO/smoke-uvylj",
-    "badsaarow/d-fire"
 ]
 
 def fetch_hf_api(url, token=None):

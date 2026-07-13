@@ -267,7 +267,7 @@ def qualify_candidates() -> dict:
     hist_sources = {r["source_name"].lower() for r in registry}
     candidates = []
 
-    def add(name, url, local_path: Path, license_status, od_annotations, reason_notes, blocked=False, accept=False):
+    def add(name, url, local_path: Path, license_status, od_annotations, reason_notes, blocked=False, accept=False, require_od=True):
         exists = local_path.exists() and any(local_path.rglob("*"))
         lineage_overlap = any(b in name.lower() for b in BLOCKED_NEW_SOURCES) or any(
             b in str(url).lower() for b in BLOCKED_NEW_SOURCES
@@ -280,7 +280,7 @@ def qualify_candidates() -> dict:
             reject_reasons.append("historically_blocked_or_exposed_lineage")
         if historically_used and name not in {SOURCE_BETASECOND, SOURCE_YINGJIE}:
             reject_reasons.append("source_present_in_historical_registry")
-        if not od_annotations:
+        if require_od and not od_annotations:
             reject_reasons.append("object_detection_annotations_unverified")
         if license_status in {"unknown", "non-commercial", "blocked"}:
             # allow R&D with explicit requires_review, but not unknown/non-commercial for training gate
@@ -337,15 +337,6 @@ def qualify_candidates() -> dict:
         blocked=True,
     )
     add(
-        "roboflow/smoke100",
-        "https://universe.roboflow.com/smoke-detection/smoke100-uwe4t",
-        ROOT / "data/raw/roboflow_smoke100",
-        "blocked",
-        True,
-        "Download blocked; do not retry.",
-        blocked=True,
-    )
-    add(
         "medyoussef/fire-smoke-hardnegatives-int8",
         "https://huggingface.co/datasets/medyoussef/fire-smoke-hardnegatives-int8",
         ROOT / "data/raw/hf_candidates/medyoussef_fire-smoke-hardnegatives-int8_real",
@@ -364,13 +355,25 @@ def qualify_candidates() -> dict:
         blocked=True,
     )
     add(
-        "badsaarow/d-fire",
-        "https://huggingface.co/datasets/badsaarow/d-fire",
-        ROOT / "data/raw/hf_candidates/badsaarow_d-fire",
-        "unknown",
+        "dfire_official",
+        "https://github.com/gaia-solutions-on-demand/DFireDataset",
+        ROOT / "data/raw/dfire",
+        "CC0-1.0",
+        True,
+        "Official D-Fire via README Kaggle mirror (data/raw/dfire/MANUAL_DOWNLOAD.md). "
+        "GitHub clone alone is NOT enough — run scripts/qualify_priority_sources.py for image readiness.",
+        accept=False,
+    )
+    add(
+        "firesense_zenodo_836749",
+        "https://zenodo.org/records/836749",
+        ROOT / "data/raw/firesense",
+        "requires_review",
         False,
-        "Quarantined; possible D-Fire derivative; not downloaded.",
-        blocked=False,
+        "Official FIRESENSE fire/smoke video ZIPs. Temporal/eval only until frame+YOLO labels exist. "
+        "Download: python scripts/download_priority_sources.py download --firesense",
+        accept=False,
+        require_od=False,
     )
     add(
         "hiennguyen9874/fire-smoke-detection",
@@ -1349,7 +1352,6 @@ def decision() -> dict:
 def run_cleanup_audit() -> dict:
     """Emit repository cleanup audit artifacts."""
     entries = [
-        {"path": "archive/obsolete_workflows/smoke100_workflow.py", "classification": "ARCHIVE_REFERENCE_ONLY", "reason": "Smoke100 blocked NO_GO; do not retry", "dependency_check": "tests moved with archive", "action_taken": "moved_to_archive"},
         {"path": "archive/obsolete_workflows/hf_kien_fallback_workflow.py", "classification": "ARCHIVE_REFERENCE_ONLY", "reason": "Kien reuse NO_GO", "dependency_check": "no active imports", "action_taken": "moved_to_archive"},
         {"path": "archive/obsolete_workflows/analyze_negative_candidates.py", "classification": "REMOVE", "reason": "mocked stub", "dependency_check": "unused", "action_taken": "moved_to_archive"},
         {"path": "archive/obsolete_workflows/visual_qc.py", "classification": "REMOVE", "reason": "mocked stub", "dependency_check": "unused", "action_taken": "moved_to_archive"},
@@ -1364,7 +1366,6 @@ def run_cleanup_audit() -> dict:
         {"path": "scripts/v2_2_workflow.py", "classification": "KEEP", "reason": "eval/dedupe utilities + historical V2.2 evidence", "dependency_check": "tests + error_driven import", "action_taken": "retained"},
         {"path": "scripts/real_v2_1_workflow.py", "classification": "REFACTOR", "reason": "mock path reference updated", "dependency_check": "ok", "action_taken": "updated_mock_path"},
         {"path": "requirements.in", "classification": "REFACTOR", "reason": "removed roboflow dependency", "dependency_check": "ok", "action_taken": "roboflow_removed"},
-        {"path": "reports/*smoke100*", "classification": "KEEP", "reason": "historical NO_GO evidence", "dependency_check": "n/a", "action_taken": "retained"},
         {"path": "reports/*hf_kien*", "classification": "KEEP", "reason": "historical NO_GO evidence", "dependency_check": "n/a", "action_taken": "retained"},
         {"path": "runs/.../yolo11n_v2_1_real_512_12e/weights/best.pt", "classification": "KEEP", "reason": "frozen champion", "dependency_check": "n/a", "action_taken": "untouched"},
     ]

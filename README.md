@@ -18,7 +18,6 @@ Trusted baseline metrics: `reports/v2_1_frozen_baseline.json`.
 | Experiment | Decision |
 |---|---|
 | V2.2 (main / repaired / clean-eval) | **NO_GO** |
-| Smoke100 / Roboflow | **NO_GO** (download blocked — do not retry) |
 | Kien HF Indoor fallback | **NO_GO** (historical overlap + metric regressions) |
 | Error-driven Yingjie hard-example 1e challenger | **NO_GO** (FP-image rate regressed; see `reports/error_driven_challenger_decision.json`) |
 | Precision-recovery hard-negative-heavy 1e challenger | **NO_GO** (FP improved but smoke mAP50 regressed; see `reports/precision_recovery_decision.json`) |
@@ -29,7 +28,7 @@ Blind dataset merges are **prohibited**.
 
 Improve V2.1 only through:
 
-1. genuinely new external data (not Kien, Smoke100, Roboflow, or already-used sources);
+1. genuinely new external data (not Kien or already-used sources);
 2. source qualification + license/provenance gates;
 3. historical-overlap blocking (SHA256 + perceptual near-duplicates);
 4. running **frozen V2.1** on candidate data **before** any training;
@@ -37,6 +36,27 @@ Improve V2.1 only through:
 6. replay-balanced fine-tuning (~65–70% V2.1 train replay);
 7. conservative partial-freeze, **one-epoch** CPU challenger;
 8. strict GO / NO_GO promotion on clean val/test.
+
+### Priority CCTV sources
+
+| Priority | Source | Path | How |
+|---|---|---|---|
+| 1 | FIRESENSE fire + smoke videos | `data/raw/firesense/` | Automated Zenodo download |
+| 1 | D-Fire images + YOLO labels | `data/raw/dfire/kaggle_smoke_fire_detection_yolo/` | Official README Kaggle mirror |
+
+```bash
+# 1) Download FIRESENSE ZIPs (~820 MB)
+python scripts/download_priority_sources.py download --firesense
+
+# 2) Verify + qualify local priority sources
+python scripts/download_priority_sources.py verify
+python scripts/qualify_priority_sources.py
+
+# 3) Prepare D-Fire YOLO manifests (still no train)
+python scripts/prepare_dfire.py
+```
+
+D-Fire placement notes: `data/raw/dfire/MANUAL_DOWNLOAD.md`.
 
 ```bash
 python3.12 -m venv .venv
@@ -64,7 +84,7 @@ python scripts/check_environment.py
 
 - `scripts/real_v2_1_workflow.py` — build of frozen real V2.1
 - `scripts/v2_2_workflow.py` — historical V2.2 repair/clean-eval tooling (reuse for eval helpers)
-- `archive/obsolete_workflows/` — Smoke100, Kien fallback, mock stubs (reference only; do not re-run)
+- `archive/obsolete_workflows/` — Kien fallback, mock stubs (reference only; do not re-run)
 
 ## Tests
 

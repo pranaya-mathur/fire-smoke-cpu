@@ -30,21 +30,5 @@
     "local_path": "data/raw/hf_candidates/LibreYOLO_smoke-uvylj",
     "revision": "fcc82783b1a61a87ab0bfed5b3727b344f2236a5",
     "recommendation": "INCLUDE_CANDIDATE"
-  },
-  {
-    "dataset_id": "badsaarow/d-fire",
-    "url": "https://huggingface.co/datasets/badsaarow/d-fire",
-    "auth_detected": true,
-    "auth_used": true,
-    "access_result": "AUTHENTICATED_DOWNLOAD_OK",
-    "gated": false,
-    "license_req": false,
-    "repository_size": 4207498037,
-    "available_disk": 28819058688,
-    "download_attempted": true,
-    "download_completed": true,
-    "local_path": "data/raw/hf_candidates/badsaarow_d-fire",
-    "revision": "27f81e6f7d32fe3b29d366da9573b6150a3d148f",
-    "recommendation": "QUARANTINE"
   }
 ]

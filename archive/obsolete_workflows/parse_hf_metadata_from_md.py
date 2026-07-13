@@ -131,7 +131,6 @@ def main():
         registry = yaml.safe_load(f)
     
     mappings = {
-        "badsaarow/d-fire": (144, 151),
         "medyoussef/fire-smoke-hardnegatives-int8": (152, 153),
         "LibreYOLO/smoke-uvylj": (154, 155),
         "YingjieCheng/FireSmokeDetDatasets": (156, 157),

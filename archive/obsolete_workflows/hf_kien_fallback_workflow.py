@@ -10,16 +10,47 @@ import zipfile
 from collections import Counter, defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from fire_smoke_cpu.annotations import YoloBox, parse_yolo_label, write_yolo_label
 from fire_smoke_cpu.provenance import assert_real_training_origins
 
-import smoke100_workflow as s100
+import error_driven_workflow as ed
 import v2_2_workflow as v22
 
+
+class _Helpers:
+    """Archive-only helpers (shared utilities from active workflows)."""
+
+    utc_now = staticmethod(ed.utc_now)
+    write_json = staticmethod(ed.write_json)
+    write_csv = staticmethod(ed.write_csv)
+    read_csv = staticmethod(ed.read_csv)
+    sha256_file = staticmethod(ed.sha256_file)
+    safe_rel = staticmethod(ed.safe_rel)
+    verify_v2_1 = staticmethod(ed.verify_v2_1)
+    image_paths = staticmethod(v22.image_paths)
+    V2_1_CKPT = ed.V2_1_CKPT
+    EXPECTED_V2_1_SHA256 = ed.EXPECTED_V2_1_SHA256
+
+    @staticmethod
+    def existing_rows_for_duplicate_audit():
+        rows = []
+        for name in (
+            "v2_1_real_all_samples.csv",
+            "v2_2_clean_eval_all_samples.csv",
+            "medyoussef_real_samples.csv",
+            "libreyolo_real_samples.csv",
+        ):
+            path = ROOT / "data/manifests" / name
+            if path.exists():
+                rows.extend(ed.read_csv(path))
+        return rows
+
+
+s100 = _Helpers()
 
 SOURCE_DATASET = "hf_kien_indoor_fire_smoke"
 HF_DATASET = "KienNgyuen/Fire-Smoke-Detection"

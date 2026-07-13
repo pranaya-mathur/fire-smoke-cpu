@@ -1,1 +1,0 @@
-sample_id,canonical_image_path,canonical_label_path,source_dataset,original_image_path,original_label_path,original_filename,sha256,perceptual_hash,width,height,has_fire,has_smoke,fire_box_count,smoke_box_count,is_negative,group_id,scene_id,video_id,license_status,split,excluded,exclusion_reason

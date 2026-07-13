@@ -163,7 +163,7 @@ def main() -> int:
     md = [
         "# HF Indoor Quality Report",
         "",
-        "HF Indoor is the active fallback V1 source after official D-Fire/MS-FSDB downloads were blocked.",
+        "HF Indoor was used as a V1 fallback source; official D-Fire images/labels are now the primary OD path.",
         "",
         f"- Dataset root: `{dataset_root}`",
         f"- Images discovered: `{len(images)}`",

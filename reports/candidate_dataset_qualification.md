@@ -43,20 +43,6 @@
       "url": "https://huggingface.co/datasets/KienNgyuen/Fire-Smoke-Detection"
     },
     {
-      "dataset": "roboflow/smoke100",
-      "decision": "REJECT",
-      "genuinely_new": false,
-      "license_status": "blocked",
-      "local_exists": false,
-      "local_path": "data/raw/roboflow_smoke100",
-      "notes": "Download blocked; do not retry.",
-      "object_detection_annotations": true,
-      "reject_reasons": [
-        "historically_blocked_or_exposed_lineage"
-      ],
-      "url": "https://universe.roboflow.com/smoke-detection/smoke100-uwe4t"
-    },
-    {
       "dataset": "medyoussef/fire-smoke-hardnegatives-int8",
       "decision": "REJECT",
       "genuinely_new": false,
@@ -85,20 +71,6 @@
         "source_present_in_historical_registry"
       ],
       "url": "https://huggingface.co/datasets/LibreYOLO/smoke-uvylj"
-    },
-    {
-      "dataset": "badsaarow/d-fire",
-      "decision": "REJECT",
-      "genuinely_new": true,
-      "license_status": "unknown",
-      "local_exists": false,
-      "local_path": "data/raw/hf_candidates/badsaarow_d-fire",
-      "notes": "Quarantined; possible D-Fire derivative; not downloaded.",
-      "object_detection_annotations": false,
-      "reject_reasons": [
-        "object_detection_annotations_unverified"
-      ],
-      "url": "https://huggingface.co/datasets/badsaarow/d-fire"
     },
     {
       "dataset": "hiennguyen9874/fire-smoke-detection",

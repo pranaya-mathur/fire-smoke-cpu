@@ -5,7 +5,6 @@ cd data/raw/hf_metadata
 echo "Downloading metadata..."
 
 datasets=(
-  "badsaarow/d-fire"
   "medyoussef/fire-smoke-hardnegatives-int8"
   "LibreYOLO/smoke-uvylj"
   "YingjieCheng/FireSmokeDetDatasets"

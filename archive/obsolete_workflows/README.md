@@ -6,7 +6,6 @@ They must **not** be re-run as part of the active SecureVU improvement pipeline.
 
 | Script | Outcome | Why archived |
 |---|---|---|
-| `smoke100_workflow.py` + wrappers | `NO_GO` | Roboflow Smoke100 download blocked; do not retry |
 | `hf_kien_fallback_workflow.py` | `NO_GO` | Reused historically exposed Kien data; metric regressions |
 | `mock_hf_downloads.py` | superseded | Mock / sandbox path; forbidden for real training |
 | `analyze_negative_candidates.py` | dead stub | Hardcoded mocked zeros |

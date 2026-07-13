@@ -3,13 +3,6 @@
     {
       "action_taken": "moved_to_archive",
       "classification": "ARCHIVE_REFERENCE_ONLY",
-      "dependency_check": "tests moved with archive",
-      "path": "archive/obsolete_workflows/smoke100_workflow.py",
-      "reason": "Smoke100 blocked NO_GO; do not retry"
-    },
-    {
-      "action_taken": "moved_to_archive",
-      "classification": "ARCHIVE_REFERENCE_ONLY",
       "dependency_check": "no active imports",
       "path": "archive/obsolete_workflows/hf_kien_fallback_workflow.py",
       "reason": "Kien reuse NO_GO"
@@ -109,13 +102,6 @@
       "action_taken": "retained",
       "classification": "KEEP",
       "dependency_check": "n/a",
-      "path": "reports/*smoke100*",
-      "reason": "historical NO_GO evidence"
-    },
-    {
-      "action_taken": "retained",
-      "classification": "KEEP",
-      "dependency_check": "n/a",
       "path": "reports/*hf_kien*",
       "reason": "historical NO_GO evidence"
     },
@@ -127,5 +113,5 @@
       "reason": "frozen champion"
     }
   ],
-  "timestamp_utc": "2026-07-12T16:38:14.805545+00:00"
+  "timestamp_utc": "2026-07-12T19:11:14.668244+00:00"
 }

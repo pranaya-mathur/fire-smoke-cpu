@@ -1,9 +1,8 @@
 name,source_url,license_discovered,license_file_url,commercial_use_status,notes
 dfire,https://github.com/gaia-solutions-on-demand/DFireDataset,UNKNOWN,,requires review,Initial source tracking only; license requires human/legal review.
-ms_fsdb,https://drive.google.com/file/d/14ylxaNBVmXjAFXt2h4lnyBe7xELhOVHc/view?usp=drive_link,UNKNOWN,,requires review,Initial source tracking only; license requires human/legal review.
-mivia,https://mivia.unisa.it/datasets/video-analysis-datasets/fire-detection-dataset/,UNKNOWN,,requires review,Initial source tracking only; license requires human/legal review.
-fasdd,https://doi.org/10.57760/sciencedb.j00104.00103,UNKNOWN,,requires review,Initial source tracking only; license requires human/legal review.
 dfire,https://github.com/gaia-solutions-on-demand/DFireDataset,UNKNOWN,,requires review,Initial source tracking only; license requires human/legal review.
 dfire,https://github.com/gaia-solutions-on-demand/DFireDataset,CC0-1.0 discovered in official GitHub LICENSE,,confirmed by license text; still review in commercial release process,Initial source tracking only; license requires human/legal review.
 hf_kien_cctv,https://huggingface.co/datasets/KienNgyuen/Fire-Smoke-Detection,CONFLICT: HF repo Apache-2.0 metadata; matching Simuletic page has cc-by-nc-4.0 tag and CC BY 4.0 card text,,requires review,Do not use for commercial training until source/license conflict is resolved.
 hf_kien_indoor,https://huggingface.co/datasets/KienNgyuen/Fire-Smoke-Detection plus https://universe.roboflow.com/object-detection-7qn6l/indoor-fire-smoke/dataset/1,Roboflow YAML says CC BY 4.0,,requires review,Potentially usable with attribution after source/mapping confirmation; not merged into V1 yet.
+firesense,https://zenodo.org/records/836749,requires_review,https://zenodo.org/records/836749,requires review; confirm Zenodo record license before commercial deploy,FIRESENSE flame/smoke videos; video-only until frame labels exist.
+dfire_official,https://github.com/gaia-solutions-on-demand/DFireDataset,CC0-1.0,https://github.com/gaia-solutions-on-demand/DFireDataset/blob/main/LICENSE,confirmed by license text; still review in commercial release process,Official README Kaggle mirror images/labels.

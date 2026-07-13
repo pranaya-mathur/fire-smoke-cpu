@@ -119,7 +119,7 @@
     "scripts/mock_hf_downloads.py": true
   },
   "real_dataset_local_paths": {
-    "dfire": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/hf_candidates/badsaarow_d-fire_hf_snapshot",
+    "dfire": "data/raw/dfire/kaggle_smoke_fire_detection_yolo",
     "libreyolo": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/hf_candidates/LibreYOLO_smoke-uvylj_hf_snapshot",
     "medyoussef": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/hf_candidates/medyoussef_fire-smoke-hardnegatives-int8_hf_snapshot"
   },

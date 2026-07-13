@@ -1,35 +1,5 @@
 [
   {
-    "dataset_id": "badsaarow_d_fire",
-    "exists": true,
-    "repo_metadata": null,
-    "readme": true,
-    "license_tag": "unknown",
-    "has_license_file": false,
-    "configs": 1,
-    "splits": 2,
-    "samples": 21527,
-    "columns": [
-      "image",
-      "label",
-      "filename"
-    ],
-    "image_storage": "embedded_parquet",
-    "has_bounding_boxes": false,
-    "annotation_format": "unknown",
-    "class_names": [],
-    "class_ids": [],
-    "has_fire": true,
-    "has_smoke": false,
-    "has_negative": false,
-    "distractors": false,
-    "video_frames": false,
-    "grouping_inferable": false,
-    "synthetic": false,
-    "cctv_relevant": false,
-    "provenance_documented": false
-  },
-  {
     "dataset_id": "medyoussef_hardnegatives",
     "exists": true,
     "repo_metadata": null,

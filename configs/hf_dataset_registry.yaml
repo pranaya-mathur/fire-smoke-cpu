@@ -1,29 +1,4 @@
 candidates:
-- dataset_id: badsaarow_d_fire
-  url: https://huggingface.co/datasets/badsaarow/d-fire
-  purpose: Foundation dataset for fire and smoke
-  priority: P0
-  expected_task: object_detection
-  expected_classes:
-  - fire
-  - smoke
-  expected_annotation_format: yolo
-  expected_role: primary_foundation_candidate
-  license_status: pending_review
-  commercial_use_status: unknown
-  inspection_status: completed
-  integration_status: quarantined
-  notes: Inspect whether genuinely derived from D-Fire. Verify provenance.
-  auth_required: true
-  auth_available: true
-  gated: false
-  access_status: AUTHENTICATED_DOWNLOAD_OK
-  download_status: MOCKED_FOR_PIPELINE
-  local_path: data/raw/hf_candidates/badsaarow_d-fire
-  revision: 27f81e6f7d32fe3b29d366da9573b6150a3d148f
-  estimated_size: 4207498037
-  actual_size: 4207498037
-  recommendation: QUARANTINE
 - dataset_id: medyoussef_hardnegatives
   url: https://huggingface.co/datasets/medyoussef/fire-smoke-hardnegatives-int8
   purpose: Negative samples for false alarm reduction
@@ -35,19 +10,15 @@ candidates:
   license_status: pending_review
   commercial_use_status: unknown
   inspection_status: completed
-  integration_status: quarantined
-  notes: Inspect for genuine negative images, normal scenes, and diverse environments
-    (fog, steam, etc).
+  integration_status: historically_used_blocked
+  notes: Already used in V2.1; blocked as new booster.
   auth_required: true
   auth_available: true
   gated: false
   access_status: AUTHENTICATED_DOWNLOAD_OK
-  download_status: MOCKED_FOR_PIPELINE
+  download_status: PRESENT
   local_path: data/raw/hf_candidates/medyoussef_fire-smoke-hardnegatives-int8
-  revision: 5db7b603eebc0229ac9fbff1bce760ea97bd2f5d
-  estimated_size: 3317229455
-  actual_size: 3317229455
-  recommendation: INCLUDE_CANDIDATE
+  recommendation: BLOCKED_HISTORICAL
 - dataset_id: libreyolo_smoke_uvylj
   url: https://huggingface.co/datasets/LibreYOLO/smoke-uvylj
   purpose: Enhance smoke detection capabilities
@@ -60,18 +31,15 @@ candidates:
   license_status: pending_review
   commercial_use_status: unknown
   inspection_status: completed
-  integration_status: quarantined
-  notes: Verify object detection boxes. Convert smoke class to canonical 1.
+  integration_status: historically_used_blocked
+  notes: Already used in V2.1; blocked as new booster.
   auth_required: true
   auth_available: true
   gated: false
   access_status: AUTHENTICATED_DOWNLOAD_OK
-  download_status: MOCKED_FOR_PIPELINE
+  download_status: PRESENT
   local_path: data/raw/hf_candidates/LibreYOLO_smoke-uvylj
-  revision: fcc82783b1a61a87ab0bfed5b3727b344f2236a5
-  estimated_size: 42050168
-  actual_size: 42050168
-  recommendation: INCLUDE_CANDIDATE
+  recommendation: BLOCKED_HISTORICAL
 - dataset_id: yingjie_fire_smoke
   url: https://huggingface.co/datasets/YingjieCheng/FireSmokeDetDatasets
   purpose: Supplemental positive examples
@@ -80,13 +48,15 @@ candidates:
   expected_classes:
   - fire
   - smoke
-  expected_annotation_format: unknown
+  expected_annotation_format: yolo
   expected_role: supplemental_positive
-  license_status: pending_review
-  commercial_use_status: unknown
-  inspection_status: pending
-  integration_status: quarantined
-  notes: Validate object detection annotations, source provenance, and negative images.
+  license_status: apache-2.0
+  commercial_use_status: review
+  inspection_status: completed
+  integration_status: local_candidate
+  notes: Previous 1e challenger NO_GO; still local for analysis only.
+  local_path: data/raw/hf_candidates/YingjieCheng_FireSmokeDetDatasets
+  recommendation: ANALYZE_ONLY
 - dataset_id: kienngyuen_fire_smoke
   url: https://huggingface.co/datasets/KienNgyuen/Fire-Smoke-Detection
   purpose: Existing baseline source
@@ -99,24 +69,11 @@ candidates:
   expected_role: supplemental_positive_existing
   license_status: pending_review
   commercial_use_status: unknown
-  inspection_status: pending
-  integration_status: quarantined
-  notes: Do not let it dominate V2. Preserve provenance and manifest data.
-- dataset_id: hiennguyen_fire_smoke
-  url: https://huggingface.co/datasets/hiennguyen9874/fire-smoke-detection
-  purpose: Secondary supplemental positives
-  priority: P1
-  expected_task: object_detection
-  expected_classes:
-  - fire
-  - smoke
-  expected_annotation_format: unknown
-  expected_role: supplemental_positive
-  license_status: pending_review
-  commercial_use_status: unknown
-  inspection_status: pending
-  integration_status: quarantined
-  notes: Verify bounding box suitability and cross-source duplicates.
+  inspection_status: completed
+  integration_status: historically_used_blocked
+  notes: Do not reuse as new booster.
+  local_path: data/raw/hf_kien_fire_smoke
+  recommendation: BLOCKED_HISTORICAL
 - dataset_id: betasecond_jimei
   url: https://huggingface.co/datasets/betasecond/jimei-fire-smoke-yolo-dataset
   purpose: Secondary supplemental positives
@@ -130,5 +87,7 @@ candidates:
   license_status: pending_review
   commercial_use_status: unknown
   inspection_status: pending
-  integration_status: quarantined
-  notes: Verify actual YOLO format, class IDs, negatives, and duplicate risk.
+  integration_status: local_candidate
+  notes: Verify YOLO format, class IDs, negatives, and duplicate risk before any challenger use.
+  local_path: data/raw/hf_candidates/betasecond_jimei-fire-smoke-yolo-dataset
+  recommendation: CANDIDATE

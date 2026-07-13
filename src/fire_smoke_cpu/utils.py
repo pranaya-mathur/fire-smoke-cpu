@@ -70,13 +70,36 @@ def perceptual_hash(path: Path) -> str:
 def list_images(root: Path) -> list[Path]:
     if not root.exists():
         return []
-    return sorted(p for p in root.rglob("*") if p.is_file() and p.suffix.lower() in IMAGE_EXTS)
+    # pathlib.Path.rglob does not descend into directory symlinks; use walk+dedupe.
+    found: dict[str, Path] = {}
+    for dirpath, _dirnames, filenames in os.walk(root, followlinks=True):
+        for name in filenames:
+            path = Path(dirpath) / name
+            if path.suffix.lower() not in IMAGE_EXTS:
+                continue
+            try:
+                key = str(path.resolve())
+            except OSError:
+                key = str(path)
+            found.setdefault(key, path)
+    return sorted(found.values(), key=lambda p: str(p))
 
 
 def list_videos(root: Path) -> list[Path]:
     if not root.exists():
         return []
-    return sorted(p for p in root.rglob("*") if p.is_file() and p.suffix.lower() in VIDEO_EXTS)
+    found: dict[str, Path] = {}
+    for dirpath, _dirnames, filenames in os.walk(root, followlinks=True):
+        for name in filenames:
+            path = Path(dirpath) / name
+            if path.suffix.lower() not in VIDEO_EXTS:
+                continue
+            try:
+                key = str(path.resolve())
+            except OSError:
+                key = str(path)
+            found.setdefault(key, path)
+    return sorted(found.values(), key=lambda p: str(p))
 
 
 def write_json(path: Path, data: object) -> None:

@@ -1,5 +1,4 @@
 dataset_id,hub_license_tag,readme_statement,actual_license_file,source_attribution,upstream_url,commercial_use_status,provenance_status,recommendation
-badsaarow_d_fire,unknown,Requires human review,False,Requires human review,Requires human review,requires review,unknown,Review
 medyoussef_hardnegatives,unknown,Requires human review,False,Requires human review,Requires human review,requires review,unknown,Review
 libreyolo_smoke_uvylj,cc-by-4.0,Requires human review,False,Requires human review,Requires human review,confirmed,unknown,Proceed
 yingjie_fire_smoke,apache-2.0,Requires human review,False,Requires human review,Requires human review,confirmed,unknown,Proceed

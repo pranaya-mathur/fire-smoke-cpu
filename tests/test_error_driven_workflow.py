@@ -19,11 +19,10 @@ def test_error_driven_never_overwrites_v2_1_and_is_one_epoch():
     assert "long_training_started\": False" in text or '"long_training_started": False' in text
 
 
-def test_blocked_sources_include_kien_and_smoke100():
+def test_blocked_sources_include_kien():
     mod = load_workflow()
     blocked = {b.lower() for b in mod["BLOCKED_NEW_SOURCES"]}
     assert "kien" in blocked or "kienngyuen" in blocked
-    assert "smoke100" in blocked
     assert "medyoussef" in blocked
 
 
@@ -38,8 +37,15 @@ def test_size_bucket_and_iou_helpers():
     assert mod["_box_iou"](a, b) > 0.99
 
 
-def test_obsolete_smoke100_not_in_scripts():
+def test_removed_placeholder_datasets_absent():
     root = Path(__file__).resolve().parents[1]
     assert not (root / "scripts/smoke100_workflow.py").exists()
-    assert (root / "archive/obsolete_workflows/smoke100_workflow.py").exists()
+    assert not (root / "archive/obsolete_workflows/smoke100_workflow.py").exists()
     assert not (root / "scripts/hf_kien_fallback_workflow.py").exists()
+    assert not (root / "data/raw/ms_fsdb").exists()
+    assert not (root / "data/raw/mivia").exists()
+    assert not (root / "data/raw/fasdd").exists()
+    assert not (root / "data/raw/pyro_sdis").exists()
+    assert not (root / "data/raw/roboflow_smoke100").exists()
+    assert not (root / "data/raw/dfire/surveillance_videos").exists()
+    assert not (root / "scripts/prepare_ms_fsdb.py").exists()

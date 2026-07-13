@@ -1,6 +1,5 @@
 # Repository Cleanup Audit
 
-- `archive/obsolete_workflows/smoke100_workflow.py` — **ARCHIVE_REFERENCE_ONLY** — Smoke100 blocked NO_GO; do not retry — deps: tests moved with archive — action: moved_to_archive
 - `archive/obsolete_workflows/hf_kien_fallback_workflow.py` — **ARCHIVE_REFERENCE_ONLY** — Kien reuse NO_GO — deps: no active imports — action: moved_to_archive
 - `archive/obsolete_workflows/analyze_negative_candidates.py` — **REMOVE** — mocked stub — deps: unused — action: moved_to_archive
 - `archive/obsolete_workflows/visual_qc.py` — **REMOVE** — mocked stub — deps: unused — action: moved_to_archive
@@ -15,6 +14,5 @@
 - `scripts/v2_2_workflow.py` — **KEEP** — eval/dedupe utilities + historical V2.2 evidence — deps: tests + error_driven import — action: retained
 - `scripts/real_v2_1_workflow.py` — **REFACTOR** — mock path reference updated — deps: ok — action: updated_mock_path
 - `requirements.in` — **REFACTOR** — removed roboflow dependency — deps: ok — action: roboflow_removed
-- `reports/*smoke100*` — **KEEP** — historical NO_GO evidence — deps: n/a — action: retained
 - `reports/*hf_kien*` — **KEEP** — historical NO_GO evidence — deps: n/a — action: retained
 - `runs/.../yolo11n_v2_1_real_512_12e/weights/best.pt` — **KEEP** — frozen champion — deps: n/a — action: untouched

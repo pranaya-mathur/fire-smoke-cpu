@@ -1,16 +1,2465 @@
 {
-  "excluded": 1,
+  "canonical_class_names": [
+    "fire",
+    "smoke"
+  ],
+  "class_remap_applied": true,
+  "excluded": 340,
   "exclusions": [
     {
       "errors": [
-        "missing_label"
+        "line_3:zero_or_negative_area"
       ],
-      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/DFireDataset/figures/dfire_examples.png",
-      "label": ""
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF07743.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF07743.txt"
+    },
+    {
+      "errors": [
+        "line_3:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF07774.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF07774.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF07867.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF07867.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF07890.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF07890.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF07891.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF07891.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF07894.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF07894.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF07910.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF07910.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF07920.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF07920.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF07922.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF07922.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF07941.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF07941.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF07942.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF07942.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF07943.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF07943.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF07946.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF07946.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF07949.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF07949.txt"
+    },
+    {
+      "errors": [
+        "line_2:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/AoF08348.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/AoF08348.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/PublicDataset01162.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/PublicDataset01162.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/PublicDataset01321.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/PublicDataset01321.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/PublicDataset01323.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/PublicDataset01323.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10509.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10509.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10513.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10513.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10590.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10590.txt"
+    },
+    {
+      "errors": [
+        "line_5:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10669.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10669.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10739.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10739.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10743.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10743.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10755.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10755.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10765.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10765.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10766.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10766.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10767.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10767.txt"
+    },
+    {
+      "errors": [
+        "line_2:coordinate_out_of_range",
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10769.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10769.txt"
+    },
+    {
+      "errors": [
+        "line_2:coordinate_out_of_range",
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10770.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10770.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10772.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10772.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10773.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10773.txt"
+    },
+    {
+      "errors": [
+        "line_3:coordinate_out_of_range",
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10775.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10775.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10777.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10777.txt"
+    },
+    {
+      "errors": [
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10778.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10778.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10779.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10779.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10781.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10781.txt"
+    },
+    {
+      "errors": [
+        "line_8:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10782.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10782.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10793.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10793.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10798.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10798.txt"
+    },
+    {
+      "errors": [
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10801.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10801.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10803.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10803.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_2:box_outside_image",
+        "line_7:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10807.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10807.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10809.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10809.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10819.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10819.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10820.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10820.txt"
+    },
+    {
+      "errors": [
+        "line_3:coordinate_out_of_range",
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10821.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10821.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB10910.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB10910.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB11002.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB11002.txt"
+    },
+    {
+      "errors": [
+        "line_1:coordinate_out_of_range",
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB11090.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB11090.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB11126.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB11126.txt"
+    },
+    {
+      "errors": [
+        "line_1:coordinate_out_of_range",
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB11598.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB11598.txt"
+    },
+    {
+      "errors": [
+        "line_1:coordinate_out_of_range",
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB11600.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB11600.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB11602.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB11602.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB11603.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB11603.txt"
+    },
+    {
+      "errors": [
+        "line_1:coordinate_out_of_range",
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB11606.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB11606.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB11607.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB11607.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB11614.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB11614.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB11620.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB11620.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB11621.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB11621.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB11624.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB11624.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/images/WEB11804.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/test/labels/WEB11804.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04522.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04522.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04568.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04568.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04627.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04627.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04663.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04663.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04664.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04664.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04687.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04687.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04689.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04689.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04690.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04690.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04695.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04695.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04696.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04696.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04723.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04723.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04750.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04750.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04761.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04761.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04763.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04763.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04798.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04798.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04854.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04854.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04856.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04856.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04857.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04857.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image",
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04858.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04858.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04861.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04861.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image",
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04869.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04869.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04871.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04871.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04873.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04873.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04875.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04875.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04963.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04963.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04964.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04964.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04966.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04966.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04967.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04967.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04968.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04968.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04970.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04970.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04971.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04971.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04979.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04979.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04989.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04989.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04991.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04991.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04992.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04992.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF04997.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF04997.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF05005.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF05005.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF05311.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF05311.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF05352.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF05352.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF05411.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF05411.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF05412.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF05412.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF05413.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF05413.txt"
+    },
+    {
+      "errors": [
+        "line_2:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF05470.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF05470.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF05874.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF05874.txt"
+    },
+    {
+      "errors": [
+        "line_2:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF06155.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF06155.txt"
+    },
+    {
+      "errors": [
+        "line_2:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF06348.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF06348.txt"
+    },
+    {
+      "errors": [
+        "line_2:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF06439.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF06439.txt"
+    },
+    {
+      "errors": [
+        "line_2:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/AoF06456.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/AoF06456.txt"
+    },
+    {
+      "errors": [
+        "line_5:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/PublicDataset00056.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/PublicDataset00056.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB03821.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB03821.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image",
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04008.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04008.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04012.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04012.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04112.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04112.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04185.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04185.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04188.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04188.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04193.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04193.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04195.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04195.txt"
+    },
+    {
+      "errors": [
+        "line_5:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04243.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04243.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04331.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04331.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04410.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04410.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04420.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04420.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04435.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04435.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04450.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04450.txt"
+    },
+    {
+      "errors": [
+        "line_2:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04527.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04527.txt"
+    },
+    {
+      "errors": [
+        "line_5:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04742.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04742.txt"
+    },
+    {
+      "errors": [
+        "line_5:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04849.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04849.txt"
+    },
+    {
+      "errors": [
+        "line_8:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB04983.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB04983.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05038.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05038.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05050.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05050.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05084.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05084.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05086.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05086.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05088.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05088.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05092.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05092.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05093.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05093.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image",
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05096.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05096.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image",
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05100.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05100.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image",
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05103.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05103.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05107.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05107.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05108.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05108.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05110.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05110.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05111.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05111.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05112.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05112.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image",
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05114.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05114.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05115.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05115.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05117.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05117.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05118.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05118.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05124.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05124.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05126.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05126.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05129.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05129.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05130.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05130.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05131.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05131.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05145.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05145.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05152.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05152.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05154.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05154.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05155.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05155.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image",
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05157.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05157.txt"
+    },
+    {
+      "errors": [
+        "line_7:box_outside_image",
+        "line_8:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05158.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05158.txt"
+    },
+    {
+      "errors": [
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05160.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05160.txt"
+    },
+    {
+      "errors": [
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05162.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05162.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05164.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05164.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image",
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05165.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05165.txt"
+    },
+    {
+      "errors": [
+        "line_8:box_outside_image",
+        "line_9:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05167.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05167.txt"
+    },
+    {
+      "errors": [
+        "line_7:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05174.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05174.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05176.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05176.txt"
+    },
+    {
+      "errors": [
+        "line_8:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05188.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05188.txt"
+    },
+    {
+      "errors": [
+        "line_6:box_outside_image",
+        "line_7:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05192.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05192.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05195.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05195.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image",
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05196.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05196.txt"
+    },
+    {
+      "errors": [
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05201.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05201.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image",
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05206.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05206.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05212.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05212.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05215.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05215.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image",
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05217.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05217.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image",
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05219.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05219.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05220.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05220.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05223.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05223.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05224.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05224.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05227.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05227.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05228.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05228.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05229.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05229.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05231.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05231.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05232.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05232.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05233.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05233.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05236.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05236.txt"
+    },
+    {
+      "errors": [
+        "line_7:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05237.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05237.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05238.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05238.txt"
+    },
+    {
+      "errors": [
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05243.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05243.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05244.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05244.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image",
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05246.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05246.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05254.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05254.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image",
+        "line_4:box_outside_image",
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05255.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05255.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image",
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05256.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05256.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image",
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05257.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05257.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image",
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05259.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05259.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05262.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05262.txt"
+    },
+    {
+      "errors": [
+        "line_6:box_outside_image",
+        "line_7:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05263.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05263.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image",
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05265.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05265.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image",
+        "line_4:box_outside_image",
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05266.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05266.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image",
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05267.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05267.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05271.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05271.txt"
+    },
+    {
+      "errors": [
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05276.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05276.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image",
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05279.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05279.txt"
+    },
+    {
+      "errors": [
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05281.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05281.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05285.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05285.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image",
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05287.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05287.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05289.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05289.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05293.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05293.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image",
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05295.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05295.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05297.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05297.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_2:box_outside_image",
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05299.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05299.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_2:box_outside_image",
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05300.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05300.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05304.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05304.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05305.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05305.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05307.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05307.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05308.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05308.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05315.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05315.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05316.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05316.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05317.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05317.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05318.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05318.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05328.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05328.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05331.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05331.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05333.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05333.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05343.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05343.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05348.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05348.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05355.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05355.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05356.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05356.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05358.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05358.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05360.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05360.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05362.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05362.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05363.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05363.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05537.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05537.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05757.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05757.txt"
+    },
+    {
+      "errors": [
+        "line_7:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05882.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05882.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB05886.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB05886.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB06028.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB06028.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB06101.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB06101.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB06251.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB06251.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB06363.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB06363.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB06611.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB06611.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB06733.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB06733.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB06750.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB06750.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB06754.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB06754.txt"
+    },
+    {
+      "errors": [
+        "line_8:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB06900.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB06900.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB07167.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB07167.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB07460.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB07460.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB07714.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB07714.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB07720.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB07720.txt"
+    },
+    {
+      "errors": [
+        "line_2:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB07998.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB07998.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08558.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08558.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08559.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08559.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08632.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08632.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08636.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08636.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08643.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08643.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image",
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08646.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08646.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08654.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08654.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08656.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08656.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08658.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08658.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08659.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08659.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08661.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08661.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08669.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08669.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08673.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08673.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08675.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08675.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08676.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08676.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08677.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08677.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08681.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08681.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08683.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08683.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08686.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08686.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08687.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08687.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08696.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08696.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08698.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08698.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08708.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08708.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08711.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08711.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08712.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08712.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08714.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08714.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08718.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08718.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08725.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08725.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB08727.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB08727.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB09163.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB09163.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB09241.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB09241.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB09312.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB09312.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB09339.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB09339.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB09346.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB09346.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB09363.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB09363.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/images/WEB09424.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/train/labels/WEB09424.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/AoF04688.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/AoF04688.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/AoF04800.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/AoF04800.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/AoF04855.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/AoF04855.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/AoF04859.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/AoF04859.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/AoF04860.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/AoF04860.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/AoF04867.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/AoF04867.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/AoF04990.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/AoF04990.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/AoF04998.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/AoF04998.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB03765.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB03765.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB03951.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB03951.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB04449.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB04449.txt"
+    },
+    {
+      "errors": [
+        "line_8:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB04980.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB04980.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05040.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05040.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05089.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05089.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05090.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05090.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05091.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05091.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05097.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05097.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05099.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05099.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image",
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05102.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05102.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image",
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05105.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05105.txt"
+    },
+    {
+      "errors": [
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05190.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05190.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05194.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05194.txt"
+    },
+    {
+      "errors": [
+        "line_6:box_outside_image",
+        "line_8:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05199.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05199.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05214.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05214.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05225.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05225.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05230.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05230.txt"
+    },
+    {
+      "errors": [
+        "line_7:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05251.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05251.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05268.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05268.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05270.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05270.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05273.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05273.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05282.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05282.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05286.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05286.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image",
+        "line_6:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05290.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05290.txt"
+    },
+    {
+      "errors": [
+        "line_5:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05291.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05291.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05292.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05292.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_2:box_outside_image",
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05298.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05298.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image",
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05301.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05301.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05323.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05323.txt"
+    },
+    {
+      "errors": [
+        "line_4:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05327.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05327.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05347.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05347.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB05365.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB05365.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB06751.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB06751.txt"
+    },
+    {
+      "errors": [
+        "line_2:zero_or_negative_area"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB08540.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB08540.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB08560.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB08560.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB08641.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB08641.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image",
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB08642.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB08642.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB08678.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB08678.txt"
+    },
+    {
+      "errors": [
+        "line_3:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB08690.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB08690.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB08691.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB08691.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB08701.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB08701.txt"
+    },
+    {
+      "errors": [
+        "line_2:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB08702.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB08702.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB08709.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB08709.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB08710.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB08710.txt"
+    },
+    {
+      "errors": [
+        "line_1:box_outside_image"
+      ],
+      "image": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/images/WEB08726.jpg",
+      "label": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire/presplit/kaggle_splits/val/labels/WEB08726.txt"
     }
   ],
-  "images_discovered": 1,
+  "images_discovered": 21527,
+  "labels_remapped_to_canonical": 11689,
+  "notes": "Official D-Fire README Kaggle mirror used when OneDrive blocked. Raw archives untouched; remapping applied only to canonical labels.",
   "raw_dir": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/dfire",
-  "timestamp_utc": "2026-07-11T15:49:55.990305+00:00",
-  "valid_samples": 0
+  "source_class_names": [
+    "smoke",
+    "fire"
+  ],
+  "timestamp_utc": "2026-07-12T18:13:39.704046+00:00",
+  "valid_samples": 21187
 }

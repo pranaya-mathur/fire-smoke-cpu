@@ -29,4 +29,5 @@ def test_obsolete_workflows_still_archived():
     root = Path(__file__).resolve().parents[1]
     assert not (root / "scripts/smoke100_workflow.py").exists()
     assert not (root / "scripts/hf_kien_fallback_workflow.py").exists()
-    assert (root / "archive/obsolete_workflows/smoke100_workflow.py").exists()
+    assert not (root / "archive/obsolete_workflows/smoke100_workflow.py").exists()
+    assert (root / "archive/obsolete_workflows/hf_kien_fallback_workflow.py").exists()

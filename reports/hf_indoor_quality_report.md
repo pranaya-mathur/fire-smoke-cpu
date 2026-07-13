@@ -1,6 +1,5 @@
 # HF Indoor Quality Report
 
-HF Indoor is the active fallback V1 source after official D-Fire/MS-FSDB downloads were blocked.
 
 - Dataset root: `/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/hf_kien_fire_smoke/extracted_indoor/Indoor Fire Smoke`
 - Images discovered: `5000`

@@ -18,37 +18,21 @@ from fire_smoke_cpu.utils import ensure_dirs, sha256_file, utc_now_iso
 DATASETS = {
     "dfire": {
         "url": "https://github.com/gaia-solutions-on-demand/DFireDataset",
-        "data_url": "https://1drv.ms/u/c/c0bd25b6b048b01d/EbLgD7bES4FDvUN37Grxn8QBF5gIBBc7YV2qklF08GCiBw",
-        "split_url": "https://1drv.ms/f/c/c0bd25b6b048b01d/Ema8FFze8mFIlM1Hn81BUUgBE3vnnmK4SQxybS-nHRt2pA?e=6rk0aN",
+        "data_url": "https://www.kaggle.com/datasets/sayedgamal99/smoke-fire-detection-yolo",
+        "split_url": "https://www.kaggle.com/datasets/sayedgamal99/smoke-fire-detection-yolo",
         "dest": RAW_DIR / "dfire",
-        "expected": "official D-Fire images/labels archive from OneDrive plus optional split archive",
+        "expected": "official D-Fire images/labels via README Kaggle mirror",
         "license": "CC0-1.0 discovered in official GitHub LICENSE",
         "commercial_use_status": "confirmed by license text; still review in commercial release process",
         "auto": "git",
     },
-    "ms_fsdb": {
-        "url": "https://drive.google.com/file/d/14ylxaNBVmXjAFXt2h4lnyBe7xELhOVHc/view?usp=drive_link",
-        "dest": RAW_DIR / "ms_fsdb",
-        "expected": "official MS-FSDB archive from Google Drive",
-        "license": "UNKNOWN",
-        "commercial_use_status": "requires review",
-        "auto": "manual_drive",
-    },
-    "mivia": {
-        "url": "https://mivia.unisa.it/datasets/video-analysis-datasets/fire-detection-dataset/",
-        "dest": RAW_DIR / "mivia",
-        "expected": "MIVIA fire detection videos after any required license/download flow",
-        "license": "UNKNOWN",
-        "commercial_use_status": "requires review",
-        "auto": "manual_web",
-    },
-    "fasdd": {
-        "url": "https://doi.org/10.57760/sciencedb.j00104.00103",
-        "dest": RAW_DIR / "fasdd",
-        "expected": "FASDD archive from ScienceDB DOI landing page",
-        "license": "UNKNOWN",
-        "commercial_use_status": "requires review",
-        "auto": "manual_web",
+    "firesense": {
+        "url": "https://zenodo.org/records/836749",
+        "dest": RAW_DIR / "firesense",
+        "expected": "fire_videos.1406.zip and smoke_videos.1407.zip from Zenodo",
+        "license": "requires_review",
+        "commercial_use_status": "requires review; confirm Zenodo record license before commercial deploy",
+        "auto": "priority_script",
     },
 }
 
@@ -172,7 +156,7 @@ def download_dfire(info: dict) -> None:
                 "destination": str(dest),
                 "timestamp_utc": utc_now_iso(),
                 "archive_or_repo": info["expected"],
-                "message": "Official GitHub repo cloned, but actual images/labels are hosted through OneDrive and require manual download if automated access is blocked.",
+                "message": "Official GitHub repo cloned; images/labels via README Kaggle mirror preferred. See data/raw/dfire/MANUAL_DOWNLOAD.md",
             },
             DOWNLOAD_FIELDS,
         )
@@ -200,6 +184,19 @@ def main() -> int:
         )
         if info["auto"] == "git":
             download_dfire(info)
+        elif info["auto"] == "priority_script":
+            print(
+                "FIRESENSE downloads are handled by scripts/download_priority_sources.py "
+                "(Zenodo curl). Delegating..."
+            )
+            import subprocess
+
+            result = subprocess.run(
+                [sys.executable, str(ROOT / "scripts" / "download_priority_sources.py"), "download", "--firesense"],
+                cwd=str(ROOT),
+            )
+            if result.returncode != 0:
+                record_manual(name, info)
         else:
             maybe_extract_archives(info["dest"])
             record_manual(name, info)

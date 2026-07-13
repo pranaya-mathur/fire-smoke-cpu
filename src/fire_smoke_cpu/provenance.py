@@ -7,13 +7,21 @@ ALLOWED_DATA_ORIGINS = {
     "huggingface_snapshot",
     "local_existing",
     "roboflow_universe",
+    "zenodo",
+    "official_provider",
     "synthetic",
     "mock",
     "placeholder",
     "unknown",
 }
 
-REAL_TRAINING_ALLOWED_ORIGINS = {"huggingface_snapshot", "local_existing", "roboflow_universe"}
+REAL_TRAINING_ALLOWED_ORIGINS = {
+    "huggingface_snapshot",
+    "local_existing",
+    "roboflow_universe",
+    "zenodo",
+    "official_provider",
+}
 REAL_TRAINING_FORBIDDEN_ORIGINS = {"mock", "placeholder", "unknown"}
 
 

@@ -4,7 +4,6 @@ Total needed (compressed): 23.95 GB
 Recommended free space (extraction overhead): 47.90 GB
 Actual free space: 27.36 GB
 
-- badsaarow_d_fire: 3.92 GB
 - medyoussef_hardnegatives: 3.09 GB
 - libreyolo_smoke_uvylj: 0.04 GB
 - yingjie_fire_smoke: 2.10 GB

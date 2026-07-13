@@ -1,0 +1,98 @@
+# FIRESENSE Download Report
+
+```json
+{
+  "archives": [
+    {
+      "archive_or_repo": "fire_videos.1406.zip",
+      "dataset": "firesense_fire_videos",
+      "destination": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/firesense/fire_videos.1406.zip",
+      "extract_dir": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/firesense/extracted/fire_videos.1406",
+      "extracted_size_bytes": 990653484,
+      "message": "downloaded; extracted",
+      "notes": "FIRESENSE flame-detection videos: 11 positive + 16 negative (Zenodo listing).",
+      "sha256": "15bff18ba386d98769bd9d8c992ad6a16af38170eb49c0d8bb7fec8bc0f72982",
+      "size_bytes": 622676845,
+      "source_url": "https://zenodo.org/records/836749/files/fire_videos.1406.zip?download=1",
+      "status": "DOWNLOADED",
+      "timestamp_utc": "2026-07-12T17:54:31.390759+00:00"
+    },
+    {
+      "archive_or_repo": "smoke_videos.1407.zip",
+      "dataset": "firesense_smoke_videos",
+      "destination": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/firesense/smoke_videos.1407.zip",
+      "extract_dir": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/firesense/extracted/smoke_videos.1407",
+      "extracted_size_bytes": 236121596,
+      "message": "downloaded; extracted",
+      "notes": "FIRESENSE smoke videos: 13 positive + 9 negative (Zenodo listing).",
+      "sha256": "876035a132f81119504e9fa53634d56215dd84b29c986d373bff4ee638b37eea",
+      "size_bytes": 197589846,
+      "source_url": "https://zenodo.org/records/836749/files/smoke_videos.1407.zip?download=1",
+      "status": "DOWNLOADED",
+      "timestamp_utc": "2026-07-12T17:59:58.637913+00:00"
+    }
+  ],
+  "status": "PASS",
+  "timestamp_utc": "2026-07-12T17:59:58.638423+00:00",
+  "video_inventory": {
+    "by_role_counts": {
+      "fire": 27,
+      "other": 0,
+      "smoke": 22
+    },
+    "extract_root": "/Users/mobcoderid-296/Desktop/fire-smoke/fire-smoke-cpu/data/raw/firesense/extracted",
+    "video_count": 49,
+    "videos_sample": [
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo1.858.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo10.1072.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo11.1073.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo12.1074.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo13.1075.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo14.1076.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo15.1078.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo16.1077.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo2.859.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo3.860.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo4.861.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo5.862.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo6.863.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo7.864.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo8.865.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/neg/negsVideo9.866.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/pos/posVideo1.868.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/pos/posVideo10.869.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/pos/posVideo11.870.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/pos/posVideo2.871.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/pos/posVideo3.872.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/pos/posVideo4.873.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/pos/posVideo5.874.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/pos/posVideo6.875.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/pos/posVideo7.876.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/pos/posVideo8.877.avi",
+      "data/raw/firesense/extracted/fire_videos.1406/pos/posVideo9.878.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/neg/testneg01.807.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/neg/testneg02.808.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/neg/testneg03.809.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/neg/testneg04.810.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/neg/testneg05.811.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/neg/testneg06.812.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/neg/testneg07.813.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/neg/testneg08.814.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/neg/testneg09.815.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/pos/testpos01.817.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/pos/testpos02.818.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/pos/testpos03.819.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/pos/testpos04.820.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/pos/testpos05.821.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/pos/testpos06.822.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/pos/testpos07.823.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/pos/testpos08.824.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/pos/testpos09.825.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/pos/testpos10.826.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/pos/testpos11.827.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/pos/testpos12.828.avi",
+      "data/raw/firesense/extracted/smoke_videos.1407/pos/testpos13.829.avi"
+    ]
+  }
+}
+```

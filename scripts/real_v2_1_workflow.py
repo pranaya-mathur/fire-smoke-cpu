@@ -43,8 +43,8 @@ DATASETS = {
         "work": ROOT / "data/raw/hf_candidates/LibreYOLO_smoke-uvylj_hf_snapshot",
     },
     "dfire": {
-        "dataset_id": "badsaarow/d-fire",
-        "snapshot": ROOT / "data/raw/hf_candidates/badsaarow_d-fire_hf_snapshot",
+        "dataset_id": "dfire_official",
+        "snapshot": ROOT / "data/raw/dfire/kaggle_smoke_fire_detection_yolo",
     },
 }
 

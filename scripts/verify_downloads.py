@@ -22,7 +22,8 @@ def main():
     datasets = {
         "medyoussef": "data/raw/hf_candidates/medyoussef_fire-smoke-hardnegatives-int8",
         "LibreYOLO": "data/raw/hf_candidates/LibreYOLO_smoke-uvylj",
-        "D-Fire": "data/raw/hf_candidates/badsaarow_d-fire"
+        "D-Fire": "data/raw/dfire/kaggle_smoke_fire_detection_yolo",
+        "FIRESENSE": "data/raw/firesense",
     }
     
     results = {}

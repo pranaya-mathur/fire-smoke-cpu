@@ -4,7 +4,6 @@
 
 | Dataset ID | Status | License | Samples | Classes |
 |---|---|---|---|---|
-| badsaarow_d_fire | OK | unknown | 21527 | Unknown |
 | medyoussef_hardnegatives | OK | unknown | 0 | Unknown |
 | libreyolo_smoke_uvylj | OK | cc-by-4.0 | 0 | Unknown |
 | yingjie_fire_smoke | OK | apache-2.0 | 9452 | train, test, val |
@@ -14,7 +13,6 @@
 
 ## Details
 
-### badsaarow_d_fire
 - **Exists**: True
 - **License Tag**: unknown
 - **Has License File**: False

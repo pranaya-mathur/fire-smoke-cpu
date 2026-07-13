@@ -1,0 +1,103 @@
+{
+  "accepted_count": 3,
+  "candidates": [
+    {
+      "dataset": "firesense_zenodo_836749",
+      "decision": "ACCEPT_TEMPORAL_ONLY",
+      "license_status": "requires_review",
+      "local_exists": true,
+      "local_path": "data/raw/firesense",
+      "notes": "Official FIRESENSE fire+smoke video ZIPs. Video-only; not YOLO OD. Use for temporal/eval clips after provenance review. Do not blind-merge into V2.1 train.",
+      "object_detection_annotations": false,
+      "reject_reasons": [],
+      "role": "temporal_eval_videos",
+      "url": "https://zenodo.org/records/836749"
+    },
+    {
+      "dataset": "dfire_official_images_labels",
+      "decision": "ACCEPT",
+      "license_status": "CC0-1.0",
+      "local_exists": true,
+      "local_path": "data/raw/dfire",
+      "notes": "Official D-Fire images + YOLO labels (Kaggle README mirror). Primary detector training candidate via scripts/prepare_dfire.py.",
+      "object_detection_annotations": true,
+      "reject_reasons": [],
+      "role": "detector_training",
+      "url": "https://www.kaggle.com/datasets/sayedgamal99/smoke-fire-detection-yolo"
+    },
+    {
+      "dataset": "dfire_official_presplit",
+      "decision": "ACCEPT",
+      "license_status": "CC0-1.0",
+      "local_exists": true,
+      "local_path": "data/raw/dfire/presplit",
+      "notes": "Train/val/test splits from the official Kaggle D-Fire mirror.",
+      "object_detection_annotations": true,
+      "reject_reasons": [],
+      "role": "detector_training_presplit",
+      "url": "https://www.kaggle.com/datasets/sayedgamal99/smoke-fire-detection-yolo"
+    }
+  ],
+  "historical_registry": {
+    "status": "PASS",
+    "total_rows": 46284,
+    "unique_sha256": 34044
+  },
+  "next_actions": [
+    "python scripts/prepare_dfire.py",
+    "python scripts/error_driven_workflow.py historical-registry",
+    "# Later (still no blind merge): audit/overlap on official dfire, then frozen V2.1 error-analyze",
+    "Do NOT run train-1e until quality gates pass on hard-example selection"
+  ],
+  "policy": {
+    "blind_merges_prohibited": true,
+    "blocked_boosters": [
+      "hf_kien",
+      "kien",
+      "kienngyuen",
+      "libreyolo",
+      "medyoussef",
+      "smoke100"
+    ],
+    "require_frozen_v2_1_error_analyze_before_train": true,
+    "require_historical_overlap_before_train": true
+  },
+  "selected_for_od_training": {
+    "dataset": "dfire_official_images_labels",
+    "decision": "ACCEPT",
+    "license_status": "CC0-1.0",
+    "local_exists": true,
+    "local_path": "data/raw/dfire",
+    "notes": "Official D-Fire images + YOLO labels (Kaggle README mirror). Primary detector training candidate via scripts/prepare_dfire.py.",
+    "object_detection_annotations": true,
+    "reject_reasons": [],
+    "role": "detector_training",
+    "url": "https://www.kaggle.com/datasets/sayedgamal99/smoke-fire-detection-yolo"
+  },
+  "selected_for_temporal": [
+    {
+      "dataset": "firesense_zenodo_836749",
+      "decision": "ACCEPT_TEMPORAL_ONLY",
+      "license_status": "requires_review",
+      "local_exists": true,
+      "local_path": "data/raw/firesense",
+      "notes": "Official FIRESENSE fire+smoke video ZIPs. Video-only; not YOLO OD. Use for temporal/eval clips after provenance review. Do not blind-merge into V2.1 train.",
+      "object_detection_annotations": false,
+      "reject_reasons": [],
+      "role": "temporal_eval_videos",
+      "url": "https://zenodo.org/records/836749"
+    }
+  ],
+  "status": "PASS_OD_READY",
+  "timestamp_utc": "2026-07-12T19:08:07.785244+00:00",
+  "training_started": false,
+  "v2_1_overwrite": false,
+  "verify_summary": {
+    "pending": [],
+    "ready": [
+      "firesense_videos",
+      "dfire_images_labels"
+    ],
+    "status": "READY"
+  }
+}
